@@ -103,6 +103,7 @@ namespace Hotel_SoftWare2
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
+            openChildForm(new CustomersForm());
             HideMenu();
         }
 
