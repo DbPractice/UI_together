@@ -9,4 +9,3 @@ C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.Properties.Resources.resources
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csproj.GenerateResource.Cache
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.DatPhong.resources
-

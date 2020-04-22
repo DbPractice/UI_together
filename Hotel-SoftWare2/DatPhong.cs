@@ -26,7 +26,7 @@ namespace Hotel_SoftWare2
 
         private void datphong_click(object sender, EventArgs e)
         {
-            MessageBox.Show("Đặt phòng thành công !");
+            MessageBox.Show("Đặt phòng thành công ! Nhân viên của chúng tôi sẽ liên hệ với quý khách sớm nhất !");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

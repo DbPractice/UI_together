@@ -61,7 +61,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBoxghichu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.buttontimkiem = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxloaiP = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -104,6 +103,7 @@
             // 
             // textBoxngaysd
             // 
+            this.textBoxngaysd.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxngaysd.Location = new System.Drawing.Point(106, 0);
             this.textBoxngaysd.Name = "textBoxngaysd";
             this.textBoxngaysd.Size = new System.Drawing.Size(212, 20);
@@ -130,6 +130,7 @@
             // 
             // textBoxTenP
             // 
+            this.textBoxTenP.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTenP.Location = new System.Drawing.Point(106, 0);
             this.textBoxTenP.Name = "textBoxTenP";
             this.textBoxTenP.Size = new System.Drawing.Size(212, 20);
@@ -156,6 +157,7 @@
             // 
             // textBoxMaP
             // 
+            this.textBoxMaP.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMaP.Location = new System.Drawing.Point(106, 0);
             this.textBoxMaP.Name = "textBoxMaP";
             this.textBoxMaP.Size = new System.Drawing.Size(212, 20);
@@ -183,6 +185,7 @@
             // 
             // textBoxCMND
             // 
+            this.textBoxCMND.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCMND.Location = new System.Drawing.Point(106, 0);
             this.textBoxCMND.Name = "textBoxCMND";
             this.textBoxCMND.Size = new System.Drawing.Size(212, 20);
@@ -209,6 +212,7 @@
             // 
             // textBoxsdt
             // 
+            this.textBoxsdt.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxsdt.Location = new System.Drawing.Point(106, 0);
             this.textBoxsdt.Name = "textBoxsdt";
             this.textBoxsdt.Size = new System.Drawing.Size(212, 20);
@@ -235,6 +239,7 @@
             // 
             // textBoxDiaChi
             // 
+            this.textBoxDiaChi.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDiaChi.Location = new System.Drawing.Point(106, 0);
             this.textBoxDiaChi.Name = "textBoxDiaChi";
             this.textBoxDiaChi.Size = new System.Drawing.Size(212, 20);
@@ -261,6 +266,7 @@
             // 
             // textBoxNameKH
             // 
+            this.textBoxNameKH.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNameKH.Location = new System.Drawing.Point(106, 0);
             this.textBoxNameKH.Name = "textBoxNameKH";
             this.textBoxNameKH.Size = new System.Drawing.Size(212, 20);
@@ -369,7 +375,6 @@
             // 
             this.panel10.Controls.Add(this.textBoxghichu);
             this.panel10.Controls.Add(this.label6);
-            this.panel10.Controls.Add(this.buttontimkiem);
             this.panel10.Controls.Add(this.label2);
             this.panel10.Controls.Add(this.comboBoxloaiP);
             this.panel10.Location = new System.Drawing.Point(428, 113);
@@ -379,6 +384,7 @@
             // 
             // textBoxghichu
             // 
+            this.textBoxghichu.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxghichu.Location = new System.Drawing.Point(128, 41);
             this.textBoxghichu.Name = "textBoxghichu";
             this.textBoxghichu.Size = new System.Drawing.Size(157, 20);
@@ -395,19 +401,6 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Ghi chú:";
             // 
-            // buttontimkiem
-            // 
-            this.buttontimkiem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttontimkiem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttontimkiem.ForeColor = System.Drawing.Color.Navy;
-            this.buttontimkiem.Location = new System.Drawing.Point(305, 10);
-            this.buttontimkiem.Name = "buttontimkiem";
-            this.buttontimkiem.Size = new System.Drawing.Size(97, 38);
-            this.buttontimkiem.TabIndex = 2;
-            this.buttontimkiem.Text = "Tìm kiếm";
-            this.buttontimkiem.UseVisualStyleBackColor = false;
-            this.buttontimkiem.Click += new System.EventHandler(this.timkiem_click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -421,10 +414,11 @@
             // 
             // comboBoxloaiP
             // 
+            this.comboBoxloaiP.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxloaiP.FormattingEnabled = true;
             this.comboBoxloaiP.Location = new System.Drawing.Point(128, 10);
             this.comboBoxloaiP.Name = "comboBoxloaiP";
-            this.comboBoxloaiP.Size = new System.Drawing.Size(157, 21);
+            this.comboBoxloaiP.Size = new System.Drawing.Size(157, 22);
             this.comboBoxloaiP.TabIndex = 0;
             this.comboBoxloaiP.SelectedIndexChanged += new System.EventHandler(this.comboBoxloaiP_SelectedIndexChanged);
             // 
@@ -433,7 +427,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(428, 184);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(405, 289);
+            this.dataGridView1.Size = new System.Drawing.Size(405, 210);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -513,7 +507,6 @@
         private System.Windows.Forms.Button buttonthoat;
         private System.Windows.Forms.Button buttondatphong;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button buttontimkiem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxloaiP;
         private System.Windows.Forms.Label label6;
