@@ -71,6 +71,7 @@ namespace Hotel_SoftWare2
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
+            openChildForm(new DatPhong());
             HideMenu();
         }
 
