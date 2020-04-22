@@ -70,7 +70,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FPTSHOP\\.nuget\\packages\\": {}
+    "C:\\Users\\datproqhna\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -83,7 +83,7 @@
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\datproqhna\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -91,6 +91,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://packagesource": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
