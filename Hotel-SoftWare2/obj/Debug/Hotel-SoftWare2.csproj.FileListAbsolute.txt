@@ -22,3 +22,15 @@ D:\Ki2_Năm3\Db-Practice\Git\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWar
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csproj.CopyComplete
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.exe
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.pdb
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\bin\Debug\Hotel-SoftWare2.exe.config
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\bin\Debug\Hotel-SoftWare2.exe
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\bin\Debug\Hotel-SoftWare2.pdb
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.MainForm.resources
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.Properties.Resources.resources
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csproj.GenerateResource.cache
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csproj.CoreCompileInputs.cache
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csproj.CopyComplete
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.exe
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.pdb
