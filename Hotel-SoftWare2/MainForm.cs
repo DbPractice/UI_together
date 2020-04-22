@@ -107,11 +107,13 @@ namespace Hotel_SoftWare2
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
+            openChildForm(new EmployeesForm());
             HideMenu();
         }
 
         private void btnNguoiDung_Click(object sender, EventArgs e)
         {
+            openChildForm(new UsersForm());
             HideMenu();
         }
 

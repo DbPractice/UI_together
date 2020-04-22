@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCustomers = new System.Windows.Forms.DataGridView();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.btnX = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewCustomers
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(152, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(541, 435);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCustomers.Location = new System.Drawing.Point(152, 25);
+            this.dataGridViewCustomers.Name = "dataGridViewCustomers";
+            this.dataGridViewCustomers.Size = new System.Drawing.Size(541, 435);
+            this.dataGridViewCustomers.TabIndex = 0;
             // 
             // btnThem
             // 
@@ -64,6 +64,7 @@
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -75,7 +76,7 @@
             this.btnSua.IconColor = System.Drawing.Color.White;
             this.btnSua.IconSize = 30;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(12, 138);
+            this.btnSua.Location = new System.Drawing.Point(12, 140);
             this.btnSua.Name = "btnSua";
             this.btnSua.Rotation = 0D;
             this.btnSua.Size = new System.Drawing.Size(119, 40);
@@ -95,7 +96,7 @@
             this.btnXoa.IconColor = System.Drawing.Color.White;
             this.btnXoa.IconSize = 30;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(12, 194);
+            this.btnXoa.Location = new System.Drawing.Point(12, 200);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Rotation = 0D;
             this.btnXoa.Size = new System.Drawing.Size(119, 40);
@@ -115,7 +116,7 @@
             this.btnTimKiem.IconColor = System.Drawing.Color.White;
             this.btnTimKiem.IconSize = 30;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(12, 251);
+            this.btnTimKiem.Location = new System.Drawing.Point(12, 260);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Rotation = 0D;
             this.btnTimKiem.Size = new System.Drawing.Size(119, 40);
@@ -133,7 +134,7 @@
             this.btnX.IconChar = FontAwesome.Sharp.IconChar.Undo;
             this.btnX.IconColor = System.Drawing.Color.White;
             this.btnX.IconSize = 30;
-            this.btnX.Location = new System.Drawing.Point(12, 310);
+            this.btnX.Location = new System.Drawing.Point(12, 320);
             this.btnX.Name = "btnX";
             this.btnX.Rotation = 0D;
             this.btnX.Size = new System.Drawing.Size(119, 42);
@@ -153,17 +154,17 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewCustomers);
             this.Name = "CustomersForm";
             this.Text = "CustomersForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewCustomers;
         private FontAwesome.Sharp.IconButton btnThem;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnXoa;
