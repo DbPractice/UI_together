@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Hotel_SoftWare2
 {
@@ -72,7 +71,6 @@ namespace Hotel_SoftWare2
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
-            openChildForm(new DatPhong());
             HideMenu();
         }
 
@@ -93,7 +91,6 @@ namespace Hotel_SoftWare2
 
         private void btnDichVuPhong_Click(object sender, EventArgs e)
         {
-            openChildForm(new DichVuPhongForm());
             HideMenu();
         }
 
@@ -127,7 +124,6 @@ namespace Hotel_SoftWare2
 
         private void bntDichVu_Click(object sender, EventArgs e)
         {
-            openChildForm(new QLDichVuForm());
             HideMenu();
         }
 
