@@ -22,3 +22,16 @@ D:\Ki2_Năm3\Db-Practice\Git\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWar
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csproj.CopyComplete
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.exe
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.pdb
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\bin\Debug\Hotel-SoftWare2.exe.config
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\bin\Debug\Hotel-SoftWare2.exe
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\bin\Debug\Hotel-SoftWare2.pdb
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\bin\Debug\FontAwesome.Sharp.dll
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.MainForm.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.Properties.Resources.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csproj.GenerateResource.cache
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csproj.CoreCompileInputs.cache
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csproj.CopyComplete
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.exe
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.pdb
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.CustomersForm.resources
