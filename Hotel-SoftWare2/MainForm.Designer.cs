@@ -52,10 +52,12 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTopChill = new System.Windows.Forms.Panel();
             this.panelBotChildForm = new System.Windows.Forms.Panel();
+            this.textBoxHelloUser = new System.Windows.Forms.TextBox();
             this.panelMenu.SuspendLayout();
             this.panelQuanLy.SuspendLayout();
             this.panelChucNang.SuspendLayout();
             this.panelHeThong.SuspendLayout();
+            this.panelTopChill.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -83,7 +85,7 @@
             this.btnThongKeHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongKeHoaDon.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnThongKeHoaDon.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnThongKeHoaDon.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnThongKeHoaDon.IconChar = FontAwesome.Sharp.IconChar.Signal;
             this.btnThongKeHoaDon.IconColor = System.Drawing.Color.White;
             this.btnThongKeHoaDon.IconSize = 32;
             this.btnThongKeHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,7 +121,7 @@
             this.bntDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntDichVu.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.bntDichVu.ForeColor = System.Drawing.Color.Gainsboro;
-            this.bntDichVu.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.bntDichVu.IconChar = FontAwesome.Sharp.IconChar.Servicestack;
             this.bntDichVu.IconColor = System.Drawing.Color.White;
             this.bntDichVu.IconSize = 32;
             this.bntDichVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,7 +144,7 @@
             this.btnPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhong.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPhong.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPhong.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnPhong.IconChar = FontAwesome.Sharp.IconChar.Dungeon;
             this.btnPhong.IconColor = System.Drawing.Color.White;
             this.btnPhong.IconSize = 32;
             this.btnPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,7 +167,7 @@
             this.btnNguoiDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNguoiDung.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnNguoiDung.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnNguoiDung.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnNguoiDung.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.btnNguoiDung.IconColor = System.Drawing.Color.White;
             this.btnNguoiDung.IconSize = 32;
             this.btnNguoiDung.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,7 +190,7 @@
             this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhanVien.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnNhanVien.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnNhanVien.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnNhanVien.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
             this.btnNhanVien.IconColor = System.Drawing.Color.White;
             this.btnNhanVien.IconSize = 32;
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,7 +213,7 @@
             this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhachHang.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnKhachHang.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnKhachHang.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnKhachHang.IconChar = FontAwesome.Sharp.IconChar.User;
             this.btnKhachHang.IconColor = System.Drawing.Color.White;
             this.btnKhachHang.IconSize = 32;
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,7 +236,7 @@
             this.btnQuanLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuanLy.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnQuanLy.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnQuanLy.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnQuanLy.IconChar = FontAwesome.Sharp.IconChar.UserTie;
             this.btnQuanLy.IconColor = System.Drawing.Color.White;
             this.btnQuanLy.IconSize = 32;
             this.btnQuanLy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -271,7 +273,7 @@
             this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHoaDon.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnHoaDon.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnHoaDon.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnHoaDon.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
             this.btnHoaDon.IconColor = System.Drawing.Color.White;
             this.btnHoaDon.IconSize = 32;
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,7 +296,7 @@
             this.btnDichVuPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDichVuPhong.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnDichVuPhong.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDichVuPhong.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnDichVuPhong.IconChar = FontAwesome.Sharp.IconChar.ConciergeBell;
             this.btnDichVuPhong.IconColor = System.Drawing.Color.White;
             this.btnDichVuPhong.IconSize = 32;
             this.btnDichVuPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -317,7 +319,7 @@
             this.btnTraPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTraPhong.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnTraPhong.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnTraPhong.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnTraPhong.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
             this.btnTraPhong.IconColor = System.Drawing.Color.White;
             this.btnTraPhong.IconSize = 32;
             this.btnTraPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -340,7 +342,7 @@
             this.btnHuyDatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuyDatPhong.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnHuyDatPhong.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnHuyDatPhong.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnHuyDatPhong.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.btnHuyDatPhong.IconColor = System.Drawing.Color.White;
             this.btnHuyDatPhong.IconSize = 32;
             this.btnHuyDatPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -363,7 +365,7 @@
             this.btnNhanPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhanPhong.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnNhanPhong.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnNhanPhong.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnNhanPhong.IconChar = FontAwesome.Sharp.IconChar.Key;
             this.btnNhanPhong.IconColor = System.Drawing.Color.White;
             this.btnNhanPhong.IconSize = 32;
             this.btnNhanPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -386,7 +388,7 @@
             this.btnDatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDatPhong.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnDatPhong.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDatPhong.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnDatPhong.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
             this.btnDatPhong.IconColor = System.Drawing.Color.White;
             this.btnDatPhong.IconSize = 32;
             this.btnDatPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -409,7 +411,7 @@
             this.btnChucNang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChucNang.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnChucNang.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnChucNang.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnChucNang.IconChar = FontAwesome.Sharp.IconChar.Tools;
             this.btnChucNang.IconColor = System.Drawing.Color.White;
             this.btnChucNang.IconSize = 32;
             this.btnChucNang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -442,7 +444,7 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnThoat.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnThoat.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnThoat.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
             this.btnThoat.IconColor = System.Drawing.Color.White;
             this.btnThoat.IconSize = 32;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -465,7 +467,7 @@
             this.btnDoiMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoiMK.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnDoiMK.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDoiMK.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnDoiMK.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.btnDoiMK.IconColor = System.Drawing.Color.White;
             this.btnDoiMK.IconSize = 32;
             this.btnDoiMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -488,7 +490,7 @@
             this.btnHeThong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHeThong.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnHeThong.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnHeThong.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.btnHeThong.IconChar = FontAwesome.Sharp.IconChar.Cogs;
             this.btnHeThong.IconColor = System.Drawing.Color.White;
             this.btnHeThong.IconSize = 32;
             this.btnHeThong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -515,20 +517,34 @@
             // panelTopChill
             // 
             this.panelTopChill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
+            this.panelTopChill.Controls.Add(this.textBoxHelloUser);
             this.panelTopChill.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopChill.Location = new System.Drawing.Point(200, 0);
             this.panelTopChill.Name = "panelTopChill";
-            this.panelTopChill.Size = new System.Drawing.Size(734, 50);
+            this.panelTopChill.Size = new System.Drawing.Size(734, 30);
             this.panelTopChill.TabIndex = 1;
             // 
             // panelBotChildForm
             // 
             this.panelBotChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.panelBotChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBotChildForm.Location = new System.Drawing.Point(200, 50);
+            this.panelBotChildForm.Location = new System.Drawing.Point(200, 30);
             this.panelBotChildForm.Name = "panelBotChildForm";
-            this.panelBotChildForm.Size = new System.Drawing.Size(734, 511);
+            this.panelBotChildForm.Size = new System.Drawing.Size(734, 531);
             this.panelBotChildForm.TabIndex = 2;
+            // 
+            // textBoxHelloUser
+            // 
+            this.textBoxHelloUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
+            this.textBoxHelloUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxHelloUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHelloUser.ForeColor = System.Drawing.Color.Gainsboro;
+            this.textBoxHelloUser.Location = new System.Drawing.Point(542, 6);
+            this.textBoxHelloUser.Multiline = true;
+            this.textBoxHelloUser.Name = "textBoxHelloUser";
+            this.textBoxHelloUser.Size = new System.Drawing.Size(100, 21);
+            this.textBoxHelloUser.TabIndex = 0;
+            this.textBoxHelloUser.Text = "Hello, Manager";
             // 
             // MainForm
             // 
@@ -545,6 +561,8 @@
             this.panelQuanLy.ResumeLayout(false);
             this.panelChucNang.ResumeLayout(false);
             this.panelHeThong.ResumeLayout(false);
+            this.panelTopChill.ResumeLayout(false);
+            this.panelTopChill.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -575,6 +593,7 @@
         private FontAwesome.Sharp.IconButton btnThongKeHoaDon;
         private System.Windows.Forms.Panel panelTopChill;
         private System.Windows.Forms.Panel panelBotChildForm;
+        private System.Windows.Forms.TextBox textBoxHelloUser;
     }
 }
 
