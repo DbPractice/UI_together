@@ -34,6 +34,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "FontAwesome": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[5.12.1, )"

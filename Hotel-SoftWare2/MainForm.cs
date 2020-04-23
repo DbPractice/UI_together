@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Hotel_SoftWare2
 {
     public partial class MainForm : Form
@@ -17,7 +18,7 @@ namespace Hotel_SoftWare2
             InitializeComponent();
             customizeDesing();
         }
-
+       
         private void customizeDesing()
         {
             panelHeThong.Visible = false;
@@ -71,21 +72,25 @@ namespace Hotel_SoftWare2
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
+            openChildForm(new DatPhongForm());
             HideMenu();
         }
 
         private void btnNhanPhong_Click(object sender, EventArgs e)
         {
+            openChildForm(new NhanPhongForm());
             HideMenu();
         }
 
         private void btnHuyDatPhong_Click(object sender, EventArgs e)
         {
+            openChildForm(new Huyphong());
             HideMenu();
         }
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
+            openChildForm(new TraPhong());
             HideMenu();
         }
 
@@ -119,6 +124,7 @@ namespace Hotel_SoftWare2
 
         private void btnPhong_Click(object sender, EventArgs e)
         {
+           openChildForm(new QlyPhong());
             HideMenu();
         }
 
@@ -147,6 +153,11 @@ namespace Hotel_SoftWare2
             panelBotChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
+        }
+
+        private void panelBotChildForm_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
