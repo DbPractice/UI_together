@@ -191,11 +191,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Chiller", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Chiller", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkBlue;
             this.label10.Location = new System.Drawing.Point(325, 26);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(298, 43);
+            this.label10.Size = new System.Drawing.Size(320, 46);
             this.label10.TabIndex = 19;
             this.label10.Text = "Welcome to our Hotel !";
             // 
