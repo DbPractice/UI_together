@@ -13,6 +13,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgFontAwesome Condition=" '$(PkgFontAwesome)' == '' ">C:\Users\THUY LINH\.nuget\packages\fontawesome\4.7.0</PkgFontAwesome>
+    <PkgFontAwesome Condition=" '$(PkgFontAwesome)' == '' ">C:\Users\FPTSHOP\.nuget\packages\fontawesome\4.7.0</PkgFontAwesome>
   </PropertyGroup>
 </Project>

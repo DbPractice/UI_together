@@ -90,17 +90,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLServiceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QLServiceForm.Designer.cs">
-      <DependentUpon>QLServiceForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ServiceRoomForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ServiceRoomForm.Designer.cs">
-      <DependentUpon>ServiceRoomForm.cs</DependentUpon>
     <Compile Include="QlyPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +135,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QLServiceForm.resx">
-      <DependentUpon>QLServiceForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ServiceRoomForm.resx">
-      <DependentUpon>ServiceRoomForm.cs</DependentUpon>
     <EmbeddedResource Include="QlyPhong.resx">
       <DependentUpon>QlyPhong.cs</DependentUpon>
     </EmbeddedResource>
