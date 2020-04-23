@@ -545,6 +545,7 @@
             this.panelBotChildForm.Name = "panelBotChildForm";
             this.panelBotChildForm.Size = new System.Drawing.Size(734, 531);
             this.panelBotChildForm.TabIndex = 2;
+            this.panelBotChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBotChildForm_Paint);
             // 
             // MainForm
             // 
