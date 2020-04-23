@@ -33,7 +33,7 @@
             this.labelDiaChi = new System.Windows.Forms.Label();
             this.labelSoCMND = new System.Windows.Forms.Label();
             this.labelTenKH = new System.Windows.Forms.Label();
-            this.textBoxKH = new System.Windows.Forms.TextBox();
+            this.textBoxMaKH = new System.Windows.Forms.TextBox();
             this.textBoxDiaChi = new System.Windows.Forms.TextBox();
             this.textBoxSDT = new System.Windows.Forms.TextBox();
             this.textBoxSoCMND = new System.Windows.Forms.TextBox();
@@ -92,13 +92,13 @@
             this.labelTenKH.TabIndex = 4;
             this.labelTenKH.Text = "Tên Khách Hàng";
             // 
-            // textBoxKH
+            // textBoxMaKH
             // 
-            this.textBoxKH.Location = new System.Drawing.Point(280, 40);
-            this.textBoxKH.Multiline = true;
-            this.textBoxKH.Name = "textBoxKH";
-            this.textBoxKH.Size = new System.Drawing.Size(200, 24);
-            this.textBoxKH.TabIndex = 5;
+            this.textBoxMaKH.Location = new System.Drawing.Point(280, 40);
+            this.textBoxMaKH.Multiline = true;
+            this.textBoxMaKH.Name = "textBoxMaKH";
+            this.textBoxMaKH.Size = new System.Drawing.Size(200, 24);
+            this.textBoxMaKH.TabIndex = 5;
             // 
             // textBoxDiaChi
             // 
@@ -184,7 +184,7 @@
             this.Controls.Add(this.textBoxSoCMND);
             this.Controls.Add(this.textBoxSDT);
             this.Controls.Add(this.textBoxDiaChi);
-            this.Controls.Add(this.textBoxKH);
+            this.Controls.Add(this.textBoxMaKH);
             this.Controls.Add(this.labelTenKH);
             this.Controls.Add(this.labelSoCMND);
             this.Controls.Add(this.labelDiaChi);
@@ -204,7 +204,7 @@
         private System.Windows.Forms.Label labelDiaChi;
         private System.Windows.Forms.Label labelSoCMND;
         private System.Windows.Forms.Label labelTenKH;
-        private System.Windows.Forms.TextBox textBoxKH;
+        private System.Windows.Forms.TextBox textBoxMaKH;
         private System.Windows.Forms.TextBox textBoxDiaChi;
         private System.Windows.Forms.TextBox textBoxSDT;
         private System.Windows.Forms.TextBox textBoxSoCMND;

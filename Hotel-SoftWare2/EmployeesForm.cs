@@ -21,5 +21,28 @@ namespace Hotel_SoftWare2
         {
             this.Close();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            openChildForm2(new AddEmpForm());
+        }
+
+        private Form activeForm = null;
+        private void openChildForm2(Form childForm2)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm2;
+            childForm2.TopLevel = false;
+            childForm2.FormBorderStyle = FormBorderStyle.None;
+            childForm2.Dock = DockStyle.Fill;
+            dataGridViewEmployees.Controls.Add(childForm2);
+            dataGridViewEmployees.Tag = childForm2;
+            childForm2.BringToFront();
+            childForm2.Show();
+
+        }
     }
 }

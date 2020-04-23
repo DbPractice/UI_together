@@ -51,8 +51,8 @@
             this.btnHeThong = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTopChill = new System.Windows.Forms.Panel();
-            this.panelBotChildForm = new System.Windows.Forms.Panel();
             this.textBoxHelloUser = new System.Windows.Forms.TextBox();
+            this.panelBotChildForm = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelQuanLy.SuspendLayout();
             this.panelChucNang.SuspendLayout();
@@ -524,15 +524,6 @@
             this.panelTopChill.Size = new System.Drawing.Size(734, 30);
             this.panelTopChill.TabIndex = 1;
             // 
-            // panelBotChildForm
-            // 
-            this.panelBotChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.panelBotChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBotChildForm.Location = new System.Drawing.Point(200, 30);
-            this.panelBotChildForm.Name = "panelBotChildForm";
-            this.panelBotChildForm.Size = new System.Drawing.Size(734, 531);
-            this.panelBotChildForm.TabIndex = 2;
-            // 
             // textBoxHelloUser
             // 
             this.textBoxHelloUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
@@ -546,6 +537,15 @@
             this.textBoxHelloUser.TabIndex = 0;
             this.textBoxHelloUser.Text = "Hello, Manager";
             // 
+            // panelBotChildForm
+            // 
+            this.panelBotChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelBotChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBotChildForm.Location = new System.Drawing.Point(200, 30);
+            this.panelBotChildForm.Name = "panelBotChildForm";
+            this.panelBotChildForm.Size = new System.Drawing.Size(734, 531);
+            this.panelBotChildForm.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,6 +556,7 @@
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HotelSystem";
             this.panelMenu.ResumeLayout(false);
             this.panelQuanLy.ResumeLayout(false);

@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +55,18 @@
     <Compile Include="AddCusForm.Designer.cs">
       <DependentUpon>AddCusForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddEmpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmpForm.Designer.cs">
+      <DependentUpon>AddEmpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUsersForm.Designer.cs">
+      <DependentUpon>AddUsersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +78,12 @@
     </Compile>
     <Compile Include="EmployeesForm.Designer.cs">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -81,11 +102,20 @@
     <EmbeddedResource Include="AddCusForm.resx">
       <DependentUpon>AddCusForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddEmpForm.resx">
+      <DependentUpon>AddEmpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUsersForm.resx">
+      <DependentUpon>AddUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomersForm.resx">
       <DependentUpon>CustomersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeesForm.resx">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
