@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hotel_SoftWare2
 {
-    public partial class NhanPhong : Form
+    public partial class TraPhong : Form
     {
-        public NhanPhong()
+        public TraPhong()
         {
             InitializeComponent();
         }

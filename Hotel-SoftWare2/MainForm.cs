@@ -78,7 +78,7 @@ namespace Hotel_SoftWare2
 
         private void btnNhanPhong_Click(object sender, EventArgs e)
         {
-           
+            openChildForm(new NhanPhongForm());
             HideMenu();
         }
 
@@ -90,6 +90,7 @@ namespace Hotel_SoftWare2
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
+            openChildForm(new TraPhong());
             HideMenu();
         }
 

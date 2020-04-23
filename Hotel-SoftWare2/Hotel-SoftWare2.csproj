@@ -82,11 +82,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanPhong.cs">
+    <Compile Include="TraPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanPhong.Designer.cs">
-      <DependentUpon>NhanPhong.cs</DependentUpon>
+    <Compile Include="TraPhong.Designer.cs">
+      <DependentUpon>TraPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,6 +95,12 @@
     </Compile>
     <Compile Include="QlyPhong.Designer.cs">
       <DependentUpon>QlyPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanPhongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanPhongForm.Designer.cs">
+      <DependentUpon>NhanPhongForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>
@@ -131,6 +137,12 @@
     </Compile>
     <EmbeddedResource Include="QlyPhong.resx">
       <DependentUpon>QlyPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanPhongForm.resx">
+      <DependentUpon>NhanPhongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraPhong.resx">
+      <DependentUpon>TraPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>

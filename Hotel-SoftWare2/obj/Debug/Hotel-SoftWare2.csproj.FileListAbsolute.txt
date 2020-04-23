@@ -57,3 +57,5 @@ C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.DatPhongForm.resources
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.QlyPhong.resources
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.Huyphong.resources
+C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.NhanPhongForm.resources
+C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.TraPhong.resources
