@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Hotel_SoftWare2
 {
-    public partial class AddEmpForm : Form
+    public partial class ServiceRoomForm : Form
     {
-        public AddEmpForm()
+        public ServiceRoomForm()
         {
             InitializeComponent();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

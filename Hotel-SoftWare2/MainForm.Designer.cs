@@ -526,6 +526,7 @@
             // 
             // textBoxHelloUser
             // 
+            this.textBoxHelloUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxHelloUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.textBoxHelloUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxHelloUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -555,7 +556,7 @@
             this.Controls.Add(this.panelBotChildForm);
             this.Controls.Add(this.panelTopChill);
             this.Controls.Add(this.panelMenu);
-            this.MinimumSize = new System.Drawing.Size(800, 500);
+            this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HotelSystem";

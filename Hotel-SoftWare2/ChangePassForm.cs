@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hotel_SoftWare2
 {
-    public partial class AddEmpForm : Form
+    public partial class ChangePassForm : Form
     {
-        public AddEmpForm()
+        public ChangePassForm()
         {
             InitializeComponent();
         }

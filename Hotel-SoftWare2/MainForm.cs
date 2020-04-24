@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 
 namespace Hotel_SoftWare2
 {
     public partial class MainForm : Form
     {
+        Thread th;
         public MainForm()
         {
             InitializeComponent();
@@ -62,12 +64,20 @@ namespace Hotel_SoftWare2
 
         private void btnDoiMK_Click(object sender, EventArgs e)
         {
+            openChildForm(new ChangePassForm());
             HideMenu();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            HideMenu();
+            this.Close();
+            th = new Thread(openLoginForm);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+        private void openLoginForm(object obj)
+        {
+            Application.Run(new LoginForm());
         }
 
         private void btnDatPhong_Click(object sender, EventArgs e)
@@ -96,6 +106,7 @@ namespace Hotel_SoftWare2
 
         private void btnDichVuPhong_Click(object sender, EventArgs e)
         {
+            openChildForm(new ServiceRoomForm());
             HideMenu();
         }
 
@@ -130,6 +141,7 @@ namespace Hotel_SoftWare2
 
         private void bntDichVu_Click(object sender, EventArgs e)
         {
+            openChildForm(new QLServiceForm());
             HideMenu();
         }
 
