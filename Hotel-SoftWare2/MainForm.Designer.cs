@@ -557,6 +557,7 @@
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HotelSystem";
             this.panelMenu.ResumeLayout(false);
             this.panelQuanLy.ResumeLayout(false);
