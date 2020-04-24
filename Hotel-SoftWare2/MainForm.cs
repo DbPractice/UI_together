@@ -96,6 +96,7 @@ namespace Hotel_SoftWare2
 
         private void btnDichVuPhong_Click(object sender, EventArgs e)
         {
+            openChildForm(new ServiceRoomForm());
             HideMenu();
         }
 
@@ -130,6 +131,7 @@ namespace Hotel_SoftWare2
 
         private void bntDichVu_Click(object sender, EventArgs e)
         {
+            openChildForm(new QLServiceForm());
             HideMenu();
         }
 

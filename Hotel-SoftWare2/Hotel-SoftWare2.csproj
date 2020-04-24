@@ -90,7 +90,7 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
-      </Compile>
+    </Compile>
     <Compile Include="Huyphong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +102,18 @@
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLServiceForm.Designer.cs">
+      <DependentUpon>QLServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceRoomForm.Designer.cs">
+      <DependentUpon>ServiceRoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TraPhong.cs">
       <SubType>Form</SubType>
@@ -149,7 +161,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="Huyphong.resx">
       <DependentUpon>Huyphong.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,11 +177,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QLServiceForm.resx">
+      <DependentUpon>QLServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QlyPhong.resx">
       <DependentUpon>QlyPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanPhongForm.resx">
       <DependentUpon>NhanPhongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceRoomForm.resx">
+      <DependentUpon>ServiceRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TraPhong.resx">
       <DependentUpon>TraPhong.cs</DependentUpon>
