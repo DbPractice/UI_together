@@ -104,20 +104,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\datproqhna\\.nuget\\packages\\": {}
+    "C:\\Users\\THUY LINH\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+      "projectUniqueName": "C:\\Users\\THUY LINH\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
       "projectName": "Hotel-SoftWare2",
-      "projectPath": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
-      "packagesPath": "C:\\Users\\datproqhna\\.nuget\\packages\\",
-      "outputPath": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\obj\\",
+      "projectPath": "C:\\Users\\THUY LINH\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+      "packagesPath": "C:\\Users\\THUY LINH\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\THUY LINH\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\datproqhna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\THUY LINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

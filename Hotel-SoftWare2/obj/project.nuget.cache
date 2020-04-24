@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cfD8CHK6LvZLth84HrIOOEyDyTeStGI8U3jrSaD1S4iOiytzSAhRIrL0ucXkmM85m7msvmq8ey8H+0b8GvXrEg==",
+  "dgSpecHash": "kENZy2T1G2ZXgwb1Vgp2GW8vIeZW9qhWPsPR3sZSDxtmmLNc1lhz7G6tdMK7Ol8AhPMBYGbcTfkfxi+HXskUjw==",
   "success": true,
-  "projectFilePath": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+  "projectFilePath": "C:\\Users\\THUY LINH\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
-    "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome.sharp\\5.12.1\\fontawesome.sharp.5.12.1.nupkg.sha512"
+    "C:\\Users\\THUY LINH\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
+    "C:\\Users\\THUY LINH\\.nuget\\packages\\fontawesome.sharp\\5.12.1\\fontawesome.sharp.5.12.1.nupkg.sha512"
   ],
   "logs": []
 }
