@@ -37,8 +37,9 @@
             this.labelNgaySinh = new System.Windows.Forms.Label();
             this.labelSDT = new System.Windows.Forms.Label();
             this.labelMaNV = new System.Windows.Forms.Label();
-            this.comboBoxDate = new System.Windows.Forms.ComboBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dateTimePickerEmp = new System.Windows.Forms.DateTimePicker();
+            this.groupBoxAddEmp = new System.Windows.Forms.GroupBox();
+            this.groupBoxAddEmp.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -51,7 +52,7 @@
             this.btnCancel.IconColor = System.Drawing.Color.White;
             this.btnCancel.IconSize = 30;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(280, 334);
+            this.btnCancel.Location = new System.Drawing.Point(230, 252);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Rotation = 0D;
             this.btnCancel.Size = new System.Drawing.Size(88, 40);
@@ -60,6 +61,7 @@
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -71,7 +73,7 @@
             this.btnSave.IconColor = System.Drawing.Color.White;
             this.btnSave.IconSize = 30;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(126, 334);
+            this.btnSave.Location = new System.Drawing.Point(100, 252);
             this.btnSave.Name = "btnSave";
             this.btnSave.Rotation = 0D;
             this.btnSave.Size = new System.Drawing.Size(80, 40);
@@ -83,7 +85,7 @@
             // 
             // textBoxHoTenNV
             // 
-            this.textBoxHoTenNV.Location = new System.Drawing.Point(280, 140);
+            this.textBoxHoTenNV.Location = new System.Drawing.Point(230, 100);
             this.textBoxHoTenNV.Multiline = true;
             this.textBoxHoTenNV.Name = "textBoxHoTenNV";
             this.textBoxHoTenNV.Size = new System.Drawing.Size(200, 24);
@@ -91,7 +93,7 @@
             // 
             // textBoxSDT
             // 
-            this.textBoxSDT.Location = new System.Drawing.Point(280, 260);
+            this.textBoxSDT.Location = new System.Drawing.Point(230, 200);
             this.textBoxSDT.Multiline = true;
             this.textBoxSDT.Name = "textBoxSDT";
             this.textBoxSDT.Size = new System.Drawing.Size(200, 24);
@@ -99,7 +101,7 @@
             // 
             // textBoxMaNV
             // 
-            this.textBoxMaNV.Location = new System.Drawing.Point(280, 80);
+            this.textBoxMaNV.Location = new System.Drawing.Point(230, 50);
             this.textBoxMaNV.Multiline = true;
             this.textBoxMaNV.Name = "textBoxMaNV";
             this.textBoxMaNV.Size = new System.Drawing.Size(200, 24);
@@ -109,7 +111,7 @@
             // 
             this.labelHoTenNV.AutoSize = true;
             this.labelHoTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHoTenNV.Location = new System.Drawing.Point(60, 140);
+            this.labelHoTenNV.Location = new System.Drawing.Point(50, 100);
             this.labelHoTenNV.Name = "labelHoTenNV";
             this.labelHoTenNV.Size = new System.Drawing.Size(74, 24);
             this.labelHoTenNV.TabIndex = 17;
@@ -119,7 +121,7 @@
             // 
             this.labelNgaySinh.AutoSize = true;
             this.labelNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNgaySinh.Location = new System.Drawing.Point(60, 200);
+            this.labelNgaySinh.Location = new System.Drawing.Point(50, 150);
             this.labelNgaySinh.Name = "labelNgaySinh";
             this.labelNgaySinh.Size = new System.Drawing.Size(97, 24);
             this.labelNgaySinh.TabIndex = 16;
@@ -129,7 +131,7 @@
             // 
             this.labelSDT.AutoSize = true;
             this.labelSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSDT.Location = new System.Drawing.Point(60, 260);
+            this.labelSDT.Location = new System.Drawing.Point(50, 200);
             this.labelSDT.Name = "labelSDT";
             this.labelSDT.Size = new System.Drawing.Size(130, 24);
             this.labelSDT.TabIndex = 14;
@@ -139,49 +141,56 @@
             // 
             this.labelMaNV.AutoSize = true;
             this.labelMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaNV.Location = new System.Drawing.Point(60, 80);
+            this.labelMaNV.Location = new System.Drawing.Point(50, 50);
             this.labelMaNV.Name = "labelMaNV";
             this.labelMaNV.Size = new System.Drawing.Size(131, 24);
             this.labelMaNV.TabIndex = 13;
             this.labelMaNV.Text = "Mã Nhân Viên";
             // 
-            // comboBoxDate
+            // dateTimePickerEmp
             // 
-            this.comboBoxDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxDate.FormattingEnabled = true;
-            this.comboBoxDate.Location = new System.Drawing.Point(280, 200);
-            this.comboBoxDate.Name = "comboBoxDate";
-            this.comboBoxDate.Size = new System.Drawing.Size(200, 24);
-            this.comboBoxDate.TabIndex = 25;
-            this.comboBoxDate.Click += new System.EventHandler(this.ClickCalender);
+            this.dateTimePickerEmp.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePickerEmp.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dateTimePickerEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerEmp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerEmp.Location = new System.Drawing.Point(230, 149);
+            this.dateTimePickerEmp.Name = "dateTimePickerEmp";
+            this.dateTimePickerEmp.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePickerEmp.TabIndex = 25;
             // 
-            // monthCalendar1
+            // groupBoxAddEmp
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(299, 225);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 26;
-            this.monthCalendar1.Visible = false;
+            this.groupBoxAddEmp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxAddEmp.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxAddEmp.Controls.Add(this.labelMaNV);
+            this.groupBoxAddEmp.Controls.Add(this.btnCancel);
+            this.groupBoxAddEmp.Controls.Add(this.dateTimePickerEmp);
+            this.groupBoxAddEmp.Controls.Add(this.btnSave);
+            this.groupBoxAddEmp.Controls.Add(this.labelHoTenNV);
+            this.groupBoxAddEmp.Controls.Add(this.textBoxSDT);
+            this.groupBoxAddEmp.Controls.Add(this.labelNgaySinh);
+            this.groupBoxAddEmp.Controls.Add(this.labelSDT);
+            this.groupBoxAddEmp.Controls.Add(this.textBoxHoTenNV);
+            this.groupBoxAddEmp.Controls.Add(this.textBoxMaNV);
+            this.groupBoxAddEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxAddEmp.Location = new System.Drawing.Point(20, 30);
+            this.groupBoxAddEmp.Name = "groupBoxAddEmp";
+            this.groupBoxAddEmp.Size = new System.Drawing.Size(450, 342);
+            this.groupBoxAddEmp.TabIndex = 26;
+            this.groupBoxAddEmp.TabStop = false;
+            this.groupBoxAddEmp.Text = "Thêm Nhân Viên";
             // 
             // AddEmpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 396);
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.comboBoxDate);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.textBoxHoTenNV);
-            this.Controls.Add(this.textBoxSDT);
-            this.Controls.Add(this.textBoxMaNV);
-            this.Controls.Add(this.labelHoTenNV);
-            this.Controls.Add(this.labelNgaySinh);
-            this.Controls.Add(this.labelSDT);
-            this.Controls.Add(this.labelMaNV);
+            this.Controls.Add(this.groupBoxAddEmp);
             this.Name = "AddEmpForm";
             this.Text = "AddEmpForm";
+            this.groupBoxAddEmp.ResumeLayout(false);
+            this.groupBoxAddEmp.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -196,7 +205,7 @@
         private System.Windows.Forms.Label labelNgaySinh;
         private System.Windows.Forms.Label labelSDT;
         private System.Windows.Forms.Label labelMaNV;
-        private System.Windows.Forms.ComboBox comboBoxDate;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEmp;
+        private System.Windows.Forms.GroupBox groupBoxAddEmp;
     }
 }

@@ -37,9 +37,11 @@
             this.labelNhapLaiMK = new System.Windows.Forms.Label();
             this.labelTenTK = new System.Windows.Forms.Label();
             this.groupBoxQuyen = new System.Windows.Forms.GroupBox();
-            this.checkBoxQuanLy = new System.Windows.Forms.CheckBox();
             this.checkBoxLeTan = new System.Windows.Forms.CheckBox();
+            this.checkBoxQuanLy = new System.Windows.Forms.CheckBox();
+            this.groupBoxAddEmp = new System.Windows.Forms.GroupBox();
             this.groupBoxQuyen.SuspendLayout();
+            this.groupBoxAddEmp.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -52,7 +54,7 @@
             this.btnCancel.IconColor = System.Drawing.Color.White;
             this.btnCancel.IconSize = 30;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(280, 334);
+            this.btnCancel.Location = new System.Drawing.Point(230, 296);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Rotation = 0D;
             this.btnCancel.Size = new System.Drawing.Size(88, 40);
@@ -73,7 +75,7 @@
             this.btnSave.IconColor = System.Drawing.Color.White;
             this.btnSave.IconSize = 30;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(126, 334);
+            this.btnSave.Location = new System.Drawing.Point(139, 296);
             this.btnSave.Name = "btnSave";
             this.btnSave.Rotation = 0D;
             this.btnSave.Size = new System.Drawing.Size(80, 40);
@@ -85,7 +87,7 @@
             // 
             // textBoxMK
             // 
-            this.textBoxMK.Location = new System.Drawing.Point(280, 105);
+            this.textBoxMK.Location = new System.Drawing.Point(230, 80);
             this.textBoxMK.Multiline = true;
             this.textBoxMK.Name = "textBoxMK";
             this.textBoxMK.Size = new System.Drawing.Size(200, 24);
@@ -93,7 +95,7 @@
             // 
             // textBoxNhapLaiMK
             // 
-            this.textBoxNhapLaiMK.Location = new System.Drawing.Point(280, 165);
+            this.textBoxNhapLaiMK.Location = new System.Drawing.Point(230, 130);
             this.textBoxNhapLaiMK.Multiline = true;
             this.textBoxNhapLaiMK.Name = "textBoxNhapLaiMK";
             this.textBoxNhapLaiMK.Size = new System.Drawing.Size(200, 24);
@@ -101,7 +103,7 @@
             // 
             // textBoxTenTK
             // 
-            this.textBoxTenTK.Location = new System.Drawing.Point(280, 45);
+            this.textBoxTenTK.Location = new System.Drawing.Point(230, 30);
             this.textBoxTenTK.Multiline = true;
             this.textBoxTenTK.Name = "textBoxTenTK";
             this.textBoxTenTK.Size = new System.Drawing.Size(200, 24);
@@ -111,7 +113,7 @@
             // 
             this.labelMK.AutoSize = true;
             this.labelMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMK.Location = new System.Drawing.Point(60, 105);
+            this.labelMK.Location = new System.Drawing.Point(50, 80);
             this.labelMK.Name = "labelMK";
             this.labelMK.Size = new System.Drawing.Size(89, 24);
             this.labelMK.TabIndex = 30;
@@ -121,7 +123,7 @@
             // 
             this.labelNhapLaiMK.AutoSize = true;
             this.labelNhapLaiMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNhapLaiMK.Location = new System.Drawing.Point(60, 165);
+            this.labelNhapLaiMK.Location = new System.Drawing.Point(50, 130);
             this.labelNhapLaiMK.Name = "labelNhapLaiMK";
             this.labelNhapLaiMK.Size = new System.Drawing.Size(169, 24);
             this.labelNhapLaiMK.TabIndex = 29;
@@ -131,7 +133,7 @@
             // 
             this.labelTenTK.AutoSize = true;
             this.labelTenTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenTK.Location = new System.Drawing.Point(60, 45);
+            this.labelTenTK.Location = new System.Drawing.Point(50, 30);
             this.labelTenTK.Name = "labelTenTK";
             this.labelTenTK.Size = new System.Drawing.Size(135, 24);
             this.labelTenTK.TabIndex = 27;
@@ -142,23 +144,12 @@
             this.groupBoxQuyen.Controls.Add(this.checkBoxLeTan);
             this.groupBoxQuyen.Controls.Add(this.checkBoxQuanLy);
             this.groupBoxQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxQuyen.Location = new System.Drawing.Point(64, 216);
+            this.groupBoxQuyen.Location = new System.Drawing.Point(50, 180);
             this.groupBoxQuyen.Name = "groupBoxQuyen";
-            this.groupBoxQuyen.Size = new System.Drawing.Size(416, 100);
+            this.groupBoxQuyen.Size = new System.Drawing.Size(380, 100);
             this.groupBoxQuyen.TabIndex = 36;
             this.groupBoxQuyen.TabStop = false;
             this.groupBoxQuyen.Text = "Quyền";
-            // 
-            // checkBoxQuanLy
-            // 
-            this.checkBoxQuanLy.AutoSize = true;
-            this.checkBoxQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxQuanLy.Location = new System.Drawing.Point(6, 28);
-            this.checkBoxQuanLy.Name = "checkBoxQuanLy";
-            this.checkBoxQuanLy.Size = new System.Drawing.Size(87, 24);
-            this.checkBoxQuanLy.TabIndex = 0;
-            this.checkBoxQuanLy.Text = "Quản Lý";
-            this.checkBoxQuanLy.UseVisualStyleBackColor = true;
             // 
             // checkBoxLeTan
             // 
@@ -171,26 +162,51 @@
             this.checkBoxLeTan.Text = "Lễ Tân";
             this.checkBoxLeTan.UseVisualStyleBackColor = true;
             // 
+            // checkBoxQuanLy
+            // 
+            this.checkBoxQuanLy.AutoSize = true;
+            this.checkBoxQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxQuanLy.Location = new System.Drawing.Point(6, 28);
+            this.checkBoxQuanLy.Name = "checkBoxQuanLy";
+            this.checkBoxQuanLy.Size = new System.Drawing.Size(87, 24);
+            this.checkBoxQuanLy.TabIndex = 0;
+            this.checkBoxQuanLy.Text = "Quản Lý";
+            this.checkBoxQuanLy.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxAddEmp
+            // 
+            this.groupBoxAddEmp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxAddEmp.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxAddEmp.Controls.Add(this.textBoxTenTK);
+            this.groupBoxAddEmp.Controls.Add(this.btnCancel);
+            this.groupBoxAddEmp.Controls.Add(this.groupBoxQuyen);
+            this.groupBoxAddEmp.Controls.Add(this.textBoxNhapLaiMK);
+            this.groupBoxAddEmp.Controls.Add(this.textBoxMK);
+            this.groupBoxAddEmp.Controls.Add(this.btnSave);
+            this.groupBoxAddEmp.Controls.Add(this.labelTenTK);
+            this.groupBoxAddEmp.Controls.Add(this.labelMK);
+            this.groupBoxAddEmp.Controls.Add(this.labelNhapLaiMK);
+            this.groupBoxAddEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxAddEmp.Location = new System.Drawing.Point(20, 30);
+            this.groupBoxAddEmp.Name = "groupBoxAddEmp";
+            this.groupBoxAddEmp.Size = new System.Drawing.Size(450, 342);
+            this.groupBoxAddEmp.TabIndex = 37;
+            this.groupBoxAddEmp.TabStop = false;
+            this.groupBoxAddEmp.Text = "Thêm Tài Khoản";
+            // 
             // AddUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 396);
-            this.Controls.Add(this.groupBoxQuyen);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.textBoxMK);
-            this.Controls.Add(this.textBoxNhapLaiMK);
-            this.Controls.Add(this.textBoxTenTK);
-            this.Controls.Add(this.labelMK);
-            this.Controls.Add(this.labelNhapLaiMK);
-            this.Controls.Add(this.labelTenTK);
+            this.Controls.Add(this.groupBoxAddEmp);
             this.Name = "AddUsersForm";
             this.Text = "AddUsersForm";
             this.groupBoxQuyen.ResumeLayout(false);
             this.groupBoxQuyen.PerformLayout();
+            this.groupBoxAddEmp.ResumeLayout(false);
+            this.groupBoxAddEmp.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -207,5 +223,6 @@
         private System.Windows.Forms.GroupBox groupBoxQuyen;
         private System.Windows.Forms.CheckBox checkBoxLeTan;
         private System.Windows.Forms.CheckBox checkBoxQuanLy;
+        private System.Windows.Forms.GroupBox groupBoxAddEmp;
     }
 }

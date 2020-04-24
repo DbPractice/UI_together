@@ -30,12 +30,13 @@
         {
             this.panelLogo = new System.Windows.Forms.Panel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.textBoxUserName = new System.Windows.Forms.TextBox();
+            this.textBoxPassWord = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnX = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // panelLogo
@@ -59,6 +60,16 @@
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
             // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderColor = System.Drawing.Color.LightGray;
+            this.lineShape2.Enabled = false;
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 310;
+            this.lineShape2.X2 = 717;
+            this.lineShape2.Y1 = 171;
+            this.lineShape2.Y2 = 171;
+            // 
             // lineShape1
             // 
             this.lineShape1.BorderColor = System.Drawing.Color.LightGray;
@@ -69,39 +80,33 @@
             this.lineShape1.Y1 = 100;
             this.lineShape1.Y2 = 100;
             // 
-            // textBox1
+            // textBoxUserName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(310, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(408, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "User";
+            this.textBoxUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.textBoxUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUserName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUserName.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxUserName.Location = new System.Drawing.Point(310, 77);
+            this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.Size = new System.Drawing.Size(408, 20);
+            this.textBoxUserName.TabIndex = 2;
+            this.textBoxUserName.Text = "UserName";
+            this.textBoxUserName.Enter += new System.EventHandler(this.textBoxUserName_Enter);
+            this.textBoxUserName.Leave += new System.EventHandler(this.textBoxUserName_Leave);
             // 
-            // textBox2
+            // textBoxPassWord
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox2.Location = new System.Drawing.Point(310, 146);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(408, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "Pass Word";
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.BorderColor = System.Drawing.Color.LightGray;
-            this.lineShape2.Enabled = false;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 310;
-            this.lineShape2.X2 = 717;
-            this.lineShape2.Y1 = 171;
-            this.lineShape2.Y2 = 171;
+            this.textBoxPassWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.textBoxPassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPassWord.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassWord.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxPassWord.Location = new System.Drawing.Point(310, 146);
+            this.textBoxPassWord.Name = "textBoxPassWord";
+            this.textBoxPassWord.Size = new System.Drawing.Size(408, 20);
+            this.textBoxPassWord.TabIndex = 3;
+            this.textBoxPassWord.Text = "PassWord";
+            this.textBoxPassWord.Enter += new System.EventHandler(this.textBoxPassWord_Enter);
+            this.textBoxPassWord.Leave += new System.EventHandler(this.textBoxPassWord_Leave);
             // 
             // label1
             // 
@@ -131,21 +136,40 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // btnX
+            // 
+            this.btnX.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnX.BackColor = System.Drawing.Color.Transparent;
+            this.btnX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnX.FlatAppearance.BorderSize = 0;
+            this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnX.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnX.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.btnX.IconColor = System.Drawing.Color.Red;
+            this.btnX.IconSize = 30;
+            this.btnX.Location = new System.Drawing.Point(742, 3);
+            this.btnX.Name = "btnX";
+            this.btnX.Rotation = 0D;
+            this.btnX.Size = new System.Drawing.Size(26, 30);
+            this.btnX.TabIndex = 6;
+            this.btnX.UseVisualStyleBackColor = false;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPassWord);
+            this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.panelLogo);
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.ResumeLayout(false);
@@ -159,9 +183,10 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxUserName;
+        private System.Windows.Forms.TextBox textBoxPassWord;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogin;
+        private FontAwesome.Sharp.IconButton btnX;
     }
 }

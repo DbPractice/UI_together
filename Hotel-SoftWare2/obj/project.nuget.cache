@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cxc/MxSXOHTM1oGc/708YXwZwixPxWnhzp2jVklIjt4I+w5MVraURvDp2jUJ8CUZMvn/dvybBmM3RTTMJ4tYeA==",
+  "dgSpecHash": "cfD8CHK6LvZLth84HrIOOEyDyTeStGI8U3jrSaD1S4iOiytzSAhRIrL0ucXkmM85m7msvmq8ey8H+0b8GvXrEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FPTSHOP\\Documents\\Visual Studio 2019\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+  "projectFilePath": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\FPTSHOP\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
-    "C:\\Users\\FPTSHOP\\.nuget\\packages\\fontawesome.sharp\\5.12.1\\fontawesome.sharp.5.12.1.nupkg.sha512"
+    "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
+    "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome.sharp\\5.12.1\\fontawesome.sharp.5.12.1.nupkg.sha512"
   ],
   "logs": []
 }

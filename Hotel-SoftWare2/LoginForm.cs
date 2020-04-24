@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Hotel_SoftWare2
 {
     public partial class LoginForm : Form
     {
+        Thread th;
         public LoginForm()
         {
             InitializeComponent();
@@ -19,7 +21,60 @@ namespace Hotel_SoftWare2
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            this.Close();
+            th = new Thread(openMainForm);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+        private void openMainForm(object obj)
+        {
+            Application.Run(new MainForm());
+        }
 
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBoxUserName_Enter(object sender, EventArgs e)
+        {
+            if (textBoxUserName.Text == "UserName")
+            {
+                textBoxUserName.Text = "";
+                textBoxUserName.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void textBoxUserName_Leave(object sender, EventArgs e)
+        {
+            if (textBoxUserName.Text == "")
+            {
+                textBoxUserName.Text = "UserName";
+                textBoxUserName.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void textBoxPassWord_Enter(object sender, EventArgs e)
+        {
+            if (textBoxPassWord.Text == "PassWord")
+            {
+                textBoxPassWord.Text = "";
+                textBoxPassWord.ForeColor = Color.LightGray;
+                textBoxPassWord.UseSystemPasswordChar = true;
+            }
+            
+            
+        }
+
+        private void textBoxPassWord_Leave(object sender, EventArgs e)
+        {
+            if (textBoxPassWord.Text == "") 
+            {
+                textBoxPassWord.Text = "PassWord";
+                textBoxPassWord.ForeColor = Color.DimGray;
+                textBoxPassWord.UseSystemPasswordChar = false;
+            }
+            
         }
     }
 }

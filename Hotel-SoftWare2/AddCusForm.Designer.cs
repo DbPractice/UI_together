@@ -40,13 +40,15 @@
             this.textBoxTenKH = new System.Windows.Forms.TextBox();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
+            this.groupBoxAddCus = new System.Windows.Forms.GroupBox();
+            this.groupBoxAddCus.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelMaKH
             // 
             this.labelMaKH.AutoSize = true;
             this.labelMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaKH.Location = new System.Drawing.Point(60, 40);
+            this.labelMaKH.Location = new System.Drawing.Point(50, 40);
             this.labelMaKH.Name = "labelMaKH";
             this.labelMaKH.Size = new System.Drawing.Size(146, 24);
             this.labelMaKH.TabIndex = 0;
@@ -56,7 +58,7 @@
             // 
             this.labelSDT.AutoSize = true;
             this.labelSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSDT.Location = new System.Drawing.Point(60, 280);
+            this.labelSDT.Location = new System.Drawing.Point(50, 240);
             this.labelSDT.Name = "labelSDT";
             this.labelSDT.Size = new System.Drawing.Size(130, 24);
             this.labelSDT.TabIndex = 1;
@@ -66,7 +68,7 @@
             // 
             this.labelDiaChi.AutoSize = true;
             this.labelDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiaChi.Location = new System.Drawing.Point(60, 220);
+            this.labelDiaChi.Location = new System.Drawing.Point(50, 190);
             this.labelDiaChi.Name = "labelDiaChi";
             this.labelDiaChi.Size = new System.Drawing.Size(70, 24);
             this.labelDiaChi.TabIndex = 2;
@@ -76,7 +78,7 @@
             // 
             this.labelSoCMND.AutoSize = true;
             this.labelSoCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoCMND.Location = new System.Drawing.Point(60, 160);
+            this.labelSoCMND.Location = new System.Drawing.Point(50, 140);
             this.labelSoCMND.Name = "labelSoCMND";
             this.labelSoCMND.Size = new System.Drawing.Size(94, 24);
             this.labelSoCMND.TabIndex = 3;
@@ -86,7 +88,7 @@
             // 
             this.labelTenKH.AutoSize = true;
             this.labelTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenKH.Location = new System.Drawing.Point(60, 100);
+            this.labelTenKH.Location = new System.Drawing.Point(50, 90);
             this.labelTenKH.Name = "labelTenKH";
             this.labelTenKH.Size = new System.Drawing.Size(154, 24);
             this.labelTenKH.TabIndex = 4;
@@ -94,7 +96,7 @@
             // 
             // textBoxMaKH
             // 
-            this.textBoxMaKH.Location = new System.Drawing.Point(280, 40);
+            this.textBoxMaKH.Location = new System.Drawing.Point(230, 40);
             this.textBoxMaKH.Multiline = true;
             this.textBoxMaKH.Name = "textBoxMaKH";
             this.textBoxMaKH.Size = new System.Drawing.Size(200, 24);
@@ -102,7 +104,7 @@
             // 
             // textBoxDiaChi
             // 
-            this.textBoxDiaChi.Location = new System.Drawing.Point(280, 220);
+            this.textBoxDiaChi.Location = new System.Drawing.Point(230, 190);
             this.textBoxDiaChi.Multiline = true;
             this.textBoxDiaChi.Name = "textBoxDiaChi";
             this.textBoxDiaChi.Size = new System.Drawing.Size(200, 24);
@@ -110,7 +112,7 @@
             // 
             // textBoxSDT
             // 
-            this.textBoxSDT.Location = new System.Drawing.Point(280, 280);
+            this.textBoxSDT.Location = new System.Drawing.Point(230, 240);
             this.textBoxSDT.Multiline = true;
             this.textBoxSDT.Name = "textBoxSDT";
             this.textBoxSDT.Size = new System.Drawing.Size(200, 24);
@@ -118,7 +120,7 @@
             // 
             // textBoxSoCMND
             // 
-            this.textBoxSoCMND.Location = new System.Drawing.Point(280, 160);
+            this.textBoxSoCMND.Location = new System.Drawing.Point(230, 140);
             this.textBoxSoCMND.Multiline = true;
             this.textBoxSoCMND.Name = "textBoxSoCMND";
             this.textBoxSoCMND.Size = new System.Drawing.Size(200, 24);
@@ -126,7 +128,7 @@
             // 
             // textBoxTenKH
             // 
-            this.textBoxTenKH.Location = new System.Drawing.Point(280, 105);
+            this.textBoxTenKH.Location = new System.Drawing.Point(230, 90);
             this.textBoxTenKH.Multiline = true;
             this.textBoxTenKH.Name = "textBoxTenKH";
             this.textBoxTenKH.Size = new System.Drawing.Size(200, 24);
@@ -142,7 +144,7 @@
             this.btnSave.IconColor = System.Drawing.Color.White;
             this.btnSave.IconSize = 30;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(126, 334);
+            this.btnSave.Location = new System.Drawing.Point(116, 286);
             this.btnSave.Name = "btnSave";
             this.btnSave.Rotation = 0D;
             this.btnSave.Size = new System.Drawing.Size(80, 40);
@@ -162,7 +164,7 @@
             this.btnCancel.IconColor = System.Drawing.Color.White;
             this.btnCancel.IconSize = 30;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(280, 334);
+            this.btnCancel.Location = new System.Drawing.Point(230, 286);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Rotation = 0D;
             this.btnCancel.Size = new System.Drawing.Size(88, 40);
@@ -173,27 +175,41 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // groupBoxAddCus
+            // 
+            this.groupBoxAddCus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxAddCus.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxAddCus.Controls.Add(this.textBoxMaKH);
+            this.groupBoxAddCus.Controls.Add(this.textBoxSDT);
+            this.groupBoxAddCus.Controls.Add(this.btnCancel);
+            this.groupBoxAddCus.Controls.Add(this.textBoxTenKH);
+            this.groupBoxAddCus.Controls.Add(this.textBoxSoCMND);
+            this.groupBoxAddCus.Controls.Add(this.textBoxDiaChi);
+            this.groupBoxAddCus.Controls.Add(this.btnSave);
+            this.groupBoxAddCus.Controls.Add(this.labelTenKH);
+            this.groupBoxAddCus.Controls.Add(this.labelMaKH);
+            this.groupBoxAddCus.Controls.Add(this.labelSoCMND);
+            this.groupBoxAddCus.Controls.Add(this.labelDiaChi);
+            this.groupBoxAddCus.Controls.Add(this.labelSDT);
+            this.groupBoxAddCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxAddCus.Location = new System.Drawing.Point(20, 30);
+            this.groupBoxAddCus.Name = "groupBoxAddCus";
+            this.groupBoxAddCus.Size = new System.Drawing.Size(450, 342);
+            this.groupBoxAddCus.TabIndex = 27;
+            this.groupBoxAddCus.TabStop = false;
+            this.groupBoxAddCus.Text = "Thêm Khách Hàng";
+            // 
             // AddCusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 396);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.textBoxTenKH);
-            this.Controls.Add(this.textBoxSoCMND);
-            this.Controls.Add(this.textBoxSDT);
-            this.Controls.Add(this.textBoxDiaChi);
-            this.Controls.Add(this.textBoxMaKH);
-            this.Controls.Add(this.labelTenKH);
-            this.Controls.Add(this.labelSoCMND);
-            this.Controls.Add(this.labelDiaChi);
-            this.Controls.Add(this.labelSDT);
-            this.Controls.Add(this.labelMaKH);
+            this.Controls.Add(this.groupBoxAddCus);
             this.Name = "AddCusForm";
             this.Text = "AddCusForm";
+            this.groupBoxAddCus.ResumeLayout(false);
+            this.groupBoxAddCus.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -211,5 +227,6 @@
         private System.Windows.Forms.TextBox textBoxTenKH;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnCancel;
+        private System.Windows.Forms.GroupBox groupBoxAddCus;
     }
 }
