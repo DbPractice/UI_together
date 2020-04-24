@@ -98,3 +98,5 @@ C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\De
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.QLServiceForm.resources
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ServiceRoomForm.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.QLServiceForm.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ServiceRoomForm.resources
