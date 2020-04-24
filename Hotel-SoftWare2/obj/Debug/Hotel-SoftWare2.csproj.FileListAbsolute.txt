@@ -102,3 +102,4 @@ C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\De
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.QLServiceForm.resources
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ServiceRoomForm.resources
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ChangePassForm.resources
