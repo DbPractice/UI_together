@@ -44,5 +44,10 @@ namespace Hotel_SoftWare2
             childForm2.Show();
 
         }
+
+        private void EmployeesForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

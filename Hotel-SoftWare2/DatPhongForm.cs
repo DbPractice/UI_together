@@ -164,7 +164,7 @@ namespace Hotel_SoftWare2
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void iconButton2_Click_1(object sender, EventArgs e)
@@ -178,5 +178,12 @@ namespace Hotel_SoftWare2
         {
             Application.Run(new ttKhachHang());
         }
+
+        private void DatPhongForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

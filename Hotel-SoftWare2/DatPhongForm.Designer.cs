@@ -476,6 +476,7 @@
             this.Controls.Add(this.label4);
             this.Name = "DatPhongForm";
             this.Text = "DatPhongForm";
+            this.Load += new System.EventHandler(this.DatPhongForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();

@@ -105,3 +105,4 @@ C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.QLServiceForm.resources
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ServiceRoomForm.resources
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ttKhachHang.resources
+C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ThemsuaxoaPhong.resources

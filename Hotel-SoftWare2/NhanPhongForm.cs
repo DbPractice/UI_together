@@ -24,7 +24,7 @@ namespace Hotel_SoftWare2
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
 
         }
 
@@ -34,6 +34,26 @@ namespace Hotel_SoftWare2
             {
                 e.Cancel = true;
             }
+        }
+
+        private void NhanPhongForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nhận phòng thành công !", "Thông báo");
         }
     }
 }
