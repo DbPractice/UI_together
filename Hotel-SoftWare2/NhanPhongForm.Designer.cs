@@ -68,6 +68,7 @@
             this.label1.Size = new System.Drawing.Size(243, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin khách hàng:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -232,6 +233,7 @@
             this.label12.Size = new System.Drawing.Size(102, 22);
             this.label12.TabIndex = 4;
             this.label12.Text = "Phòng Đặt:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // dataGridView1
             // 
@@ -259,6 +261,7 @@
             this.iconButton1.TabIndex = 6;
             this.iconButton1.Text = "      NHẬN PHÒNG";
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton2
             // 
@@ -294,6 +297,7 @@
             this.Name = "NhanPhongForm";
             this.Text = "NhanPhong";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NhanPhongForm_FormClosing);
+            this.Load += new System.EventHandler(this.NhanPhongForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();

@@ -163,6 +163,7 @@
             this.Controls.Add(this.dataGridViewEmployees);
             this.Name = "EmployeesForm";
             this.Text = "EmployeesForm";
+            this.Load += new System.EventHandler(this.EmployeesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).EndInit();
             this.ResumeLayout(false);
 
