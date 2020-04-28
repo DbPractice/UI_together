@@ -121,6 +121,12 @@
     <Compile Include="ServiceRoomForm.Designer.cs">
       <DependentUpon>ServiceRoomForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemsuaxoaPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemsuaxoaPhong.Designer.cs">
+      <DependentUpon>ThemsuaxoaPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="TraPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,12 @@
     </Compile>
     <Compile Include="NhanPhongForm.Designer.cs">
       <DependentUpon>NhanPhongForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ttKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ttKhachHang.Designer.cs">
+      <DependentUpon>ttKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>
@@ -198,8 +210,14 @@
     <EmbeddedResource Include="ServiceRoomForm.resx">
       <DependentUpon>ServiceRoomForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemsuaxoaPhong.resx">
+      <DependentUpon>ThemsuaxoaPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TraPhong.resx">
       <DependentUpon>TraPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ttKhachHang.resx">
+      <DependentUpon>ttKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>

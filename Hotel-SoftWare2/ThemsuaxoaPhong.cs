@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Hotel_SoftWare2
 {
-    public partial class Huyphong : Form
+    public partial class ThemsuaxoaPhong : Form
     {
-        public Huyphong()
+        public ThemsuaxoaPhong()
         {
             InitializeComponent();
         }
@@ -20,14 +21,10 @@ namespace Hotel_SoftWare2
         private void iconButton2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void Huyphong_Load(object sender, EventArgs e)
-        {
 
         }
 
-        private void Huyphong_FormClosing(object sender, FormClosingEventArgs e)
+        private void ThemsuaxoaPhong_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn thoát?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
