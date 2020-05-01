@@ -46,7 +46,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Gainsboro;
@@ -67,7 +67,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Gainsboro;
@@ -144,6 +144,7 @@
             this.groupBoxQuyen.Controls.Add(this.checkBoxLeTan);
             this.groupBoxQuyen.Controls.Add(this.checkBoxQuanLy);
             this.groupBoxQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxQuyen.ForeColor = System.Drawing.Color.White;
             this.groupBoxQuyen.Location = new System.Drawing.Point(50, 180);
             this.groupBoxQuyen.Name = "groupBoxQuyen";
             this.groupBoxQuyen.Size = new System.Drawing.Size(380, 100);
@@ -175,8 +176,7 @@
             // 
             // groupBoxAddEmp
             // 
-            this.groupBoxAddEmp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBoxAddEmp.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxAddEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.groupBoxAddEmp.Controls.Add(this.textBoxTenTK);
             this.groupBoxAddEmp.Controls.Add(this.btnCancel);
             this.groupBoxAddEmp.Controls.Add(this.groupBoxQuyen);
@@ -186,10 +186,12 @@
             this.groupBoxAddEmp.Controls.Add(this.labelTenTK);
             this.groupBoxAddEmp.Controls.Add(this.labelMK);
             this.groupBoxAddEmp.Controls.Add(this.labelNhapLaiMK);
+            this.groupBoxAddEmp.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBoxAddEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxAddEmp.Location = new System.Drawing.Point(20, 30);
+            this.groupBoxAddEmp.ForeColor = System.Drawing.Color.White;
+            this.groupBoxAddEmp.Location = new System.Drawing.Point(0, 0);
             this.groupBoxAddEmp.Name = "groupBoxAddEmp";
-            this.groupBoxAddEmp.Size = new System.Drawing.Size(450, 342);
+            this.groupBoxAddEmp.Size = new System.Drawing.Size(760, 600);
             this.groupBoxAddEmp.TabIndex = 37;
             this.groupBoxAddEmp.TabStop = false;
             this.groupBoxAddEmp.Text = "Thêm Tài Khoản";
@@ -198,8 +200,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 396);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.ClientSize = new System.Drawing.Size(940, 600);
             this.Controls.Add(this.groupBoxAddEmp);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddUsersForm";
             this.Text = "AddUsersForm";
             this.groupBoxQuyen.ResumeLayout(false);

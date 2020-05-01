@@ -51,7 +51,7 @@
             this.btnHeThong = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelTopChill = new System.Windows.Forms.Panel();
-            this.textBoxHelloUser = new System.Windows.Forms.TextBox();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.panelBotChildForm = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelQuanLy.SuspendLayout();
@@ -75,7 +75,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 561);
+            this.panelMenu.Size = new System.Drawing.Size(200, 630);
             this.panelMenu.TabIndex = 0;
             // 
             // btnThongKeHoaDon
@@ -95,7 +95,7 @@
             this.btnThongKeHoaDon.Rotation = 0D;
             this.btnThongKeHoaDon.Size = new System.Drawing.Size(183, 40);
             this.btnThongKeHoaDon.TabIndex = 7;
-            this.btnThongKeHoaDon.Text = "Thống Kê Hóa Đơn";
+            this.btnThongKeHoaDon.Text = "Thống Kê Doanh Thu\r\n";
             this.btnThongKeHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongKeHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongKeHoaDon.UseVisualStyleBackColor = true;
@@ -517,26 +517,27 @@
             // panelTopChill
             // 
             this.panelTopChill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
-            this.panelTopChill.Controls.Add(this.textBoxHelloUser);
+            this.panelTopChill.Controls.Add(this.textBoxTitle);
             this.panelTopChill.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTopChill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelTopChill.Location = new System.Drawing.Point(200, 0);
             this.panelTopChill.Name = "panelTopChill";
-            this.panelTopChill.Size = new System.Drawing.Size(734, 30);
+            this.panelTopChill.Size = new System.Drawing.Size(940, 30);
             this.panelTopChill.TabIndex = 1;
             // 
-            // textBoxHelloUser
+            // textBoxTitle
             // 
-            this.textBoxHelloUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxHelloUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
-            this.textBoxHelloUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxHelloUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHelloUser.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBoxHelloUser.Location = new System.Drawing.Point(542, 6);
-            this.textBoxHelloUser.Multiline = true;
-            this.textBoxHelloUser.Name = "textBoxHelloUser";
-            this.textBoxHelloUser.Size = new System.Drawing.Size(100, 21);
-            this.textBoxHelloUser.TabIndex = 0;
-            this.textBoxHelloUser.Text = "Hello, Manager";
+            this.textBoxTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
+            this.textBoxTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.textBoxTitle.Location = new System.Drawing.Point(415, 3);
+            this.textBoxTitle.Multiline = true;
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(263, 21);
+            this.textBoxTitle.TabIndex = 0;
+            this.textBoxTitle.Text = "HOME\r\n";
             // 
             // panelBotChildForm
             // 
@@ -544,7 +545,7 @@
             this.panelBotChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBotChildForm.Location = new System.Drawing.Point(200, 30);
             this.panelBotChildForm.Name = "panelBotChildForm";
-            this.panelBotChildForm.Size = new System.Drawing.Size(734, 531);
+            this.panelBotChildForm.Size = new System.Drawing.Size(940, 600);
             this.panelBotChildForm.TabIndex = 2;
             this.panelBotChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBotChildForm_Paint);
             // 
@@ -552,11 +553,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 561);
+            this.ClientSize = new System.Drawing.Size(1140, 630);
             this.Controls.Add(this.panelBotChildForm);
             this.Controls.Add(this.panelTopChill);
             this.Controls.Add(this.panelMenu);
-            this.MinimumSize = new System.Drawing.Size(950, 600);
+            this.MinimumSize = new System.Drawing.Size(1156, 669);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HotelSystem";
@@ -596,7 +597,7 @@
         private FontAwesome.Sharp.IconButton btnThongKeHoaDon;
         private System.Windows.Forms.Panel panelTopChill;
         private System.Windows.Forms.Panel panelBotChildForm;
-        private System.Windows.Forms.TextBox textBoxHelloUser;
+        private System.Windows.Forms.TextBox textBoxTitle;
     }
 }
 

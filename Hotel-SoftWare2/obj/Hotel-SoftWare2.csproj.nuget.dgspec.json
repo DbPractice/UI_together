@@ -35,6 +35,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
             "FontAwesome": {
               "target": "Package",
               "version": "[4.7.0, )"

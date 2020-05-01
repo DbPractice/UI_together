@@ -14,5 +14,6 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgFontAwesome Condition=" '$(PkgFontAwesome)' == '' ">C:\Users\datproqhna\.nuget\packages\fontawesome\4.7.0</PkgFontAwesome>
+    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\datproqhna\.nuget\packages\entityframework\6.2.0</PkgEntityFramework>
   </PropertyGroup>
 </Project>

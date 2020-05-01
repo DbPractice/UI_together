@@ -15,6 +15,7 @@ namespace Hotel_SoftWare2
         public UsersForm()
         {
             InitializeComponent();
+            btnSua.Enabled = btnXoa.Enabled = false;
         }
 
         private void btnX_Click(object sender, EventArgs e)
