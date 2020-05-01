@@ -37,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxloaiP = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label32 = new System.Windows.Forms.Label();
@@ -71,7 +70,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 270);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 200);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(310, 210);
             this.dataGridView1.TabIndex = 21;
@@ -85,7 +84,7 @@
             this.panel10.Controls.Add(this.label6);
             this.panel10.Controls.Add(this.label2);
             this.panel10.Controls.Add(this.comboBoxloaiP);
-            this.panel10.Location = new System.Drawing.Point(31, 113);
+            this.panel10.Location = new System.Drawing.Point(31, 58);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(310, 109);
             this.panel10.TabIndex = 20;
@@ -155,23 +154,12 @@
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 18;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Chiller", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(197, -1);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(298, 43);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Welcome to our Hotel !";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(27, 74);
+            this.label4.Location = new System.Drawing.Point(27, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 19);
             this.label4.TabIndex = 17;
@@ -182,7 +170,6 @@
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel1.Controls.Add(this.label32);
             this.panel1.Controls.Add(this.label31);
-            this.panel1.Controls.Add(this.label30);
             this.panel1.Controls.Add(this.label29);
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.label27);
@@ -199,7 +186,7 @@
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(395, 113);
+            this.panel1.Location = new System.Drawing.Point(386, 282);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 128);
             this.panel1.TabIndex = 27;
@@ -228,7 +215,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(78, 71);
+            this.label30.Location = new System.Drawing.Point(473, 331);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(16, 14);
             this.label30.TabIndex = 43;
@@ -396,7 +383,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(403, 74);
+            this.label3.Location = new System.Drawing.Point(391, 247);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(202, 19);
             this.label3.TabIndex = 28;
@@ -412,7 +399,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconSize = 22;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(31, 218);
+            this.iconButton1.Location = new System.Drawing.Point(375, 84);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Rotation = 0D;
             this.iconButton1.Size = new System.Drawing.Size(105, 40);
@@ -466,13 +453,13 @@
             this.ClientSize = new System.Drawing.Size(718, 492);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.label30);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
             this.Name = "DatPhongForm";
             this.Text = "DatPhongForm";
@@ -494,7 +481,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxloaiP;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label1;
