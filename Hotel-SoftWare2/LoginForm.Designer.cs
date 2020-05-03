@@ -87,6 +87,7 @@
             this.textBoxUserName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUserName.ForeColor = System.Drawing.Color.DimGray;
             this.textBoxUserName.Location = new System.Drawing.Point(310, 77);
+            this.textBoxUserName.MaxLength = 30;
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(408, 20);
             this.textBoxUserName.TabIndex = 2;
@@ -101,6 +102,7 @@
             this.textBoxPassWord.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassWord.ForeColor = System.Drawing.Color.DimGray;
             this.textBoxPassWord.Location = new System.Drawing.Point(310, 146);
+            this.textBoxPassWord.MaxLength = 30;
             this.textBoxPassWord.Name = "textBoxPassWord";
             this.textBoxPassWord.Size = new System.Drawing.Size(408, 20);
             this.textBoxPassWord.TabIndex = 3;

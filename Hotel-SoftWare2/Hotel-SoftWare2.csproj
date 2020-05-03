@@ -51,18 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCusForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddCusForm.Designer.cs">
-      <DependentUpon>AddCusForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddEmpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddEmpForm.Designer.cs">
-      <DependentUpon>AddEmpForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +114,15 @@
     <Compile Include="EmployeesForm.Designer.cs">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="getAccount_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getallCus_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getallEmp_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
@@ -149,6 +146,9 @@
     </Compile>
     <Compile Include="Huyphong.Designer.cs">
       <DependentUpon>Huyphong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logIn_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -221,12 +221,6 @@
     <Compile Include="UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddCusForm.resx">
-      <DependentUpon>AddCusForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddEmpForm.resx">
-      <DependentUpon>AddEmpForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddUsersForm.resx">
       <DependentUpon>AddUsersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +316,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="dbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>dbModel.edmx</DependentUpon>
@@ -332,9 +329,6 @@
       <DependentUpon>dbModel.edmx</DependentUpon>
       <LastGenOutput>dbModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

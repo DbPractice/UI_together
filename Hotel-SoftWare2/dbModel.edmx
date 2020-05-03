@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ChiTietPhieuThue">
           <Key>
             <PropertyRef Name="MaChiTietPhieuThue" />
@@ -226,6 +226,51 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="addCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MAKH" Type="varchar" Mode="In" />
+          <Parameter Name="TENKH" Type="nvarchar" Mode="In" />
+          <Parameter Name="CMND" Type="char" Mode="In" />
+          <Parameter Name="DIACHI" Type="nvarchar" Mode="In" />
+          <Parameter Name="SDT" Type="char" Mode="In" />
+        </Function>
+        <Function Name="addEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MANV" Type="varchar" Mode="In" />
+          <Parameter Name="HOTEN" Type="nvarchar" Mode="In" />
+          <Parameter Name="NGAYSINH" Type="date" Mode="In" />
+          <Parameter Name="SDT" Type="char" Mode="In" />
+        </Function>
+        <Function Name="delCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MAKH" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="delEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MANV" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="getAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="getallCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="getallEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="logIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tentk" Type="varchar" Mode="In" />
+          <Parameter Name="matkhau" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="updateAcc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MANV" Type="varchar" Mode="In" />
+          <Parameter Name="tenTK" Type="varchar" Mode="In" />
+          <Parameter Name="matkhau" Type="varchar" Mode="In" />
+          <Parameter Name="quyen" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="updateCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MAKH" Type="varchar" Mode="In" />
+          <Parameter Name="TENKH" Type="nvarchar" Mode="In" />
+          <Parameter Name="CMND" Type="char" Mode="In" />
+          <Parameter Name="DIACHI" Type="nvarchar" Mode="In" />
+          <Parameter Name="SDT" Type="char" Mode="In" />
+        </Function>
+        <Function Name="updateEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MANV" Type="varchar" Mode="In" />
+          <Parameter Name="HOTEN" Type="nvarchar" Mode="In" />
+          <Parameter Name="NGAYSINH" Type="date" Mode="In" />
+          <Parameter Name="SDT" Type="char" Mode="In" />
+        </Function>
         <EntityContainer Name="dbModelStoreContainer">
           <EntitySet Name="ChiTietPhieuThue" EntityType="Self.ChiTietPhieuThue" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DichVu" EntityType="Self.DichVu" Schema="dbo" store:Type="Tables" />
@@ -275,8 +320,7 @@
             <End Role="Phong" EntitySet="Phong" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -519,7 +563,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="htEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ChiTietPhieuThues" EntityType="Self.ChiTietPhieuThue" />
           <EntitySet Name="DichVus" EntityType="Self.DichVu" />
           <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
@@ -567,13 +611,87 @@
             <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
             <End Role="PhieuThuePhong" EntitySet="PhieuThuePhongs" />
           </AssociationSet>
+          <FunctionImport Name="addCus">
+            <Parameter Name="MAKH" Mode="In" Type="String" />
+            <Parameter Name="TENKH" Mode="In" Type="String" />
+            <Parameter Name="CMND" Mode="In" Type="String" />
+            <Parameter Name="DIACHI" Mode="In" Type="String" />
+            <Parameter Name="SDT" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="delCus">
+          <Parameter Name="MAKH" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getAccount" ReturnType="Collection(dbModel.getAccount_Result)" />
+          <FunctionImport Name="getallCus" ReturnType="Collection(dbModel.getallCus_Result)" />
+          <FunctionImport Name="updateCus">
+            <Parameter Name="MAKH" Mode="In" Type="String" />
+            <Parameter Name="TENKH" Mode="In" Type="String" />
+            <Parameter Name="CMND" Mode="In" Type="String" />
+            <Parameter Name="DIACHI" Mode="In" Type="String" />
+            <Parameter Name="SDT" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="logIn" ReturnType="Collection(dbModel.logIn_Result)">
+            <Parameter Name="tentk" Mode="In" Type="String" />
+            <Parameter Name="matkhau" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="delEmp">
+          <Parameter Name="MANV" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getallEmp" ReturnType="Collection(dbModel.getallEmp_Result)" />
+          <FunctionImport Name="updateAcc">
+            <Parameter Name="MANV" Mode="In" Type="String" />
+            <Parameter Name="tenTK" Mode="In" Type="String" />
+            <Parameter Name="matkhau" Mode="In" Type="String" />
+            <Parameter Name="quyen" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="updateEmp">
+            <Parameter Name="MANV" Mode="In" Type="String" />
+            <Parameter Name="HOTEN" Mode="In" Type="String" />
+            <Parameter Name="NGAYSINH" Mode="In" Type="DateTime" />
+            <Parameter Name="SDT" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="addEmp">
+            <Parameter Name="MANV" Mode="In" Type="String" />
+            <Parameter Name="HOTEN" Mode="In" Type="String" />
+            <Parameter Name="NGAYSINH" Mode="In" Type="DateTime" />
+            <Parameter Name="SDT" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="getAccount_Result">
+          <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
+          <Property Type="Boolean" Name="Quyen" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="getallCus_Result">
+          <Property Type="String" Name="MaKH" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+        </ComplexType>
+        <ComplexType Name="logIn_Result">
+          <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
+          <Property Type="Boolean" Name="Quyen" Nullable="true" />
+          <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+          <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+        </ComplexType>
+        <ComplexType Name="getallEmp_Result">
+          <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+          <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities">
+        <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="htEntities">
           <EntitySetMapping Name="ChiTietPhieuThues">
             <EntityTypeMapping TypeName="dbModel.ChiTietPhieuThue">
               <MappingFragment StoreEntitySet="ChiTietPhieuThue">
@@ -698,6 +816,58 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="addCus" FunctionName="dbModel.Store.addCus" />
+          <FunctionImportMapping FunctionImportName="delCus" FunctionName="dbModel.Store.delCus" />
+          <FunctionImportMapping FunctionImportName="getAccount" FunctionName="dbModel.Store.getAccount">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.getAccount_Result">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="TenTk" ColumnName="TenTk" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getallCus" FunctionName="dbModel.Store.getallCus">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.getallCus_Result">
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+                <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="updateCus" FunctionName="dbModel.Store.updateCus" />
+          <FunctionImportMapping FunctionImportName="logIn" FunctionName="dbModel.Store.logIn">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.logIn_Result">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="TenTk" ColumnName="TenTk" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="delEmp" FunctionName="dbModel.Store.delEmp" />
+          <FunctionImportMapping FunctionImportName="getallEmp" FunctionName="dbModel.Store.getallEmp">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.getallEmp_Result">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="updateAcc" FunctionName="dbModel.Store.updateAcc" />
+          <FunctionImportMapping FunctionImportName="updateEmp" FunctionName="dbModel.Store.updateEmp" />
+          <FunctionImportMapping FunctionImportName="addEmp" FunctionName="dbModel.Store.addEmp" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
