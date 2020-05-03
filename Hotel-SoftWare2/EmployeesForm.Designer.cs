@@ -41,21 +41,21 @@
             // 
             this.dataGridViewEmployees.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEmployees.Location = new System.Drawing.Point(152, 25);
+            this.dataGridViewEmployees.Location = new System.Drawing.Point(170, 40);
             this.dataGridViewEmployees.Name = "dataGridViewEmployees";
-            this.dataGridViewEmployees.Size = new System.Drawing.Size(541, 435);
+            this.dataGridViewEmployees.Size = new System.Drawing.Size(760, 525);
             this.dataGridViewEmployees.TabIndex = 1;
             // 
             // btnX
             // 
             this.btnX.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnX.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.IconChar = FontAwesome.Sharp.IconChar.Undo;
             this.btnX.IconColor = System.Drawing.Color.White;
             this.btnX.IconSize = 30;
-            this.btnX.Location = new System.Drawing.Point(12, 320);
+            this.btnX.Location = new System.Drawing.Point(24, 340);
             this.btnX.Name = "btnX";
             this.btnX.Rotation = 0D;
             this.btnX.Size = new System.Drawing.Size(119, 42);
@@ -68,7 +68,7 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnTimKiem.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Gainsboro;
@@ -76,7 +76,7 @@
             this.btnTimKiem.IconColor = System.Drawing.Color.White;
             this.btnTimKiem.IconSize = 30;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(12, 260);
+            this.btnTimKiem.Location = new System.Drawing.Point(24, 280);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Rotation = 0D;
             this.btnTimKiem.Size = new System.Drawing.Size(119, 40);
@@ -89,7 +89,7 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnXoa.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Gainsboro;
@@ -97,7 +97,7 @@
             this.btnXoa.IconColor = System.Drawing.Color.White;
             this.btnXoa.IconSize = 30;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(12, 200);
+            this.btnXoa.Location = new System.Drawing.Point(24, 220);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Rotation = 0D;
             this.btnXoa.Size = new System.Drawing.Size(119, 40);
@@ -110,7 +110,7 @@
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnSua.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Gainsboro;
@@ -118,7 +118,7 @@
             this.btnSua.IconColor = System.Drawing.Color.White;
             this.btnSua.IconSize = 30;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(12, 140);
+            this.btnSua.Location = new System.Drawing.Point(24, 160);
             this.btnSua.Name = "btnSua";
             this.btnSua.Rotation = 0D;
             this.btnSua.Size = new System.Drawing.Size(119, 40);
@@ -131,7 +131,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnThem.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Gainsboro;
@@ -139,7 +139,7 @@
             this.btnThem.IconColor = System.Drawing.Color.White;
             this.btnThem.IconSize = 30;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(12, 80);
+            this.btnThem.Location = new System.Drawing.Point(24, 100);
             this.btnThem.Name = "btnThem";
             this.btnThem.Rotation = 0D;
             this.btnThem.Size = new System.Drawing.Size(119, 40);
@@ -154,13 +154,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 492);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.ClientSize = new System.Drawing.Size(940, 600);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridViewEmployees);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmployeesForm";
             this.Text = "EmployeesForm";
             this.Load += new System.EventHandler(this.EmployeesForm_Load);

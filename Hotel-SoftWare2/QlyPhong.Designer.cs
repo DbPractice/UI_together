@@ -170,10 +170,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(718, 492);
+            this.ClientSize = new System.Drawing.Size(940, 600);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QlyPhong";
             this.Text = "QlyPhong";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

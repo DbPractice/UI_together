@@ -92,7 +92,6 @@ D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\H
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.NhanPhongForm.resources
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.TraPhong.resources
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ChangePassForm.resources
-D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.AddEmpForm.resources
@@ -102,6 +101,8 @@ C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\De
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.QLServiceForm.resources
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ServiceRoomForm.resources
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ChangePassForm.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.QLServiceForm.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ServiceRoomForm.resources
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ChangePassForm.resources
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.QLServiceForm.resources
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ServiceRoomForm.resources
@@ -109,3 +110,8 @@ C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_
 C:\Users\THUY LINH\Documents\GitHub\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ThemsuaxoaPhong.resources
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ThemsuaxoaPhong.resources
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ttKhachHang.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ThemsuaxoaPhong.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.ttKhachHang.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.billForm.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.DoanhThuForm.resources

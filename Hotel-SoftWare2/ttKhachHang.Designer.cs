@@ -314,11 +314,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(718, 492);
+            this.ClientSize = new System.Drawing.Size(940, 600);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ttKhachHang";
             this.Text = "ttKhachHang";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ttKhachHang_FormClosing);

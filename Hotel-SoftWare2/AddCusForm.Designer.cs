@@ -136,7 +136,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Gainsboro;
@@ -144,7 +144,7 @@
             this.btnSave.IconColor = System.Drawing.Color.White;
             this.btnSave.IconSize = 30;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(116, 286);
+            this.btnSave.Location = new System.Drawing.Point(230, 387);
             this.btnSave.Name = "btnSave";
             this.btnSave.Rotation = 0D;
             this.btnSave.Size = new System.Drawing.Size(80, 40);
@@ -156,7 +156,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Gainsboro;
@@ -164,7 +164,7 @@
             this.btnCancel.IconColor = System.Drawing.Color.White;
             this.btnCancel.IconSize = 30;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(230, 286);
+            this.btnCancel.Location = new System.Drawing.Point(483, 387);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Rotation = 0D;
             this.btnCancel.Size = new System.Drawing.Size(88, 40);
@@ -177,8 +177,7 @@
             // 
             // groupBoxAddCus
             // 
-            this.groupBoxAddCus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBoxAddCus.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxAddCus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.groupBoxAddCus.Controls.Add(this.textBoxMaKH);
             this.groupBoxAddCus.Controls.Add(this.textBoxSDT);
             this.groupBoxAddCus.Controls.Add(this.btnCancel);
@@ -191,10 +190,12 @@
             this.groupBoxAddCus.Controls.Add(this.labelSoCMND);
             this.groupBoxAddCus.Controls.Add(this.labelDiaChi);
             this.groupBoxAddCus.Controls.Add(this.labelSDT);
+            this.groupBoxAddCus.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBoxAddCus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxAddCus.Location = new System.Drawing.Point(20, 30);
+            this.groupBoxAddCus.ForeColor = System.Drawing.Color.White;
+            this.groupBoxAddCus.Location = new System.Drawing.Point(0, 0);
             this.groupBoxAddCus.Name = "groupBoxAddCus";
-            this.groupBoxAddCus.Size = new System.Drawing.Size(450, 342);
+            this.groupBoxAddCus.Size = new System.Drawing.Size(760, 600);
             this.groupBoxAddCus.TabIndex = 27;
             this.groupBoxAddCus.TabStop = false;
             this.groupBoxAddCus.Text = "Thêm Khách Hàng";
@@ -203,9 +204,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 396);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.ClientSize = new System.Drawing.Size(940, 600);
             this.Controls.Add(this.groupBoxAddCus);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCusForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "AddCusForm";
             this.groupBoxAddCus.ResumeLayout(false);
             this.groupBoxAddCus.PerformLayout();

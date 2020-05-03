@@ -43,7 +43,7 @@
             // groupBoxChangePass
             // 
             this.groupBoxChangePass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBoxChangePass.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.groupBoxChangePass.Controls.Add(this.textBoxMaKH);
             this.groupBoxChangePass.Controls.Add(this.btnCancel);
             this.groupBoxChangePass.Controls.Add(this.textBoxTenKH);
@@ -53,9 +53,10 @@
             this.groupBoxChangePass.Controls.Add(this.labelMaKH);
             this.groupBoxChangePass.Controls.Add(this.labelSoCMND);
             this.groupBoxChangePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxChangePass.Location = new System.Drawing.Point(134, 75);
+            this.groupBoxChangePass.ForeColor = System.Drawing.Color.White;
+            this.groupBoxChangePass.Location = new System.Drawing.Point(65, 57);
             this.groupBoxChangePass.Name = "groupBoxChangePass";
-            this.groupBoxChangePass.Size = new System.Drawing.Size(450, 342);
+            this.groupBoxChangePass.Size = new System.Drawing.Size(822, 490);
             this.groupBoxChangePass.TabIndex = 28;
             this.groupBoxChangePass.TabStop = false;
             this.groupBoxChangePass.Text = "Đổi Mật Khẩu";
@@ -70,7 +71,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnCancel.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Gainsboro;
@@ -107,7 +108,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
             this.btnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Gainsboro;
@@ -159,8 +160,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 492);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.ClientSize = new System.Drawing.Size(940, 600);
             this.Controls.Add(this.groupBoxChangePass);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePassForm";
             this.Text = "ChangePassForm";
             this.groupBoxChangePass.ResumeLayout(false);
