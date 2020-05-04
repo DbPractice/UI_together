@@ -332,6 +332,43 @@
       <Parameter Name="NGAYSINH" Mode="In" Type="DateTime" />
       <Parameter Name="SDT" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="addSer">
+      <Parameter Name="MADV" Mode="In" Type="String" />
+      <Parameter Name="TENDV" Mode="In" Type="String" />
+      <Parameter Name="DONGIA" Mode="In" Type="Double" />
+      <Parameter Name="MALOAIDICHVU" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DSKHTP" ReturnType="Collection(dbModel.DSKHTP_Result)" />
+    <FunctionImport Name="DSNV" ReturnType="Collection(dbModel.DSNV_Result)" />
+    <FunctionImport Name="HTTT">
+      <Parameter Name="HTTT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TENNV" ReturnType="Collection(dbModel.TENNV_Result)">
+      <Parameter Name="TenNV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TIMNV" ReturnType="Collection(dbModel.TIMNV_Result)">
+      <Parameter Name="TenKH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TKKH" ReturnType="Collection(Int32)">
+      <Parameter Name="TenLoaiPhong" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TKKHTHEOPHONG" ReturnType="Collection(dbModel.TKKHTHEOPHONG_Result)" />
+    <FunctionImport Name="TKKHTHEOSOLANTHUE" ReturnType="Collection(dbModel.TKKHTHEOSOLANTHUE_Result)">
+      <Parameter Name="SOLANTHUE" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TKKHTHEOSOPHONGTHUE" ReturnType="Collection(dbModel.TKKHTHEOSOPHONGTHUE_Result)">
+      <Parameter Name="SOPHONGTHUE" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TKKHTHEOTHANG" ReturnType="Collection(Int32)">
+      <Parameter Name="THANG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TTKH" ReturnType="Collection(dbModel.TTKH_Result)">
+      <Parameter Name="MaKH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TTNV" ReturnType="Collection(dbModel.TTNV_Result)">
+      <Parameter Name="MaNV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DSDichVu" ReturnType="Collection(dbModel.DSDichVu_Result)" />
   </EntityContainer>
   <ComplexType Name="getAccount_Result">
     <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -361,5 +398,71 @@
     <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
     <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
     <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="DSKHTP_Result">
+    <Property Type="String" Name="MaKH" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="DSNV_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Quyen" Nullable="true" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="TENNV_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Quyen" Nullable="true" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="TIMNV_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="TKKHTHEOPHONG_Result">
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="slkhach" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TKKHTHEOSOLANTHUE_Result">
+    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="solanthue" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TKKHTHEOSOPHONGTHUE_Result">
+    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MaPhieuThuePhong" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="SoPhongThueTrong1Lan" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TTKH_Result">
+    <Property Type="String" Name="MaKH" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="TTNV_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Quyen" Nullable="true" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="DSDichVu_Result">
+    <Property Type="String" Name="MaDV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
+    <Property Type="Double" Name="DonGia" Nullable="true" />
+    <Property Type="String" Name="MaLoaiDV" Nullable="true" MaxLength="8" />
   </ComplexType>
 </Schema>

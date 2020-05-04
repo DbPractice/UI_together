@@ -115,5 +115,5 @@ D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\H
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.LoaiPhongForm.resources
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.LoaiDichVuForm.resources
 C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.LoaiPhongForm.resources
-C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache
+C:\Users\FPTSHOP\Documents\Visual Studio 2019\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache

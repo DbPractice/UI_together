@@ -42,6 +42,7 @@
             this.LbMaDV = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dgvServices = new System.Windows.Forms.DataGridView();
+            this.iconButtonSave = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnX.UseVisualStyleBackColor = false;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // btnTimKiem
             // 
@@ -234,6 +236,29 @@
             this.dgvServices.Name = "dgvServices";
             this.dgvServices.Size = new System.Drawing.Size(644, 400);
             this.dgvServices.TabIndex = 54;
+            this.dgvServices.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellContentClick);
+            // 
+            // iconButtonSave
+            // 
+            this.iconButtonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
+            this.iconButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonSave.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonSave.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconButtonSave.IconColor = System.Drawing.Color.White;
+            this.iconButtonSave.IconSize = 30;
+            this.iconButtonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonSave.Location = new System.Drawing.Point(745, 76);
+            this.iconButtonSave.Name = "iconButtonSave";
+            this.iconButtonSave.Rotation = 0D;
+            this.iconButtonSave.Size = new System.Drawing.Size(119, 40);
+            this.iconButtonSave.TabIndex = 55;
+            this.iconButtonSave.Text = "Lưu";
+            this.iconButtonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonSave.UseVisualStyleBackColor = false;
+            this.iconButtonSave.Click += new System.EventHandler(this.iconButtonSave_Click_1);
             // 
             // QLServiceForm
             // 
@@ -241,6 +266,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.iconButtonSave);
             this.Controls.Add(this.dgvServices);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -259,6 +285,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QLServiceForm";
             this.Text = "QLServiceForm";
+            this.Load += new System.EventHandler(this.QLServiceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,5 +308,6 @@
         private System.Windows.Forms.Label LbMaDV;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dgvServices;
+        private FontAwesome.Sharp.IconButton iconButtonSave;
     }
 }
