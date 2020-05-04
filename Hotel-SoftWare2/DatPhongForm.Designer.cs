@@ -36,7 +36,6 @@
             this.labelmpt = new System.Windows.Forms.Label();
             this.labelkh = new System.Windows.Forms.Label();
             this.labelTongTienPhong = new System.Windows.Forms.Label();
-            this.textBoxMaKH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerEmp = new System.Windows.Forms.DateTimePicker();
@@ -64,8 +63,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.groupBoxTienPhongDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -180,14 +180,6 @@
             this.labelTongTienPhong.Size = new System.Drawing.Size(25, 24);
             this.labelTongTienPhong.TabIndex = 46;
             this.labelTongTienPhong.Text = "...";
-            // 
-            // textBoxMaKH
-            // 
-            this.textBoxMaKH.Location = new System.Drawing.Point(194, 55);
-            this.textBoxMaKH.Multiline = true;
-            this.textBoxMaKH.Name = "textBoxMaKH";
-            this.textBoxMaKH.Size = new System.Drawing.Size(107, 24);
-            this.textBoxMaKH.TabIndex = 47;
             // 
             // label1
             // 
@@ -502,14 +494,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Phòng Đặt";
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(22, 21);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(434, 163);
-            this.dataGridView3.TabIndex = 0;
-            // 
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -531,12 +515,29 @@
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(22, 21);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(434, 163);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(168, 50);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 21);
+            this.comboBox5.TabIndex = 73;
+            // 
             // DatPhongForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
@@ -562,7 +563,6 @@
             this.Controls.Add(this.dateTimePickerEmp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxMaKH);
             this.Controls.Add(this.labelTongTienPhong);
             this.Controls.Add(this.labelkh);
             this.Controls.Add(this.labelmpt);
@@ -595,7 +595,6 @@
         private System.Windows.Forms.Label labelmpt;
         private System.Windows.Forms.Label labelkh;
         private System.Windows.Forms.Label labelTongTienPhong;
-        private System.Windows.Forms.TextBox textBoxMaKH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePickerEmp;
@@ -625,5 +624,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView3;
         private FontAwesome.Sharp.IconButton btnXoa;
+        private System.Windows.Forms.ComboBox comboBox5;
     }
 }

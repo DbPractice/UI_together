@@ -33,9 +33,6 @@
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.tbMaLoai = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbGia = new System.Windows.Forms.TextBox();
             this.tbTen = new System.Windows.Forms.TextBox();
@@ -43,9 +40,9 @@
             this.LbGia = new System.Windows.Forms.Label();
             this.LbTenDV = new System.Windows.Forms.Label();
             this.LbMaDV = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dgvServices = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             this.SuspendLayout();
             // 
             // btnX
@@ -56,7 +53,7 @@
             this.btnX.IconChar = FontAwesome.Sharp.IconChar.Undo;
             this.btnX.IconColor = System.Drawing.Color.White;
             this.btnX.IconSize = 30;
-            this.btnX.Location = new System.Drawing.Point(10, 396);
+            this.btnX.Location = new System.Drawing.Point(81, 453);
             this.btnX.Name = "btnX";
             this.btnX.Rotation = 0D;
             this.btnX.Size = new System.Drawing.Size(94, 42);
@@ -75,7 +72,7 @@
             this.btnTimKiem.IconColor = System.Drawing.Color.White;
             this.btnTimKiem.IconSize = 30;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(12, 318);
+            this.btnTimKiem.Location = new System.Drawing.Point(81, 393);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Rotation = 0D;
             this.btnTimKiem.Size = new System.Drawing.Size(94, 40);
@@ -95,7 +92,7 @@
             this.btnXoa.IconColor = System.Drawing.Color.White;
             this.btnXoa.IconSize = 30;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(12, 248);
+            this.btnXoa.Location = new System.Drawing.Point(81, 333);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Rotation = 0D;
             this.btnXoa.Size = new System.Drawing.Size(94, 40);
@@ -115,7 +112,7 @@
             this.btnSua.IconColor = System.Drawing.Color.White;
             this.btnSua.IconSize = 30;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(12, 177);
+            this.btnSua.Location = new System.Drawing.Point(81, 273);
             this.btnSua.Name = "btnSua";
             this.btnSua.Rotation = 0D;
             this.btnSua.Size = new System.Drawing.Size(94, 40);
@@ -135,7 +132,7 @@
             this.btnThem.IconColor = System.Drawing.Color.White;
             this.btnThem.IconSize = 30;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(10, 109);
+            this.btnThem.Location = new System.Drawing.Point(81, 213);
             this.btnThem.Name = "btnThem";
             this.btnThem.Rotation = 0D;
             this.btnThem.Size = new System.Drawing.Size(94, 40);
@@ -146,43 +143,13 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // dataGridViewUsers
-            // 
-            this.dataGridViewUsers.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(119, 39);
-            this.dataGridViewUsers.Name = "dataGridViewUsers";
-            this.dataGridViewUsers.RowHeadersWidth = 51;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(818, 549);
-            this.dataGridViewUsers.TabIndex = 22;
-            // 
-            // listView1
-            // 
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(339, 94);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(566, 475);
-            this.listView1.TabIndex = 26;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // tbMaLoai
-            // 
-            this.tbMaLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMaLoai.Location = new System.Drawing.Point(200, 318);
-            this.tbMaLoai.Multiline = true;
-            this.tbMaLoai.Name = "tbMaLoai";
-            this.tbMaLoai.Size = new System.Drawing.Size(133, 30);
-            this.tbMaLoai.TabIndex = 53;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(121, 321);
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(464, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 17);
             this.label2.TabIndex = 52;
@@ -191,7 +158,7 @@
             // tbGia
             // 
             this.tbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGia.Location = new System.Drawing.Point(200, 258);
+            this.tbGia.Location = new System.Drawing.Point(555, 49);
             this.tbGia.Multiline = true;
             this.tbGia.Name = "tbGia";
             this.tbGia.Size = new System.Drawing.Size(133, 30);
@@ -200,7 +167,7 @@
             // tbTen
             // 
             this.tbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTen.Location = new System.Drawing.Point(200, 197);
+            this.tbTen.Location = new System.Drawing.Point(272, 93);
             this.tbTen.Multiline = true;
             this.tbTen.Name = "tbTen";
             this.tbTen.Size = new System.Drawing.Size(133, 30);
@@ -209,7 +176,7 @@
             // tbMa
             // 
             this.tbMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMa.Location = new System.Drawing.Point(200, 143);
+            this.tbMa.Location = new System.Drawing.Point(272, 46);
             this.tbMa.Multiline = true;
             this.tbMa.Name = "tbMa";
             this.tbMa.Size = new System.Drawing.Size(133, 30);
@@ -218,20 +185,22 @@
             // LbGia
             // 
             this.LbGia.AutoSize = true;
-            this.LbGia.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.LbGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.LbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbGia.Location = new System.Drawing.Point(121, 260);
+            this.LbGia.ForeColor = System.Drawing.Color.Transparent;
+            this.LbGia.Location = new System.Drawing.Point(466, 52);
             this.LbGia.Name = "LbGia";
-            this.LbGia.Size = new System.Drawing.Size(66, 17);
+            this.LbGia.Size = new System.Drawing.Size(64, 17);
             this.LbGia.TabIndex = 48;
-            this.LbGia.Text = "Giá Tiền:";
+            this.LbGia.Text = "Đơn Giá:";
             // 
             // LbTenDV
             // 
             this.LbTenDV.AutoSize = true;
-            this.LbTenDV.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.LbTenDV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.LbTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbTenDV.Location = new System.Drawing.Point(127, 200);
+            this.LbTenDV.ForeColor = System.Drawing.Color.Transparent;
+            this.LbTenDV.Location = new System.Drawing.Point(186, 96);
             this.LbTenDV.Name = "LbTenDV";
             this.LbTenDV.Size = new System.Drawing.Size(60, 17);
             this.LbTenDV.TabIndex = 47;
@@ -240,43 +209,40 @@
             // LbMaDV
             // 
             this.LbMaDV.AutoSize = true;
-            this.LbMaDV.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.LbMaDV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.LbMaDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbMaDV.Location = new System.Drawing.Point(133, 145);
+            this.LbMaDV.ForeColor = System.Drawing.Color.Transparent;
+            this.LbMaDV.Location = new System.Drawing.Point(186, 49);
             this.LbMaDV.Name = "LbMaDV";
             this.LbMaDV.Size = new System.Drawing.Size(54, 17);
             this.LbMaDV.TabIndex = 46;
             this.LbMaDV.Text = "Mã DV:";
             // 
-            // label1
+            // comboBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(149, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "Thông Tin Dịch Vụ";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(555, 99);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 53;
             // 
-            // label5
+            // dgvServices
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(391, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(153, 24);
-            this.label5.TabIndex = 54;
-            this.label5.Text = "Quản Lý Dịch Vụ";
+            this.dgvServices.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServices.Location = new System.Drawing.Point(272, 174);
+            this.dgvServices.Name = "dgvServices";
+            this.dgvServices.Size = new System.Drawing.Size(644, 400);
+            this.dgvServices.TabIndex = 54;
             // 
             // QLServiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.tbMaLoai);
+            this.Controls.Add(this.dgvServices);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbGia);
             this.Controls.Add(this.tbTen);
@@ -284,9 +250,6 @@
             this.Controls.Add(this.LbGia);
             this.Controls.Add(this.LbTenDV);
             this.Controls.Add(this.LbMaDV);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.dataGridViewUsers);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnXoa);
@@ -296,7 +259,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QLServiceForm";
             this.Text = "QLServiceForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,9 +272,6 @@
         private FontAwesome.Sharp.IconButton btnXoa;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
-        private System.Windows.Forms.DataGridView dataGridViewUsers;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox tbMaLoai;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbGia;
         private System.Windows.Forms.TextBox tbTen;
@@ -319,7 +279,7 @@
         private System.Windows.Forms.Label LbGia;
         private System.Windows.Forms.Label LbTenDV;
         private System.Windows.Forms.Label LbMaDV;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgvServices;
     }
 }

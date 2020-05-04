@@ -71,28 +71,28 @@ namespace Hotel_SoftWare2
 
         private void btnHeThong_Click(object sender, EventArgs e)
         {
-            textBoxTitle.Text = "Hệ Thống";
+            textBoxTitle.Text = "HỆ THỐNG";
             changeColorMenu(btnHeThong);
             ShowMenu(panelHeThong);
         }
 
         private void btnChucNang_Click(object sender, EventArgs e)
         {
-            textBoxTitle.Text = "Chức Năng";
+            textBoxTitle.Text = "CHỨC NĂNG";
             changeColorMenu(btnChucNang);
             ShowMenu(panelChucNang);
         }
 
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
-            textBoxTitle.Text = "Quản Lý";
+            textBoxTitle.Text = "QUẢN LÝ";
             changeColorMenu(btnQuanLy);
             ShowMenu(panelQuanLy);
         }
 
         private void btnDoiMK_Click(object sender, EventArgs e)
         {
-            textBoxTitle.Text = "Đổi Mật Khẩu";
+            textBoxTitle.Text = "ĐỔI MẬT KHẨU";
             openChildForm(new ChangePassForm());
             HideMenu();
         }
@@ -215,6 +215,20 @@ namespace Hotel_SoftWare2
         private void panelBotChildForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnLoaiPhong_Click(object sender, EventArgs e)
+        {
+            textBoxTitle.Text = "LOẠI PHÒNG";
+            openChildForm(new LoaiPhongForm());
+            HideMenu();
+        }
+
+        private void btnLoaiDV_Click(object sender, EventArgs e)
+        {
+            textBoxTitle.Text = "LOẠI DỊCH VỤ";
+            openChildForm(new LoaiDichVuForm());
+            HideMenu();
         }
     }
 }

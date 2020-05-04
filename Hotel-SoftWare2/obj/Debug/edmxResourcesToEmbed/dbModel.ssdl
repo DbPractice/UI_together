@@ -221,6 +221,51 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="addCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAKH" Type="varchar" Mode="In" />
+    <Parameter Name="TENKH" Type="nvarchar" Mode="In" />
+    <Parameter Name="CMND" Type="char" Mode="In" />
+    <Parameter Name="DIACHI" Type="nvarchar" Mode="In" />
+    <Parameter Name="SDT" Type="char" Mode="In" />
+  </Function>
+  <Function Name="addEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MANV" Type="varchar" Mode="In" />
+    <Parameter Name="HOTEN" Type="nvarchar" Mode="In" />
+    <Parameter Name="NGAYSINH" Type="date" Mode="In" />
+    <Parameter Name="SDT" Type="char" Mode="In" />
+  </Function>
+  <Function Name="delCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAKH" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="delEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MANV" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getallCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getallEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="logIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tentk" Type="varchar" Mode="In" />
+    <Parameter Name="matkhau" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="updateAcc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MANV" Type="varchar" Mode="In" />
+    <Parameter Name="tenTK" Type="varchar" Mode="In" />
+    <Parameter Name="matkhau" Type="varchar" Mode="In" />
+    <Parameter Name="quyen" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="updateCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAKH" Type="varchar" Mode="In" />
+    <Parameter Name="TENKH" Type="nvarchar" Mode="In" />
+    <Parameter Name="CMND" Type="char" Mode="In" />
+    <Parameter Name="DIACHI" Type="nvarchar" Mode="In" />
+    <Parameter Name="SDT" Type="char" Mode="In" />
+  </Function>
+  <Function Name="updateEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MANV" Type="varchar" Mode="In" />
+    <Parameter Name="HOTEN" Type="nvarchar" Mode="In" />
+    <Parameter Name="NGAYSINH" Type="date" Mode="In" />
+    <Parameter Name="SDT" Type="char" Mode="In" />
+  </Function>
   <EntityContainer Name="dbModelStoreContainer">
     <EntitySet Name="ChiTietPhieuThue" EntityType="Self.ChiTietPhieuThue" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DichVu" EntityType="Self.DichVu" Schema="dbo" store:Type="Tables" />

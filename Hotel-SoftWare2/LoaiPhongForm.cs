@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Hotel_SoftWare2
 {
-    public partial class AddUsersForm : Form
+    public partial class LoaiPhongForm : Form
     {
-        public AddUsersForm()
+        public LoaiPhongForm()
         {
             InitializeComponent();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

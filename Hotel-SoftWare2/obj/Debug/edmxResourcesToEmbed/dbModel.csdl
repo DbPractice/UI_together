@@ -239,7 +239,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="htEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ChiTietPhieuThues" EntityType="Self.ChiTietPhieuThue" />
     <EntitySet Name="DichVus" EntityType="Self.DichVu" />
     <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
@@ -287,5 +287,79 @@
       <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
       <End Role="PhieuThuePhong" EntitySet="PhieuThuePhongs" />
     </AssociationSet>
+    <FunctionImport Name="addCus">
+      <Parameter Name="MAKH" Mode="In" Type="String" />
+      <Parameter Name="TENKH" Mode="In" Type="String" />
+      <Parameter Name="CMND" Mode="In" Type="String" />
+      <Parameter Name="DIACHI" Mode="In" Type="String" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="delCus">
+      <Parameter Name="MAKH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getAccount" ReturnType="Collection(dbModel.getAccount_Result)" />
+    <FunctionImport Name="getallCus" ReturnType="Collection(dbModel.getallCus_Result)" />
+    <FunctionImport Name="updateCus">
+      <Parameter Name="MAKH" Mode="In" Type="String" />
+      <Parameter Name="TENKH" Mode="In" Type="String" />
+      <Parameter Name="CMND" Mode="In" Type="String" />
+      <Parameter Name="DIACHI" Mode="In" Type="String" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="logIn" ReturnType="Collection(dbModel.logIn_Result)">
+      <Parameter Name="tentk" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="delEmp">
+      <Parameter Name="MANV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getallEmp" ReturnType="Collection(dbModel.getallEmp_Result)" />
+    <FunctionImport Name="updateAcc">
+      <Parameter Name="MANV" Mode="In" Type="String" />
+      <Parameter Name="tenTK" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
+      <Parameter Name="quyen" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="updateEmp">
+      <Parameter Name="MANV" Mode="In" Type="String" />
+      <Parameter Name="HOTEN" Mode="In" Type="String" />
+      <Parameter Name="NGAYSINH" Mode="In" Type="DateTime" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="addEmp">
+      <Parameter Name="MANV" Mode="In" Type="String" />
+      <Parameter Name="HOTEN" Mode="In" Type="String" />
+      <Parameter Name="NGAYSINH" Mode="In" Type="DateTime" />
+      <Parameter Name="SDT" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="getAccount_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Quyen" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getallCus_Result">
+    <Property Type="String" Name="MaKH" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="logIn_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Quyen" Nullable="true" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="getallEmp_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
 </Schema>

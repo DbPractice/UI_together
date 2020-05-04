@@ -13,6 +13,7 @@ namespace Hotel_SoftWare2
 {
     public partial class LoginForm : Form
     {
+        htEntities account = new htEntities();
         Thread th;
         public LoginForm()
         {
@@ -21,10 +22,21 @@ namespace Hotel_SoftWare2
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Close();
-            th = new Thread(openMainForm);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
+            DataGridView dt = new DataGridView();
+            dt.DataSource = account.logIn(textBoxUserName.Text, textBoxPassWord.Text);
+            if (dt.DataSource != null)
+            {
+                MessageBox.Show("dang nhap thanh cong");
+                this.Close();
+                th = new Thread(openMainForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+            else
+            {
+                MessageBox.Show("ten tk hoac mk k dung");
+            }
+
         }
         private void openMainForm(object obj)
         {
@@ -81,5 +93,7 @@ namespace Hotel_SoftWare2
         {
 
         }
+
+        
     }
 }

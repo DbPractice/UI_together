@@ -51,24 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCusForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddCusForm.Designer.cs">
-      <DependentUpon>AddCusForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddEmpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddEmpForm.Designer.cs">
-      <DependentUpon>AddEmpForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddUsersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddUsersForm.Designer.cs">
-      <DependentUpon>AddUsersForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="billForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +108,15 @@
     <Compile Include="EmployeesForm.Designer.cs">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="getAccount_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getallCus_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getallEmp_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
@@ -135,8 +126,20 @@
     <Compile Include="LoaiDichVu.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoaiDichVuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoaiDichVuForm.Designer.cs">
+      <DependentUpon>LoaiDichVuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoaiPhong.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiPhongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoaiPhongForm.Designer.cs">
+      <DependentUpon>LoaiPhongForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -149,6 +152,9 @@
     </Compile>
     <Compile Include="Huyphong.Designer.cs">
       <DependentUpon>Huyphong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logIn_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -183,12 +189,6 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ThemsuaxoaPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThemsuaxoaPhong.Designer.cs">
-      <DependentUpon>ThemsuaxoaPhong.cs</DependentUpon>
-    </Compile>
     <Compile Include="TraPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,15 +221,6 @@
     <Compile Include="UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddCusForm.resx">
-      <DependentUpon>AddCusForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddEmpForm.resx">
-      <DependentUpon>AddEmpForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddUsersForm.resx">
-      <DependentUpon>AddUsersForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="billForm.resx">
       <DependentUpon>billForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +238,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeesForm.resx">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaiDichVuForm.resx">
+      <DependentUpon>LoaiDichVuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaiPhongForm.resx">
+      <DependentUpon>LoaiPhongForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -277,9 +274,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ServiceRoomForm.resx">
       <DependentUpon>ServiceRoomForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThemsuaxoaPhong.resx">
-      <DependentUpon>ThemsuaxoaPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TraPhong.resx">
       <DependentUpon>TraPhong.cs</DependentUpon>
@@ -322,6 +316,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="dbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>dbModel.edmx</DependentUpon>
@@ -332,9 +329,6 @@
       <DependentUpon>dbModel.edmx</DependentUpon>
       <LastGenOutput>dbModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

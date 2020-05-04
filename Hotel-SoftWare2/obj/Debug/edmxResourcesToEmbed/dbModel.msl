@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities">
+  <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="htEntities">
     <EntitySetMapping Name="ChiTietPhieuThues">
       <EntityTypeMapping TypeName="dbModel.ChiTietPhieuThue">
         <MappingFragment StoreEntitySet="ChiTietPhieuThue">
@@ -125,5 +125,57 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="addCus" FunctionName="dbModel.Store.addCus" />
+    <FunctionImportMapping FunctionImportName="delCus" FunctionName="dbModel.Store.delCus" />
+    <FunctionImportMapping FunctionImportName="getAccount" FunctionName="dbModel.Store.getAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getAccount_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="TenTk" ColumnName="TenTk" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getallCus" FunctionName="dbModel.Store.getallCus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getallCus_Result">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="updateCus" FunctionName="dbModel.Store.updateCus" />
+    <FunctionImportMapping FunctionImportName="logIn" FunctionName="dbModel.Store.logIn">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.logIn_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenTk" ColumnName="TenTk" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="delEmp" FunctionName="dbModel.Store.delEmp" />
+    <FunctionImportMapping FunctionImportName="getallEmp" FunctionName="dbModel.Store.getallEmp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getallEmp_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="updateAcc" FunctionName="dbModel.Store.updateAcc" />
+    <FunctionImportMapping FunctionImportName="updateEmp" FunctionName="dbModel.Store.updateEmp" />
+    <FunctionImportMapping FunctionImportName="addEmp" FunctionName="dbModel.Store.addEmp" />
   </EntityContainerMapping>
 </Mapping>
