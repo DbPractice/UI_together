@@ -12,9 +12,20 @@ namespace Hotel_SoftWare2
 {
     public partial class QLServiceForm : Form
     {
+        dbEntities db = new dbEntities();
         public QLServiceForm()
         {
             InitializeComponent();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
