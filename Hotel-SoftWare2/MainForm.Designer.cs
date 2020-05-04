@@ -31,6 +31,8 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnThongKeHoaDon = new FontAwesome.Sharp.IconButton();
             this.panelQuanLy = new System.Windows.Forms.Panel();
+            this.btnLoaiDV = new FontAwesome.Sharp.IconButton();
+            this.btnLoaiPhong = new FontAwesome.Sharp.IconButton();
             this.bntDichVu = new FontAwesome.Sharp.IconButton();
             this.btnPhong = new FontAwesome.Sharp.IconButton();
             this.btnNguoiDung = new FontAwesome.Sharp.IconButton();
@@ -89,7 +91,7 @@
             this.btnThongKeHoaDon.IconColor = System.Drawing.Color.White;
             this.btnThongKeHoaDon.IconSize = 32;
             this.btnThongKeHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKeHoaDon.Location = new System.Drawing.Point(0, 740);
+            this.btnThongKeHoaDon.Location = new System.Drawing.Point(0, 820);
             this.btnThongKeHoaDon.Name = "btnThongKeHoaDon";
             this.btnThongKeHoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnThongKeHoaDon.Rotation = 0D;
@@ -103,6 +105,8 @@
             // 
             // panelQuanLy
             // 
+            this.panelQuanLy.Controls.Add(this.btnLoaiDV);
+            this.panelQuanLy.Controls.Add(this.btnLoaiPhong);
             this.panelQuanLy.Controls.Add(this.bntDichVu);
             this.panelQuanLy.Controls.Add(this.btnPhong);
             this.panelQuanLy.Controls.Add(this.btnNguoiDung);
@@ -111,8 +115,54 @@
             this.panelQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelQuanLy.Location = new System.Drawing.Point(0, 540);
             this.panelQuanLy.Name = "panelQuanLy";
-            this.panelQuanLy.Size = new System.Drawing.Size(183, 200);
+            this.panelQuanLy.Size = new System.Drawing.Size(183, 280);
             this.panelQuanLy.TabIndex = 6;
+            // 
+            // btnLoaiDV
+            // 
+            this.btnLoaiDV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoaiDV.FlatAppearance.BorderSize = 0;
+            this.btnLoaiDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoaiDV.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnLoaiDV.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLoaiDV.IconChar = FontAwesome.Sharp.IconChar.Typo3;
+            this.btnLoaiDV.IconColor = System.Drawing.Color.White;
+            this.btnLoaiDV.IconSize = 32;
+            this.btnLoaiDV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoaiDV.Location = new System.Drawing.Point(0, 240);
+            this.btnLoaiDV.Name = "btnLoaiDV";
+            this.btnLoaiDV.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnLoaiDV.Rotation = 0D;
+            this.btnLoaiDV.Size = new System.Drawing.Size(183, 40);
+            this.btnLoaiDV.TabIndex = 10;
+            this.btnLoaiDV.Text = "Loại Dịch Vụ";
+            this.btnLoaiDV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoaiDV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLoaiDV.UseVisualStyleBackColor = true;
+            this.btnLoaiDV.Click += new System.EventHandler(this.btnLoaiDV_Click);
+            // 
+            // btnLoaiPhong
+            // 
+            this.btnLoaiPhong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoaiPhong.FlatAppearance.BorderSize = 0;
+            this.btnLoaiPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoaiPhong.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnLoaiPhong.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLoaiPhong.IconChar = FontAwesome.Sharp.IconChar.Dungeon;
+            this.btnLoaiPhong.IconColor = System.Drawing.Color.White;
+            this.btnLoaiPhong.IconSize = 32;
+            this.btnLoaiPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoaiPhong.Location = new System.Drawing.Point(0, 200);
+            this.btnLoaiPhong.Name = "btnLoaiPhong";
+            this.btnLoaiPhong.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnLoaiPhong.Rotation = 0D;
+            this.btnLoaiPhong.Size = new System.Drawing.Size(183, 40);
+            this.btnLoaiPhong.TabIndex = 9;
+            this.btnLoaiPhong.Text = "Loại Phòng";
+            this.btnLoaiPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoaiPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLoaiPhong.UseVisualStyleBackColor = true;
+            this.btnLoaiPhong.Click += new System.EventHandler(this.btnLoaiPhong_Click);
             // 
             // bntDichVu
             // 
@@ -144,7 +194,7 @@
             this.btnPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhong.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPhong.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPhong.IconChar = FontAwesome.Sharp.IconChar.Dungeon;
+            this.btnPhong.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnPhong.IconColor = System.Drawing.Color.White;
             this.btnPhong.IconSize = 32;
             this.btnPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -522,7 +572,7 @@
             this.panelTopChill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelTopChill.Location = new System.Drawing.Point(200, 0);
             this.panelTopChill.Name = "panelTopChill";
-            this.panelTopChill.Size = new System.Drawing.Size(940, 30);
+            this.panelTopChill.Size = new System.Drawing.Size(940, 44);
             this.panelTopChill.TabIndex = 1;
             // 
             // textBoxTitle
@@ -532,10 +582,10 @@
             this.textBoxTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTitle.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBoxTitle.Location = new System.Drawing.Point(415, 3);
+            this.textBoxTitle.Location = new System.Drawing.Point(378, 9);
             this.textBoxTitle.Multiline = true;
             this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(263, 21);
+            this.textBoxTitle.Size = new System.Drawing.Size(278, 29);
             this.textBoxTitle.TabIndex = 0;
             this.textBoxTitle.Text = "HOME\r\n";
             // 
@@ -543,9 +593,9 @@
             // 
             this.panelBotChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.panelBotChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBotChildForm.Location = new System.Drawing.Point(200, 30);
+            this.panelBotChildForm.Location = new System.Drawing.Point(200, 44);
             this.panelBotChildForm.Name = "panelBotChildForm";
-            this.panelBotChildForm.Size = new System.Drawing.Size(940, 600);
+            this.panelBotChildForm.Size = new System.Drawing.Size(940, 586);
             this.panelBotChildForm.TabIndex = 2;
             this.panelBotChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBotChildForm_Paint);
             // 
@@ -598,6 +648,8 @@
         private System.Windows.Forms.Panel panelTopChill;
         private System.Windows.Forms.Panel panelBotChildForm;
         private System.Windows.Forms.TextBox textBoxTitle;
+        private FontAwesome.Sharp.IconButton btnLoaiDV;
+        private FontAwesome.Sharp.IconButton btnLoaiPhong;
     }
 }
 

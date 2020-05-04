@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Hotel_SoftWare2
 {
-    public partial class AddUsersForm : Form
+    public partial class LoaiDichVuForm : Form
     {
-        public AddUsersForm()
+        public LoaiDichVuForm()
         {
             InitializeComponent();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

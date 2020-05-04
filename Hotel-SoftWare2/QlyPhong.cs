@@ -12,30 +12,9 @@ namespace Hotel_SoftWare2
 {
     public partial class QlyPhong : Form
     {
-        Thread th;
         public QlyPhong()
         {
             InitializeComponent();
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            th = new Thread(openThemsuaxoaPhong);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
-        }
-        private void openThemsuaxoaPhong(object obj)
-        {
-            Application.Run(new ThemsuaxoaPhong());
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            th = new Thread(openThemsuaxoaPhong);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
