@@ -12,7 +12,7 @@ namespace Hotel_SoftWare2
 {
     public partial class QLServiceForm : Form
     {
-        dbEntities db = new dbEntities();
+       
         public QLServiceForm()
         {
             InitializeComponent();

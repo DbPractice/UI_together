@@ -25,6 +25,7 @@
         <AssociationConnector Association="dbModel.FK__Phong__MaLoai__50C5FA01" ManuallyRouted="false" />
         <AssociationConnector Association="dbModel.FK__PhieuThueP__MaNV__58671BC9" ManuallyRouted="false" />
         <AssociationConnector Association="dbModel.FK__PhieuThueP__MaSD__595B4002" ManuallyRouted="false" />
+        <AssociationConnector Association="dbModel.FK__PhieuThue__MaChi__267ABA7A" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
