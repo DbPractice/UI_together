@@ -369,6 +369,27 @@
       <Parameter Name="MaNV" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="DSDichVu" ReturnType="Collection(dbModel.DSDichVu_Result)" />
+    <FunctionImport Name="updateSer">
+      <Parameter Name="MADV" Mode="In" Type="String" />
+      <Parameter Name="TENDV" Mode="In" Type="String" />
+      <Parameter Name="DONGIA" Mode="In" Type="Double" />
+      <Parameter Name="MALOAIDICHVU" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="delSer">
+      <Parameter Name="MADV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="addTypeSer">
+      <Parameter Name="MALOAIDV" Mode="In" Type="String" />
+      <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="delTypeSer">
+      <Parameter Name="MALOAIDV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DSLoaiDichVu" ReturnType="Collection(dbModel.DSLoaiDichVu_Result)" />
+    <FunctionImport Name="updateTypeSer">
+      <Parameter Name="MALOAIDV" Mode="In" Type="String" />
+      <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="getAccount_Result">
     <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -464,5 +485,9 @@
     <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
     <Property Type="Double" Name="DonGia" Nullable="true" />
     <Property Type="String" Name="MaLoaiDV" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="DSLoaiDichVu_Result">
+    <Property Type="String" Name="MaLoaiDV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenLoaiDV" Nullable="true" MaxLength="20" />
   </ComplexType>
 </Schema>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Hotel_SoftWare2
 {
@@ -32,11 +33,6 @@ namespace Hotel_SoftWare2
             clearText();
         }
 
-        private void dgvServices_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnX_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,7 +40,12 @@ namespace Hotel_SoftWare2
 
         private void QLServiceForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hotelSoftwareDataSet1.LoaiDichVu' table. You can move, or remove it, as needed.
+            this.loaiDichVuTableAdapter.Fill(this.hotelSoftwareDataSet1.LoaiDichVu);
+            // TODO: This line of code loads data into the 'hotel_WinformDataSet.DichVu' table. You can move, or remove it, as needed.
+            this.dichVuTableAdapter.Fill(this.hotel_WinformDataSet.DichVu);
             ShowSer(dgvServices);
+            lockText();
         }
 
         private void serviceID()
@@ -85,22 +86,80 @@ namespace Hotel_SoftWare2
                     MessageBox.Show(ex.Message);
                 }
             }
-            //else
-            //{
-            //    ser.(tbMa.Text, tbTen.Text, tbGia.Text, comboBox1.Text);
-            //    try
-            //    {
-            //        MessageBox.Show("cap nhat thong tin khach hang thanh cong");
-            //        ser.SaveChanges();
-            //        ShowSer(dgvServices);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message);
-            //    }
-            //}
+            else
+            {
+                ser.updateSer(tbMa.Text, tbTen.Text, Convert.ToInt32(tbGia.Text), comboBox1.Text);
+                try
+                {
+                    MessageBox.Show("Cập Nhật Dịch Vụ Thành Công!");
+                    ser.SaveChanges();
+                    ShowSer(dgvServices);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
             clearText();
+            lockText();
             serviceID();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            status = false;
+            unlockText();
+            tbMa.Enabled = false;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Xóa Dịch Vụ Này?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                ser.delSer(tbMa.Text);
+                try
+                {
+                    MessageBox.Show("Xóa Dịch Vụ Thành Công");
+                    ser.SaveChanges();
+                    ShowSer(dgvServices);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                clearText();
+                btnXoa.Enabled = false;
+                tbMa.Text = "";
+            }
+        }
+        private void lockText()
+        {
+            tbMa.Enabled = tbTen.Enabled = tbGia.Enabled = comboBox1.Enabled = false;
+            btnSua.Enabled = btnXoa.Enabled = false;
+        }
+
+        private void unlockText()
+        {
+            tbTen.Enabled = tbGia.Enabled = comboBox1.Enabled = true;
+        }
+
+
+        private void dgvServices_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnSua.Enabled = btnXoa.Enabled = true;
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dgvServices.Rows[e.RowIndex];
+                tbMa.Text = row.Cells[0].Value.ToString();
+                tbTen.Text = row.Cells[1].Value.ToString();
+                tbGia.Text = row.Cells[2].Value.ToString();
+                comboBox1.Text = row.Cells[3].Value.ToString();
+            }
+            catch
+            {
+
+            }
         }
     }
 }

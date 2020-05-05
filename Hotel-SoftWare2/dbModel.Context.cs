@@ -319,5 +319,75 @@ namespace Hotel_SoftWare2
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DSDichVu_Result>("DSDichVu");
         }
+    
+        public virtual int updateSer(string mADV, string tENDV, Nullable<double> dONGIA, string mALOAIDICHVU)
+        {
+            var mADVParameter = mADV != null ?
+                new ObjectParameter("MADV", mADV) :
+                new ObjectParameter("MADV", typeof(string));
+    
+            var tENDVParameter = tENDV != null ?
+                new ObjectParameter("TENDV", tENDV) :
+                new ObjectParameter("TENDV", typeof(string));
+    
+            var dONGIAParameter = dONGIA.HasValue ?
+                new ObjectParameter("DONGIA", dONGIA) :
+                new ObjectParameter("DONGIA", typeof(double));
+    
+            var mALOAIDICHVUParameter = mALOAIDICHVU != null ?
+                new ObjectParameter("MALOAIDICHVU", mALOAIDICHVU) :
+                new ObjectParameter("MALOAIDICHVU", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateSer", mADVParameter, tENDVParameter, dONGIAParameter, mALOAIDICHVUParameter);
+        }
+    
+        public virtual int delSer(string mADV)
+        {
+            var mADVParameter = mADV != null ?
+                new ObjectParameter("MADV", mADV) :
+                new ObjectParameter("MADV", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("delSer", mADVParameter);
+        }
+    
+        public virtual int addTypeSer(string mALOAIDV, string tENLOAIDV)
+        {
+            var mALOAIDVParameter = mALOAIDV != null ?
+                new ObjectParameter("MALOAIDV", mALOAIDV) :
+                new ObjectParameter("MALOAIDV", typeof(string));
+    
+            var tENLOAIDVParameter = tENLOAIDV != null ?
+                new ObjectParameter("TENLOAIDV", tENLOAIDV) :
+                new ObjectParameter("TENLOAIDV", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("addTypeSer", mALOAIDVParameter, tENLOAIDVParameter);
+        }
+    
+        public virtual int delTypeSer(string mALOAIDV)
+        {
+            var mALOAIDVParameter = mALOAIDV != null ?
+                new ObjectParameter("MALOAIDV", mALOAIDV) :
+                new ObjectParameter("MALOAIDV", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("delTypeSer", mALOAIDVParameter);
+        }
+    
+        public virtual ObjectResult<DSLoaiDichVu_Result> DSLoaiDichVu()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DSLoaiDichVu_Result>("DSLoaiDichVu");
+        }
+    
+        public virtual int updateTypeSer(string mALOAIDV, string tENLOAIDV)
+        {
+            var mALOAIDVParameter = mALOAIDV != null ?
+                new ObjectParameter("MALOAIDV", mALOAIDV) :
+                new ObjectParameter("MALOAIDV", typeof(string));
+    
+            var tENLOAIDVParameter = tENLOAIDV != null ?
+                new ObjectParameter("TENLOAIDV", tENLOAIDV) :
+                new ObjectParameter("TENLOAIDV", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateTypeSer", mALOAIDVParameter, tENLOAIDVParameter);
+        }
     }
 }

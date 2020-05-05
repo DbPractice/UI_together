@@ -38,12 +38,13 @@
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.dgvLoaiDV = new System.Windows.Forms.DataGridView();
+            this.iconButtonSave = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDV)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxMaloaidv
             // 
-            this.textBoxMaloaidv.Location = new System.Drawing.Point(205, 21);
+            this.textBoxMaloaidv.Location = new System.Drawing.Point(290, 26);
             this.textBoxMaloaidv.Multiline = true;
             this.textBoxMaloaidv.Name = "textBoxMaloaidv";
             this.textBoxMaloaidv.Size = new System.Drawing.Size(200, 24);
@@ -51,7 +52,7 @@
             // 
             // textBoxTenloaidv
             // 
-            this.textBoxTenloaidv.Location = new System.Drawing.Point(205, 63);
+            this.textBoxTenloaidv.Location = new System.Drawing.Point(290, 87);
             this.textBoxTenloaidv.Multiline = true;
             this.textBoxTenloaidv.Name = "textBoxTenloaidv";
             this.textBoxTenloaidv.Size = new System.Drawing.Size(200, 24);
@@ -62,7 +63,7 @@
             this.labelTenloaidv.AutoSize = true;
             this.labelTenloaidv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTenloaidv.ForeColor = System.Drawing.Color.Transparent;
-            this.labelTenloaidv.Location = new System.Drawing.Point(39, 58);
+            this.labelTenloaidv.Location = new System.Drawing.Point(89, 87);
             this.labelTenloaidv.Name = "labelTenloaidv";
             this.labelTenloaidv.Size = new System.Drawing.Size(156, 24);
             this.labelTenloaidv.TabIndex = 37;
@@ -73,7 +74,7 @@
             this.labelMaloaidv.AutoSize = true;
             this.labelMaloaidv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMaloaidv.ForeColor = System.Drawing.Color.Transparent;
-            this.labelMaloaidv.Location = new System.Drawing.Point(39, 21);
+            this.labelMaloaidv.Location = new System.Drawing.Point(97, 26);
             this.labelMaloaidv.Name = "labelMaloaidv";
             this.labelMaloaidv.Size = new System.Drawing.Size(148, 24);
             this.labelMaloaidv.TabIndex = 34;
@@ -97,6 +98,7 @@
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnX.UseVisualStyleBackColor = false;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click_1);
             // 
             // btnTimKiem
             // 
@@ -139,6 +141,7 @@
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnSua
             // 
@@ -160,6 +163,7 @@
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
             // 
             // btnThem
             // 
@@ -181,6 +185,7 @@
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // dgvLoaiDV
             // 
@@ -190,6 +195,29 @@
             this.dgvLoaiDV.Name = "dgvLoaiDV";
             this.dgvLoaiDV.Size = new System.Drawing.Size(760, 400);
             this.dgvLoaiDV.TabIndex = 28;
+            this.dgvLoaiDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellClick);
+            // 
+            // iconButtonSave
+            // 
+            this.iconButtonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
+            this.iconButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonSave.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonSave.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconButtonSave.IconColor = System.Drawing.Color.White;
+            this.iconButtonSave.IconSize = 30;
+            this.iconButtonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonSave.Location = new System.Drawing.Point(648, 47);
+            this.iconButtonSave.Name = "iconButtonSave";
+            this.iconButtonSave.Rotation = 0D;
+            this.iconButtonSave.Size = new System.Drawing.Size(119, 40);
+            this.iconButtonSave.TabIndex = 56;
+            this.iconButtonSave.Text = "Lưu";
+            this.iconButtonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonSave.UseVisualStyleBackColor = false;
+            this.iconButtonSave.Click += new System.EventHandler(this.iconButtonSave_Click);
             // 
             // LoaiDichVuForm
             // 
@@ -197,6 +225,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.iconButtonSave);
             this.Controls.Add(this.textBoxMaloaidv);
             this.Controls.Add(this.textBoxTenloaidv);
             this.Controls.Add(this.labelTenloaidv);
@@ -210,6 +239,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoaiDichVuForm";
             this.Text = "LoaiDichVuForm";
+            this.Load += new System.EventHandler(this.LoaiDichVuForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiDV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -228,5 +258,6 @@
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
         private System.Windows.Forms.DataGridView dgvLoaiDV;
+        private FontAwesome.Sharp.IconButton iconButtonSave;
     }
 }

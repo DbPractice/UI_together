@@ -235,14 +235,25 @@
           <Parameter Name="DONGIA" Type="float" Mode="In" />
           <Parameter Name="MALOAIDICHVU" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="addTypeSer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MALOAIDV" Type="varchar" Mode="In" />
+          <Parameter Name="TENLOAIDV" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="delCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MAKH" Type="varchar" Mode="In" />
         </Function>
         <Function Name="delEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MANV" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="delSer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MADV" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="delTypeSer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MALOAIDV" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="DSDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="DSKHTP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DSLoaiDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="DSNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getallCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -297,6 +308,16 @@
           <Parameter Name="HOTEN" Type="nvarchar" Mode="In" />
           <Parameter Name="NGAYSINH" Type="date" Mode="In" />
           <Parameter Name="SDT" Type="char" Mode="In" />
+        </Function>
+        <Function Name="updateSer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MADV" Type="varchar" Mode="In" />
+          <Parameter Name="TENDV" Type="nvarchar" Mode="In" />
+          <Parameter Name="DONGIA" Type="float" Mode="In" />
+          <Parameter Name="MALOAIDICHVU" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="updateTypeSer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MALOAIDV" Type="varchar" Mode="In" />
+          <Parameter Name="TENLOAIDV" Type="nvarchar" Mode="In" />
         </Function>
         <EntityContainer Name="dbModelStoreContainer">
           <EntitySet Name="ChiTietPhieuThue" EntityType="Self.ChiTietPhieuThue" Schema="dbo" store:Type="Tables" />
@@ -719,6 +740,27 @@
           <Parameter Name="MaNV" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DSDichVu" ReturnType="Collection(dbModel.DSDichVu_Result)" />
+          <FunctionImport Name="updateSer">
+            <Parameter Name="MADV" Mode="In" Type="String" />
+            <Parameter Name="TENDV" Mode="In" Type="String" />
+            <Parameter Name="DONGIA" Mode="In" Type="Double" />
+            <Parameter Name="MALOAIDICHVU" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="delSer">
+          <Parameter Name="MADV" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="addTypeSer">
+            <Parameter Name="MALOAIDV" Mode="In" Type="String" />
+            <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="delTypeSer">
+            <Parameter Name="MALOAIDV" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DSLoaiDichVu" ReturnType="Collection(dbModel.DSLoaiDichVu_Result)" />
+          <FunctionImport Name="updateTypeSer">
+            <Parameter Name="MALOAIDV" Mode="In" Type="String" />
+            <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="getAccount_Result">
           <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -814,6 +856,10 @@
           <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
           <Property Type="Double" Name="DonGia" Nullable="true" />
           <Property Type="String" Name="MaLoaiDV" Nullable="true" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="DSLoaiDichVu_Result">
+          <Property Type="String" Name="MaLoaiDV" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="TenLoaiDV" Nullable="true" MaxLength="20" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1096,6 +1142,19 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="updateSer" FunctionName="dbModel.Store.updateSer" />
+          <FunctionImportMapping FunctionImportName="delSer" FunctionName="dbModel.Store.delSer" />
+          <FunctionImportMapping FunctionImportName="addTypeSer" FunctionName="dbModel.Store.addTypeSer" />
+          <FunctionImportMapping FunctionImportName="delTypeSer" FunctionName="dbModel.Store.delTypeSer" />
+          <FunctionImportMapping FunctionImportName="DSLoaiDichVu" FunctionName="dbModel.Store.DSLoaiDichVu">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.DSLoaiDichVu_Result">
+                <ScalarProperty Name="MaLoaiDV" ColumnName="MaLoaiDV" />
+                <ScalarProperty Name="TenLoaiDV" ColumnName="TenLoaiDV" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="updateTypeSer" FunctionName="dbModel.Store.updateTypeSer" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

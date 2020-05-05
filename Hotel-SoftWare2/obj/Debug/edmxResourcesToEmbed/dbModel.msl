@@ -276,5 +276,18 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="updateSer" FunctionName="dbModel.Store.updateSer" />
+    <FunctionImportMapping FunctionImportName="delSer" FunctionName="dbModel.Store.delSer" />
+    <FunctionImportMapping FunctionImportName="addTypeSer" FunctionName="dbModel.Store.addTypeSer" />
+    <FunctionImportMapping FunctionImportName="delTypeSer" FunctionName="dbModel.Store.delTypeSer" />
+    <FunctionImportMapping FunctionImportName="DSLoaiDichVu" FunctionName="dbModel.Store.DSLoaiDichVu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.DSLoaiDichVu_Result">
+          <ScalarProperty Name="MaLoaiDV" ColumnName="MaLoaiDV" />
+          <ScalarProperty Name="TenLoaiDV" ColumnName="TenLoaiDV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="updateTypeSer" FunctionName="dbModel.Store.updateTypeSer" />
   </EntityContainerMapping>
 </Mapping>
