@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.CompilerServices;
 
 namespace Hotel_SoftWare2
 {
@@ -29,6 +30,7 @@ namespace Hotel_SoftWare2
         private void btnThem_Click(object sender, EventArgs e)
         {
             serviceID();
+            unlockText();
             status = true;
             clearText();
         }
@@ -160,6 +162,11 @@ namespace Hotel_SoftWare2
             {
 
             }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            tbMa.Enabled = true;
         }
     }
 }

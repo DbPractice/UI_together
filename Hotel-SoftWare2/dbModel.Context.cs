@@ -107,7 +107,7 @@ namespace Hotel_SoftWare2
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateCus", mAKHParameter, tENKHParameter, cMNDParameter, dIACHIParameter, sDTParameter);
         }
-    
+
         public virtual ObjectResult<logIn_Result> logIn(string tentk, string matkhau)
         {
             var tentkParameter = tentk != null ?
@@ -388,6 +388,62 @@ namespace Hotel_SoftWare2
                 new ObjectParameter("TENLOAIDV", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateTypeSer", mALOAIDVParameter, tENLOAIDVParameter);
+        }
+    
+        public virtual int addTypeRoom(string mALOAIPHONG, string tENLOAIPHONG, Nullable<byte> sONGUOI, string gHICHU)
+        {
+            var mALOAIPHONGParameter = mALOAIPHONG != null ?
+                new ObjectParameter("MALOAIPHONG", mALOAIPHONG) :
+                new ObjectParameter("MALOAIPHONG", typeof(string));
+    
+            var tENLOAIPHONGParameter = tENLOAIPHONG != null ?
+                new ObjectParameter("TENLOAIPHONG", tENLOAIPHONG) :
+                new ObjectParameter("TENLOAIPHONG", typeof(string));
+    
+            var sONGUOIParameter = sONGUOI.HasValue ?
+                new ObjectParameter("SONGUOI", sONGUOI) :
+                new ObjectParameter("SONGUOI", typeof(byte));
+    
+            var gHICHUParameter = gHICHU != null ?
+                new ObjectParameter("GHICHU", gHICHU) :
+                new ObjectParameter("GHICHU", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("addTypeRoom", mALOAIPHONGParameter, tENLOAIPHONGParameter, sONGUOIParameter, gHICHUParameter);
+        }
+    
+        public virtual int delTypeRoom(string mALOAIPHONG)
+        {
+            var mALOAIPHONGParameter = mALOAIPHONG != null ?
+                new ObjectParameter("MALOAIPHONG", mALOAIPHONG) :
+                new ObjectParameter("MALOAIPHONG", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("delTypeRoom", mALOAIPHONGParameter);
+        }
+    
+        public virtual ObjectResult<DSLoaiPhong_Result> DSLoaiPhong()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DSLoaiPhong_Result>("DSLoaiPhong");
+        }
+    
+        public virtual int updateTypeRoom(string mALOAIPHONG, string tENLOAIPHONG, Nullable<byte> sONGUOI, string gHICHU)
+        {
+            var mALOAIPHONGParameter = mALOAIPHONG != null ?
+                new ObjectParameter("MALOAIPHONG", mALOAIPHONG) :
+                new ObjectParameter("MALOAIPHONG", typeof(string));
+    
+            var tENLOAIPHONGParameter = tENLOAIPHONG != null ?
+                new ObjectParameter("TENLOAIPHONG", tENLOAIPHONG) :
+                new ObjectParameter("TENLOAIPHONG", typeof(string));
+    
+            var sONGUOIParameter = sONGUOI.HasValue ?
+                new ObjectParameter("SONGUOI", sONGUOI) :
+                new ObjectParameter("SONGUOI", typeof(byte));
+    
+            var gHICHUParameter = gHICHU != null ?
+                new ObjectParameter("GHICHU", gHICHU) :
+                new ObjectParameter("GHICHU", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateTypeRoom", mALOAIPHONGParameter, tENLOAIPHONGParameter, sONGUOIParameter, gHICHUParameter);
         }
     }
 }

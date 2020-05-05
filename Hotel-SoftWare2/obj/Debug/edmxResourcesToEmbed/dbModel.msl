@@ -289,5 +289,18 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="updateTypeSer" FunctionName="dbModel.Store.updateTypeSer" />
+    <FunctionImportMapping FunctionImportName="addTypeRoom" FunctionName="dbModel.Store.addTypeRoom" />
+    <FunctionImportMapping FunctionImportName="delTypeRoom" FunctionName="dbModel.Store.delTypeRoom" />
+    <FunctionImportMapping FunctionImportName="DSLoaiPhong" FunctionName="dbModel.Store.DSLoaiPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.DSLoaiPhong_Result">
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+          <ScalarProperty Name="SoNguoi" ColumnName="SoNguoi" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="updateTypeRoom" FunctionName="dbModel.Store.updateTypeRoom" />
   </EntityContainerMapping>
 </Mapping>

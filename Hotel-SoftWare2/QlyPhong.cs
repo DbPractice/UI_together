@@ -12,22 +12,28 @@ namespace Hotel_SoftWare2
 {
     public partial class QlyPhong : Form
     {
+
         public QlyPhong()
         {
             InitializeComponent();
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Đã xóa phòng!", "Thông báo");
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
+        private void btnX_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-       
+        private void QlyPhong_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hotelSoftwareDataSet2.LoaiPhong' table. You can move, or remove it, as needed.
+            this.loaiPhongTableAdapter.Fill(this.hotelSoftwareDataSet2.LoaiPhong);
+
+        }
+
+        private void ibtXoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

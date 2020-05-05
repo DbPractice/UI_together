@@ -111,6 +111,9 @@
     <Compile Include="DSLoaiDichVu_Result.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DSLoaiPhong_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DSNV_Result.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
@@ -141,6 +144,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelSoftwareDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HotelSoftwareDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelSoftwareDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Hotel_WinformDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -360,6 +368,17 @@
     </None>
     <None Include="HotelSoftwareDataSet1.xss">
       <DependentUpon>HotelSoftwareDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HotelSoftwareDataSet2.xsc">
+      <DependentUpon>HotelSoftwareDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HotelSoftwareDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelSoftwareDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelSoftwareDataSet2.xss">
+      <DependentUpon>HotelSoftwareDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Hotel_WinformDataSet.xsc">
       <DependentUpon>Hotel_WinformDataSet.xsd</DependentUpon>

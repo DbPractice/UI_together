@@ -26,20 +26,6 @@ namespace Hotel_SoftWare2
             dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
-        private void TypeServiceID()
-        {
-            int count = 0;
-            count = dgvLoaiDV.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            chuoi = Convert.ToString(dgvLoaiDV.Rows[count - 1].Cells[0].Value);
-            chuoi2 = Convert.ToInt32(chuoi.Remove(0, 3));
-            if (chuoi2 + 1 < 10)
-                textBoxMaloaidv.Text = "MLDV0" + (chuoi2 + 1).ToString();
-           else
-                textBoxMaloaidv.Text = "MLDV" + (chuoi2 + 1).ToString();
-        }
-
         bool status;
 
         private void clearText()
@@ -80,13 +66,6 @@ namespace Hotel_SoftWare2
             lockText();
         }
 
-        private void btnThem_Click_1(object sender, EventArgs e)
-        {
-            TypeServiceID();
-            status = true;
-            clearText();
-        }
-
         private void btnSua_Click_1(object sender, EventArgs e)
         {
             status = false;
@@ -98,7 +77,7 @@ namespace Hotel_SoftWare2
         {
             if (MessageBox.Show("Xóa Loại Dịch Vụ Này?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                TypeSer.delSer(textBoxMaloaidv.Text);
+                TypeSer.delTypeSer(textBoxMaloaidv.Text);
                 try
                 {
                     MessageBox.Show("Xóa Loại Dịch Vụ Thành Công");
@@ -127,7 +106,7 @@ namespace Hotel_SoftWare2
                 TypeSer.addTypeSer(textBoxMaloaidv.Text, textBoxTenloaidv.Text);
                 try
                 {
-                    MessageBox.Show("Thêm Dịch Vụ Thành Công");
+                    MessageBox.Show("Thêm Loại Dịch Vụ Thành Công");
                     TypeSer.SaveChanges();
                     ShowSer(dgvLoaiDV);
 
@@ -154,6 +133,27 @@ namespace Hotel_SoftWare2
             clearText();
             lockText();
             TypeServiceID();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            TypeServiceID();
+            status = true;
+            clearText();
+        }
+
+        private void TypeServiceID()
+        {
+            int count = 0;
+            count = dgvLoaiDV.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            chuoi = Convert.ToString(dgvLoaiDV.Rows[count - 1].Cells[0].Value);
+            chuoi2 = Convert.ToInt32(chuoi.Remove(0, 4));
+            if (chuoi2 + 1 < 10)
+                textBoxMaloaidv.Text = "MLDV0" + (chuoi2 + 1).ToString();
+            else
+                textBoxMaloaidv.Text = "MLDV" + (chuoi2 + 1).ToString();
         }
     }
 }

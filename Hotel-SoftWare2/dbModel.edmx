@@ -235,6 +235,12 @@
           <Parameter Name="DONGIA" Type="float" Mode="In" />
           <Parameter Name="MALOAIDICHVU" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="addTypeRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MALOAIPHONG" Type="varchar" Mode="In" />
+          <Parameter Name="TENLOAIPHONG" Type="nvarchar" Mode="In" />
+          <Parameter Name="SONGUOI" Type="tinyint" Mode="In" />
+          <Parameter Name="GHICHU" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="addTypeSer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MALOAIDV" Type="varchar" Mode="In" />
           <Parameter Name="TENLOAIDV" Type="nvarchar" Mode="In" />
@@ -248,12 +254,16 @@
         <Function Name="delSer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MADV" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="delTypeRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MALOAIPHONG" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="delTypeSer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MALOAIDV" Type="varchar" Mode="In" />
         </Function>
         <Function Name="DSDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="DSKHTP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="DSLoaiDichVu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="DSLoaiPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="DSNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getallCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -314,6 +324,12 @@
           <Parameter Name="TENDV" Type="nvarchar" Mode="In" />
           <Parameter Name="DONGIA" Type="float" Mode="In" />
           <Parameter Name="MALOAIDICHVU" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="updateTypeRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MALOAIPHONG" Type="varchar" Mode="In" />
+          <Parameter Name="TENLOAIPHONG" Type="nvarchar" Mode="In" />
+          <Parameter Name="SONGUOI" Type="tinyint" Mode="In" />
+          <Parameter Name="GHICHU" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="updateTypeSer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MALOAIDV" Type="varchar" Mode="In" />
@@ -754,12 +770,28 @@
             <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="delTypeSer">
-            <Parameter Name="MALOAIDV" Mode="In" Type="String" />
+          <Parameter Name="MALOAIDV" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DSLoaiDichVu" ReturnType="Collection(dbModel.DSLoaiDichVu_Result)" />
           <FunctionImport Name="updateTypeSer">
             <Parameter Name="MALOAIDV" Mode="In" Type="String" />
             <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="addTypeRoom">
+            <Parameter Name="MALOAIPHONG" Mode="In" Type="String" />
+            <Parameter Name="TENLOAIPHONG" Mode="In" Type="String" />
+            <Parameter Name="SONGUOI" Mode="In" Type="Byte" />
+            <Parameter Name="GHICHU" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="delTypeRoom">
+            <Parameter Name="MALOAIPHONG" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DSLoaiPhong" ReturnType="Collection(dbModel.DSLoaiPhong_Result)" />
+          <FunctionImport Name="updateTypeRoom">
+            <Parameter Name="MALOAIPHONG" Mode="In" Type="String" />
+            <Parameter Name="TENLOAIPHONG" Mode="In" Type="String" />
+            <Parameter Name="SONGUOI" Mode="In" Type="Byte" />
+            <Parameter Name="GHICHU" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="getAccount_Result">
@@ -860,6 +892,12 @@
         <ComplexType Name="DSLoaiDichVu_Result">
           <Property Type="String" Name="MaLoaiDV" Nullable="false" MaxLength="8" />
           <Property Type="String" Name="TenLoaiDV" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="DSLoaiPhong_Result">
+          <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
+          <Property Type="Byte" Name="SoNguoi" Nullable="true" />
+          <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1155,6 +1193,19 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="updateTypeSer" FunctionName="dbModel.Store.updateTypeSer" />
+          <FunctionImportMapping FunctionImportName="addTypeRoom" FunctionName="dbModel.Store.addTypeRoom" />
+          <FunctionImportMapping FunctionImportName="delTypeRoom" FunctionName="dbModel.Store.delTypeRoom" />
+          <FunctionImportMapping FunctionImportName="DSLoaiPhong" FunctionName="dbModel.Store.DSLoaiPhong">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.DSLoaiPhong_Result">
+                <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+                <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+                <ScalarProperty Name="SoNguoi" ColumnName="SoNguoi" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="updateTypeRoom" FunctionName="dbModel.Store.updateTypeRoom" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

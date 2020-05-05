@@ -390,6 +390,22 @@
       <Parameter Name="MALOAIDV" Mode="In" Type="String" />
       <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="addTypeRoom">
+      <Parameter Name="MALOAIPHONG" Mode="In" Type="String" />
+      <Parameter Name="TENLOAIPHONG" Mode="In" Type="String" />
+      <Parameter Name="SONGUOI" Mode="In" Type="Byte" />
+      <Parameter Name="GHICHU" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="delTypeRoom">
+      <Parameter Name="MALOAIPHONG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DSLoaiPhong" ReturnType="Collection(dbModel.DSLoaiPhong_Result)" />
+    <FunctionImport Name="updateTypeRoom">
+      <Parameter Name="MALOAIPHONG" Mode="In" Type="String" />
+      <Parameter Name="TENLOAIPHONG" Mode="In" Type="String" />
+      <Parameter Name="SONGUOI" Mode="In" Type="Byte" />
+      <Parameter Name="GHICHU" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="getAccount_Result">
     <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -489,5 +505,11 @@
   <ComplexType Name="DSLoaiDichVu_Result">
     <Property Type="String" Name="MaLoaiDV" Nullable="false" MaxLength="8" />
     <Property Type="String" Name="TenLoaiDV" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="DSLoaiPhong_Result">
+    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
+    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
   </ComplexType>
 </Schema>
