@@ -31,7 +31,6 @@
             this.labelMaHD = new System.Windows.Forms.Label();
             this.labelIdHD = new System.Windows.Forms.Label();
             this.labelPhieuThue = new System.Windows.Forms.Label();
-            this.textBoxMaPhieuThue = new System.Windows.Forms.TextBox();
             this.groupBoxTien = new System.Windows.Forms.GroupBox();
             this.labeltongT = new System.Windows.Forms.Label();
             this.labelTDV = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.labelma = new System.Windows.Forms.Label();
             this.labelscmnd = new System.Windows.Forms.Label();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.comboBoxMaPT = new System.Windows.Forms.ComboBox();
             this.groupBoxTien.SuspendLayout();
             this.groupBoxBillDetail.SuspendLayout();
             this.groupBoxTienDVDetail.SuspendLayout();
@@ -100,14 +100,6 @@
             this.labelPhieuThue.Size = new System.Drawing.Size(104, 17);
             this.labelPhieuThue.TabIndex = 3;
             this.labelPhieuThue.Text = "Mã Phiếu Thuê";
-            // 
-            // textBoxMaPhieuThue
-            // 
-            this.textBoxMaPhieuThue.Location = new System.Drawing.Point(147, 77);
-            this.textBoxMaPhieuThue.Multiline = true;
-            this.textBoxMaPhieuThue.Name = "textBoxMaPhieuThue";
-            this.textBoxMaPhieuThue.Size = new System.Drawing.Size(88, 24);
-            this.textBoxMaPhieuThue.TabIndex = 6;
             // 
             // groupBoxTien
             // 
@@ -433,16 +425,24 @@
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
+            // comboBoxMaPT
+            // 
+            this.comboBoxMaPT.FormattingEnabled = true;
+            this.comboBoxMaPT.Location = new System.Drawing.Point(147, 83);
+            this.comboBoxMaPT.Name = "comboBoxMaPT";
+            this.comboBoxMaPT.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxMaPT.TabIndex = 31;
+            // 
             // billForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.comboBoxMaPT);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.groupBoxBillDetail);
             this.Controls.Add(this.groupBoxTien);
-            this.Controls.Add(this.textBoxMaPhieuThue);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.labelPhieuThue);
             this.Controls.Add(this.labelIdHD);
@@ -451,6 +451,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "billForm";
             this.Text = "billForm";
+            this.Load += new System.EventHandler(this.billForm_Load);
             this.groupBoxTien.ResumeLayout(false);
             this.groupBoxTien.PerformLayout();
             this.groupBoxBillDetail.ResumeLayout(false);
@@ -470,7 +471,6 @@
         private System.Windows.Forms.Label labelMaHD;
         private System.Windows.Forms.Label labelIdHD;
         private System.Windows.Forms.Label labelPhieuThue;
-        private System.Windows.Forms.TextBox textBoxMaPhieuThue;
         private System.Windows.Forms.GroupBox groupBoxTien;
         private FontAwesome.Sharp.IconButton btnThanhToan;
         private System.Windows.Forms.Label labelTienDV;
@@ -498,5 +498,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelnvLap;
         private System.Windows.Forms.Label labelnv;
+        private System.Windows.Forms.ComboBox comboBoxMaPT;
     }
 }

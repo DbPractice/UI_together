@@ -45,6 +45,8 @@
             this.labelNhapLaiMK = new System.Windows.Forms.Label();
             this.labelMaNV = new System.Windows.Forms.Label();
             this.textBoxMaNV = new System.Windows.Forms.TextBox();
+            this.textBoxhotenNV = new System.Windows.Forms.TextBox();
+            this.labelHoTenNV = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.groupBoxQuyen.SuspendLayout();
             this.SuspendLayout();
@@ -192,7 +194,7 @@
             // 
             // textBoxNhapLaiMK
             // 
-            this.textBoxNhapLaiMK.Location = new System.Drawing.Point(214, 138);
+            this.textBoxNhapLaiMK.Location = new System.Drawing.Point(214, 143);
             this.textBoxNhapLaiMK.Multiline = true;
             this.textBoxNhapLaiMK.Name = "textBoxNhapLaiMK";
             this.textBoxNhapLaiMK.Size = new System.Drawing.Size(200, 24);
@@ -200,7 +202,7 @@
             // 
             // textBoxMK
             // 
-            this.textBoxMK.Location = new System.Drawing.Point(214, 89);
+            this.textBoxMK.Location = new System.Drawing.Point(214, 103);
             this.textBoxMK.Multiline = true;
             this.textBoxMK.Name = "textBoxMK";
             this.textBoxMK.Size = new System.Drawing.Size(200, 24);
@@ -244,7 +246,7 @@
             this.labelMK.AutoSize = true;
             this.labelMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMK.ForeColor = System.Drawing.Color.Transparent;
-            this.labelMK.Location = new System.Drawing.Point(20, 84);
+            this.labelMK.Location = new System.Drawing.Point(20, 103);
             this.labelMK.Name = "labelMK";
             this.labelMK.Size = new System.Drawing.Size(89, 24);
             this.labelMK.TabIndex = 39;
@@ -255,7 +257,7 @@
             this.labelNhapLaiMK.AutoSize = true;
             this.labelNhapLaiMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNhapLaiMK.ForeColor = System.Drawing.Color.Transparent;
-            this.labelNhapLaiMK.Location = new System.Drawing.Point(20, 138);
+            this.labelNhapLaiMK.Location = new System.Drawing.Point(20, 143);
             this.labelNhapLaiMK.Name = "labelNhapLaiMK";
             this.labelNhapLaiMK.Size = new System.Drawing.Size(169, 24);
             this.labelNhapLaiMK.TabIndex = 38;
@@ -280,12 +282,33 @@
             this.textBoxMaNV.Size = new System.Drawing.Size(200, 24);
             this.textBoxMaNV.TabIndex = 47;
             // 
+            // textBoxhotenNV
+            // 
+            this.textBoxhotenNV.Location = new System.Drawing.Point(214, 72);
+            this.textBoxhotenNV.Multiline = true;
+            this.textBoxhotenNV.Name = "textBoxhotenNV";
+            this.textBoxhotenNV.Size = new System.Drawing.Size(200, 24);
+            this.textBoxhotenNV.TabIndex = 48;
+            // 
+            // labelHoTenNV
+            // 
+            this.labelHoTenNV.AutoSize = true;
+            this.labelHoTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHoTenNV.ForeColor = System.Drawing.Color.Transparent;
+            this.labelHoTenNV.Location = new System.Drawing.Point(20, 67);
+            this.labelHoTenNV.Name = "labelHoTenNV";
+            this.labelHoTenNV.Size = new System.Drawing.Size(169, 24);
+            this.labelHoTenNV.TabIndex = 49;
+            this.labelHoTenNV.Text = "Họ Tên Nhân Viên";
+            // 
             // UsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.labelHoTenNV);
+            this.Controls.Add(this.textBoxhotenNV);
             this.Controls.Add(this.labelMaNV);
             this.Controls.Add(this.textBoxMaNV);
             this.Controls.Add(this.textBoxTenTK);
@@ -332,5 +355,7 @@
         private System.Windows.Forms.Label labelNhapLaiMK;
         private System.Windows.Forms.Label labelMaNV;
         private System.Windows.Forms.TextBox textBoxMaNV;
+        private System.Windows.Forms.TextBox textBoxhotenNV;
+        private System.Windows.Forms.Label labelHoTenNV;
     }
 }

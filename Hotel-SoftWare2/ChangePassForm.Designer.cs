@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBoxChangePass = new System.Windows.Forms.GroupBox();
-            this.textBoxMaKH = new System.Windows.Forms.TextBox();
+            this.textBoxMkCu = new System.Windows.Forms.TextBox();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
-            this.textBoxTenKH = new System.Windows.Forms.TextBox();
-            this.textBoxSoCMND = new System.Windows.Forms.TextBox();
+            this.textBoxMkMoi = new System.Windows.Forms.TextBox();
+            this.textBoxMkMoiR = new System.Windows.Forms.TextBox();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.labelTenKH = new System.Windows.Forms.Label();
             this.labelMaKH = new System.Windows.Forms.Label();
@@ -44,10 +44,10 @@
             // 
             this.groupBoxChangePass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.groupBoxChangePass.Controls.Add(this.textBoxMaKH);
+            this.groupBoxChangePass.Controls.Add(this.textBoxMkCu);
             this.groupBoxChangePass.Controls.Add(this.btnCancel);
-            this.groupBoxChangePass.Controls.Add(this.textBoxTenKH);
-            this.groupBoxChangePass.Controls.Add(this.textBoxSoCMND);
+            this.groupBoxChangePass.Controls.Add(this.textBoxMkMoi);
+            this.groupBoxChangePass.Controls.Add(this.textBoxMkMoiR);
             this.groupBoxChangePass.Controls.Add(this.btnSave);
             this.groupBoxChangePass.Controls.Add(this.labelTenKH);
             this.groupBoxChangePass.Controls.Add(this.labelMaKH);
@@ -61,13 +61,13 @@
             this.groupBoxChangePass.TabStop = false;
             this.groupBoxChangePass.Text = "Đổi Mật Khẩu";
             // 
-            // textBoxMaKH
+            // textBoxMkCu
             // 
-            this.textBoxMaKH.Location = new System.Drawing.Point(230, 63);
-            this.textBoxMaKH.Multiline = true;
-            this.textBoxMaKH.Name = "textBoxMaKH";
-            this.textBoxMaKH.Size = new System.Drawing.Size(200, 24);
-            this.textBoxMaKH.TabIndex = 5;
+            this.textBoxMkCu.Location = new System.Drawing.Point(230, 63);
+            this.textBoxMkCu.Multiline = true;
+            this.textBoxMkCu.Name = "textBoxMkCu";
+            this.textBoxMkCu.Size = new System.Drawing.Size(200, 24);
+            this.textBoxMkCu.TabIndex = 5;
             // 
             // btnCancel
             // 
@@ -90,21 +90,21 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // textBoxTenKH
+            // textBoxMkMoi
             // 
-            this.textBoxTenKH.Location = new System.Drawing.Point(230, 140);
-            this.textBoxTenKH.Multiline = true;
-            this.textBoxTenKH.Name = "textBoxTenKH";
-            this.textBoxTenKH.Size = new System.Drawing.Size(200, 24);
-            this.textBoxTenKH.TabIndex = 9;
+            this.textBoxMkMoi.Location = new System.Drawing.Point(230, 140);
+            this.textBoxMkMoi.Multiline = true;
+            this.textBoxMkMoi.Name = "textBoxMkMoi";
+            this.textBoxMkMoi.Size = new System.Drawing.Size(200, 24);
+            this.textBoxMkMoi.TabIndex = 9;
             // 
-            // textBoxSoCMND
+            // textBoxMkMoiR
             // 
-            this.textBoxSoCMND.Location = new System.Drawing.Point(230, 220);
-            this.textBoxSoCMND.Multiline = true;
-            this.textBoxSoCMND.Name = "textBoxSoCMND";
-            this.textBoxSoCMND.Size = new System.Drawing.Size(200, 24);
-            this.textBoxSoCMND.TabIndex = 8;
+            this.textBoxMkMoiR.Location = new System.Drawing.Point(230, 220);
+            this.textBoxMkMoiR.Multiline = true;
+            this.textBoxMkMoiR.Name = "textBoxMkMoiR";
+            this.textBoxMkMoiR.Size = new System.Drawing.Size(200, 24);
+            this.textBoxMkMoiR.TabIndex = 8;
             // 
             // btnSave
             // 
@@ -125,6 +125,7 @@
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // labelTenKH
             // 
@@ -175,10 +176,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxChangePass;
-        private System.Windows.Forms.TextBox textBoxMaKH;
+        private System.Windows.Forms.TextBox textBoxMkCu;
         private FontAwesome.Sharp.IconButton btnCancel;
-        private System.Windows.Forms.TextBox textBoxTenKH;
-        private System.Windows.Forms.TextBox textBoxSoCMND;
+        private System.Windows.Forms.TextBox textBoxMkMoi;
+        private System.Windows.Forms.TextBox textBoxMkMoiR;
         private FontAwesome.Sharp.IconButton btnSave;
         private System.Windows.Forms.Label labelTenKH;
         private System.Windows.Forms.Label labelMaKH;

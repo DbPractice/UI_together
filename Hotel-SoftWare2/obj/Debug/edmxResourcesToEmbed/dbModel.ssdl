@@ -234,15 +234,25 @@
     <Parameter Name="NGAYSINH" Type="date" Mode="In" />
     <Parameter Name="SDT" Type="char" Mode="In" />
   </Function>
+  <Function Name="changePass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="matkhauhientai" Type="varchar" Mode="In" />
+    <Parameter Name="idnv" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="delCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MAKH" Type="varchar" Mode="In" />
   </Function>
   <Function Name="delEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MANV" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="getAcc1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="getAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="getallCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="getallEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getIdMPT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getIdNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TenTk" Type="varchar" Mode="In" />
+    <Parameter Name="MatKhau" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="logIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="tentk" Type="varchar" Mode="In" />
     <Parameter Name="matkhau" Type="varchar" Mode="In" />
@@ -265,6 +275,10 @@
     <Parameter Name="HOTEN" Type="nvarchar" Mode="In" />
     <Parameter Name="NGAYSINH" Type="date" Mode="In" />
     <Parameter Name="SDT" Type="char" Mode="In" />
+  </Function>
+  <Function Name="wellCome" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TenTk" Type="varchar" Mode="In" />
+    <Parameter Name="MatKhau" Type="varchar" Mode="In" />
   </Function>
   <EntityContainer Name="dbModelStoreContainer">
     <EntitySet Name="ChiTietPhieuThue" EntityType="Self.ChiTietPhieuThue" Schema="dbo" store:Type="Tables" />

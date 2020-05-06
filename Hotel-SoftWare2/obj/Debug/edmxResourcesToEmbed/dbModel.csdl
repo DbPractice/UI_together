@@ -332,6 +332,20 @@
       <Parameter Name="NGAYSINH" Mode="In" Type="DateTime" />
       <Parameter Name="SDT" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="getAcc1" ReturnType="Collection(dbModel.getAcc1_Result)" />
+    <FunctionImport Name="getIdMPT" ReturnType="Collection(String)" />
+    <FunctionImport Name="wellCome" ReturnType="Collection(String)">
+      <Parameter Name="TenTk" Mode="In" Type="String" />
+      <Parameter Name="MatKhau" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="changePass">
+      <Parameter Name="matkhauhientai" Mode="In" Type="String" />
+      <Parameter Name="idnv" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getIdNV" ReturnType="Collection(String)">
+      <Parameter Name="TenTk" Mode="In" Type="String" />
+      <Parameter Name="MatKhau" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="getAccount_Result">
     <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -361,5 +375,12 @@
     <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
     <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
     <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="getAcc1_Result">
+    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Quyen" Nullable="true" MaxLength="7" />
   </ComplexType>
 </Schema>

@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Hotel_SoftWare2
 {
     public partial class LoginForm : Form
     {
-        htEntities account = new htEntities();
         Thread th;
+        public static string username;
+        public static string password;
         public LoginForm()
         {
             InitializeComponent();
@@ -22,20 +24,45 @@ namespace Hotel_SoftWare2
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            DataGridView dt = new DataGridView();
-            dt.DataSource = account.logIn(textBoxUserName.Text, textBoxPassWord.Text);
-            if (dt.DataSource != null)
+            NhanVien obj = new NhanVien();
+            List<NhanVien> list = obj.getPass();
+            username = textBoxUserName.Text;
+            password = textBoxPassWord.Text;
+            var check = list.Where(item => item.TenTk.Equals(username)).ToList();
+            if (check.Count > 0)
             {
-                MessageBox.Show("dang nhap thanh cong");
-                this.Close();
-                th = new Thread(openMainForm);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
+                if (check[0].MatKhau.Equals(password))
+                {
+                    MessageBox.Show("dang nhap thanh cong");
+                    this.Close();
+                    th = new Thread(openMainForm);
+                    th.SetApartmentState(ApartmentState.STA);
+                    th.Start();
+                }
+                else
+                {
+                    MessageBox.Show("mat khau khong dung");
+                }
             }
             else
             {
-                MessageBox.Show("ten tk hoac mk k dung");
+                MessageBox.Show("khong ton tai tk");
             }
+
+            //DataGridView dt = new DataGridView();
+            //dt.DataSource = account.logIn(textBoxUserName.Text, textBoxPassWord.Text);
+            //if (dt.DataSource != null)
+            //{
+            //    MessageBox.Show("dang nhap thanh cong");
+            //    this.Close();
+            //    th = new Thread(openMainForm);
+            //    th.SetApartmentState(ApartmentState.STA);
+            //    th.Start();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("ten tk hoac mk k dung");
+            //}
 
         }
         private void openMainForm(object obj)
@@ -88,12 +115,5 @@ namespace Hotel_SoftWare2
             }
             
         }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

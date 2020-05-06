@@ -21,5 +21,43 @@ namespace Hotel_SoftWare2
         {
             this.Close();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            using (htEntities context = new htEntities())
+            {
+                if (textBoxMkCu.Text == LoginForm.password && textBoxMkMoi.Text == textBoxMkMoiR.Text)
+                {
+                    string idEmp = context.getIdNV(LoginForm.username, LoginForm.password).FirstOrDefault();
+                    context.changePass(textBoxMkMoi.Text, idEmp);
+                    try
+                    {
+                        MessageBox.Show("doi mk thanh cong");
+                        context.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    textBoxMkCu.Text = textBoxMkMoi.Text = textBoxMkMoiR.Text = "";
+                }
+                else if (textBoxMkCu.Text == "")
+                {
+                    MessageBox.Show("vui long nhap mk cu");
+                }
+                else if (textBoxMkMoi.Text == "")
+                {
+                    MessageBox.Show("vui long nhap mk moi");
+                }
+                else if (textBoxMkMoi.Text != textBoxMkMoiR.Text)
+                {
+                    MessageBox.Show("mk khong khop");
+                }
+                else
+                {
+                    MessageBox.Show("mk cu khong chinh xac");
+                }
+            }
+        }
     }
 }

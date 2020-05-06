@@ -52,6 +52,7 @@
             this.btnDoiMK = new FontAwesome.Sharp.IconButton();
             this.btnHeThong = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.labelWellCome = new System.Windows.Forms.Label();
             this.panelTopChill = new System.Windows.Forms.Panel();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.panelBotChildForm = new System.Windows.Forms.Panel();
@@ -59,6 +60,7 @@
             this.panelQuanLy.SuspendLayout();
             this.panelChucNang.SuspendLayout();
             this.panelHeThong.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.panelTopChill.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -558,11 +560,23 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.labelWellCome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(183, 100);
             this.panelLogo.TabIndex = 0;
+            // 
+            // labelWellCome
+            // 
+            this.labelWellCome.AutoSize = true;
+            this.labelWellCome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWellCome.ForeColor = System.Drawing.Color.Transparent;
+            this.labelWellCome.Location = new System.Drawing.Point(12, 17);
+            this.labelWellCome.Name = "labelWellCome";
+            this.labelWellCome.Size = new System.Drawing.Size(9, 20);
+            this.labelWellCome.TabIndex = 0;
+            this.labelWellCome.Text = "\r\n";
             // 
             // panelTopChill
             // 
@@ -597,7 +611,6 @@
             this.panelBotChildForm.Name = "panelBotChildForm";
             this.panelBotChildForm.Size = new System.Drawing.Size(940, 586);
             this.panelBotChildForm.TabIndex = 2;
-            this.panelBotChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBotChildForm_Paint);
             // 
             // MainForm
             // 
@@ -611,10 +624,13 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HotelSystem";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelQuanLy.ResumeLayout(false);
             this.panelChucNang.ResumeLayout(false);
             this.panelHeThong.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             this.panelTopChill.ResumeLayout(false);
             this.panelTopChill.PerformLayout();
             this.ResumeLayout(false);
@@ -650,6 +666,7 @@
         private System.Windows.Forms.TextBox textBoxTitle;
         private FontAwesome.Sharp.IconButton btnLoaiDV;
         private FontAwesome.Sharp.IconButton btnLoaiPhong;
+        private System.Windows.Forms.Label labelWellCome;
     }
 }
 

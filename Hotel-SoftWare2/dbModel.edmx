@@ -239,15 +239,25 @@
           <Parameter Name="NGAYSINH" Type="date" Mode="In" />
           <Parameter Name="SDT" Type="char" Mode="In" />
         </Function>
+        <Function Name="changePass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="matkhauhientai" Type="varchar" Mode="In" />
+          <Parameter Name="idnv" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="delCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MAKH" Type="varchar" Mode="In" />
         </Function>
         <Function Name="delEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MANV" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="getAcc1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getallCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getallEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="getIdMPT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="getIdNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TenTk" Type="varchar" Mode="In" />
+          <Parameter Name="MatKhau" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="logIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="tentk" Type="varchar" Mode="In" />
           <Parameter Name="matkhau" Type="varchar" Mode="In" />
@@ -270,6 +280,10 @@
           <Parameter Name="HOTEN" Type="nvarchar" Mode="In" />
           <Parameter Name="NGAYSINH" Type="date" Mode="In" />
           <Parameter Name="SDT" Type="char" Mode="In" />
+        </Function>
+        <Function Name="wellCome" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TenTk" Type="varchar" Mode="In" />
+          <Parameter Name="MatKhau" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="dbModelStoreContainer">
           <EntitySet Name="ChiTietPhieuThue" EntityType="Self.ChiTietPhieuThue" Schema="dbo" store:Type="Tables" />
@@ -656,6 +670,20 @@
             <Parameter Name="NGAYSINH" Mode="In" Type="DateTime" />
             <Parameter Name="SDT" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="getAcc1" ReturnType="Collection(dbModel.getAcc1_Result)" />
+          <FunctionImport Name="getIdMPT" ReturnType="Collection(String)" />
+          <FunctionImport Name="wellCome" ReturnType="Collection(String)">
+            <Parameter Name="TenTk" Mode="In" Type="String" />
+            <Parameter Name="MatKhau" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="changePass">
+            <Parameter Name="matkhauhientai" Mode="In" Type="String" />
+            <Parameter Name="idnv" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getIdNV" ReturnType="Collection(String)">
+            <Parameter Name="TenTk" Mode="In" Type="String" />
+            <Parameter Name="MatKhau" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="getAccount_Result">
           <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -685,6 +713,13 @@
           <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
           <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
           <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+        </ComplexType>
+        <ComplexType Name="getAcc1_Result">
+          <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Quyen" Nullable="true" MaxLength="7" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -868,6 +903,21 @@
           <FunctionImportMapping FunctionImportName="updateAcc" FunctionName="dbModel.Store.updateAcc" />
           <FunctionImportMapping FunctionImportName="updateEmp" FunctionName="dbModel.Store.updateEmp" />
           <FunctionImportMapping FunctionImportName="addEmp" FunctionName="dbModel.Store.addEmp" />
+          <FunctionImportMapping FunctionImportName="getAcc1" FunctionName="dbModel.Store.getAcc1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.getAcc1_Result">
+                <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="TenTk" ColumnName="TenTk" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getIdMPT" FunctionName="dbModel.Store.getIdMPT" />
+          <FunctionImportMapping FunctionImportName="wellCome" FunctionName="dbModel.Store.wellCome" />
+          <FunctionImportMapping FunctionImportName="changePass" FunctionName="dbModel.Store.changePass" />
+          <FunctionImportMapping FunctionImportName="getIdNV" FunctionName="dbModel.Store.getIdNV" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

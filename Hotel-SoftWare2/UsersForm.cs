@@ -27,16 +27,13 @@ namespace Hotel_SoftWare2
 
         private void UsersForm_Load(object sender, EventArgs e)
         {
-            
-            
             showUsers(dgvUsers);
-            //transData();
             lockText();
         }
 
         private void lockText()
         {
-            textBoxMaNV.Enabled = textBoxTenTK.Enabled = textBoxMK.Enabled = textBoxNhapLaiMK.Enabled = false;
+            textBoxMaNV.Enabled = textBoxhotenNV.Enabled = textBoxTenTK.Enabled = textBoxMK.Enabled = textBoxNhapLaiMK.Enabled = false;
             btnSua.Enabled = btnXoa.Enabled = false;
             checkBoxQuanLy.Enabled = checkBoxLeTan.Enabled = false;
         }
@@ -49,7 +46,7 @@ namespace Hotel_SoftWare2
 
         private void showUsers(DataGridView dgv)
         {
-            dgv.DataSource = user.getAccount();
+            dgv.DataSource = user.getAcc1();
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
@@ -86,7 +83,7 @@ namespace Hotel_SoftWare2
         {
             if (textBoxNhapLaiMK.Text == textBoxMK.Text)
             {
-                user.updateAcc(textBoxMaNV.Text, textBoxTenTK.Text, textBoxMK.Text, checkBoxLeTan.Checked);
+                user.updateAcc(textBoxMaNV.Text, textBoxTenTK.Text, textBoxMK.Text, checkBoxLeTan.Checked = checkBoxQuanLy.Checked);
                 try
                 {
                     MessageBox.Show("cap nhat thong tin tai khoan cho nhan vien");
@@ -107,7 +104,7 @@ namespace Hotel_SoftWare2
         }
         private void clearText()
         {
-            textBoxMaNV.Text = textBoxTenTK.Text = textBoxMK.Text = textBoxNhapLaiMK.Text = "";
+            textBoxMaNV.Text = textBoxhotenNV.Text = textBoxTenTK.Text = textBoxMK.Text = textBoxNhapLaiMK.Text = "";
             checkBoxLeTan.Checked = checkBoxQuanLy.Checked = false;
         }
 
@@ -121,15 +118,17 @@ namespace Hotel_SoftWare2
                 if (row.Cells[2].Value is null && row.Cells[3].Value is null && row.Cells[4].Value is null)
                 {
                     textBoxMaNV.Text = row.Cells[0].Value.ToString();
+                    textBoxhotenNV.Text = row.Cells[1].Value.ToString();
                     textBoxTenTK.Text = textBoxMK.Text =  string.Empty;
                     checkBoxLeTan.Checked = checkBoxQuanLy.Checked = false;
                 }
                 else
                 {
                     textBoxMaNV.Text = row.Cells[0].Value.ToString();
+                    textBoxhotenNV.Text = row.Cells[1].Value.ToString();
                     textBoxTenTK.Text = row.Cells[2].Value.ToString();
                     textBoxMK.Text = row.Cells[3].Value.ToString();
-                    if (row.Cells[4].Value.ToString() == "True")
+                    if (row.Cells[4].Value.ToString() == "Quản Lý")
                     {
                         checkBoxQuanLy.Checked = true;
                         checkBoxLeTan.Checked = false;
@@ -182,23 +181,5 @@ namespace Hotel_SoftWare2
                 checkBoxQuanLy.Enabled = false;
             }
         }
-
-        /*private void transData()
-        {
-            //DataGridViewCellEventArgs e = new DataGridViewCellEventArgs();
-            //DataGridViewRow row = new DataGridViewRow();
-            //row = dgvUsers.Rows[e.RowIndex];
-            //if (row.Cells[4].Value.ToString() == "True")
-            //{
-            //    row.Cells[4].Value = "Admin";
-            //}
-            //else
-            //{
-            //    row.Cells[4].Value = "Lễ tân";
-            //}
-            DataGridViewRow row = dgvUsers.Rows[2];
-            row.Cells[4].Value = "test";
-
-        }*/
     }
 }

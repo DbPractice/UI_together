@@ -108,6 +108,9 @@
     <Compile Include="EmployeesForm.Designer.cs">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="getAcc1_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="getAccount_Result.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>

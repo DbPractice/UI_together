@@ -177,5 +177,20 @@
     <FunctionImportMapping FunctionImportName="updateAcc" FunctionName="dbModel.Store.updateAcc" />
     <FunctionImportMapping FunctionImportName="updateEmp" FunctionName="dbModel.Store.updateEmp" />
     <FunctionImportMapping FunctionImportName="addEmp" FunctionName="dbModel.Store.addEmp" />
+    <FunctionImportMapping FunctionImportName="getAcc1" FunctionName="dbModel.Store.getAcc1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getAcc1_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="TenTk" ColumnName="TenTk" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getIdMPT" FunctionName="dbModel.Store.getIdMPT" />
+    <FunctionImportMapping FunctionImportName="wellCome" FunctionName="dbModel.Store.wellCome" />
+    <FunctionImportMapping FunctionImportName="changePass" FunctionName="dbModel.Store.changePass" />
+    <FunctionImportMapping FunctionImportName="getIdNV" FunctionName="dbModel.Store.getIdNV" />
   </EntityContainerMapping>
 </Mapping>

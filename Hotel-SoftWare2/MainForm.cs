@@ -212,11 +212,6 @@ namespace Hotel_SoftWare2
 
         }
 
-        private void panelBotChildForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnLoaiPhong_Click(object sender, EventArgs e)
         {
             textBoxTitle.Text = "LOẠI PHÒNG";
@@ -229,6 +224,15 @@ namespace Hotel_SoftWare2
             textBoxTitle.Text = "LOẠI DỊCH VỤ";
             openChildForm(new LoaiDichVuForm());
             HideMenu();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            using (htEntities context = new htEntities())
+            {
+                string tenNV = context.wellCome(LoginForm.username, LoginForm.password).FirstOrDefault();
+                labelWellCome.Text = "Xin chào,\n" + tenNV;
+            }
         }
     }
 }

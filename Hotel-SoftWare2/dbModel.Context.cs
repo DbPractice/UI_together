@@ -197,5 +197,54 @@ namespace Hotel_SoftWare2
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("addEmp", mANVParameter, hOTENParameter, nGAYSINHParameter, sDTParameter);
         }
+    
+        public virtual ObjectResult<getAcc1_Result> getAcc1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getAcc1_Result>("getAcc1");
+        }
+    
+        public virtual ObjectResult<string> getIdMPT()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getIdMPT");
+        }
+    
+        public virtual ObjectResult<string> wellCome(string tenTk, string matKhau)
+        {
+            var tenTkParameter = tenTk != null ?
+                new ObjectParameter("TenTk", tenTk) :
+                new ObjectParameter("TenTk", typeof(string));
+    
+            var matKhauParameter = matKhau != null ?
+                new ObjectParameter("MatKhau", matKhau) :
+                new ObjectParameter("MatKhau", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("wellCome", tenTkParameter, matKhauParameter);
+        }
+    
+        public virtual int changePass(string matkhauhientai, string idnv)
+        {
+            var matkhauhientaiParameter = matkhauhientai != null ?
+                new ObjectParameter("matkhauhientai", matkhauhientai) :
+                new ObjectParameter("matkhauhientai", typeof(string));
+    
+            var idnvParameter = idnv != null ?
+                new ObjectParameter("idnv", idnv) :
+                new ObjectParameter("idnv", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("changePass", matkhauhientaiParameter, idnvParameter);
+        }
+    
+        public virtual ObjectResult<string> getIdNV(string tenTk, string matKhau)
+        {
+            var tenTkParameter = tenTk != null ?
+                new ObjectParameter("TenTk", tenTk) :
+                new ObjectParameter("TenTk", typeof(string));
+    
+            var matKhauParameter = matKhau != null ?
+                new ObjectParameter("MatKhau", matKhau) :
+                new ObjectParameter("MatKhau", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getIdNV", tenTkParameter, matKhauParameter);
+        }
     }
 }
