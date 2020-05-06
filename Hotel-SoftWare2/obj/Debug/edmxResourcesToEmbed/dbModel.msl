@@ -114,17 +114,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="dbModel.sysdiagram">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="addCus" FunctionName="dbModel.Store.addCus" />
     <FunctionImportMapping FunctionImportName="delCus" FunctionName="dbModel.Store.delCus" />
     <FunctionImportMapping FunctionImportName="getAccount" FunctionName="dbModel.Store.getAccount">
@@ -192,5 +181,141 @@
     <FunctionImportMapping FunctionImportName="wellCome" FunctionName="dbModel.Store.wellCome" />
     <FunctionImportMapping FunctionImportName="changePass" FunctionName="dbModel.Store.changePass" />
     <FunctionImportMapping FunctionImportName="getIdNV" FunctionName="dbModel.Store.getIdNV" />
+    <FunctionImportMapping FunctionImportName="addSer" FunctionName="dbModel.Store.addSer" />
+    <FunctionImportMapping FunctionImportName="DSKHTP" FunctionName="dbModel.Store.DSKHTP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.DSKHTP_Result">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DSNV" FunctionName="dbModel.Store.DSNV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.DSNV_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenTk" ColumnName="TenTk" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="HTTT" FunctionName="dbModel.Store.HTTT" />
+    <FunctionImportMapping FunctionImportName="TENNV" FunctionName="dbModel.Store.TENNV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TENNV_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenTk" ColumnName="TenTk" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TIMNV" FunctionName="dbModel.Store.TIMNV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TIMNV_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TKKH" FunctionName="dbModel.Store.TKKH" />
+    <FunctionImportMapping FunctionImportName="TKKHTHEOPHONG" FunctionName="dbModel.Store.TKKHTHEOPHONG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TKKHTHEOPHONG_Result">
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="slkhach" ColumnName="slkhach" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TKKHTHEOSOLANTHUE" FunctionName="dbModel.Store.TKKHTHEOSOLANTHUE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TKKHTHEOSOLANTHUE_Result">
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="solanthue" ColumnName="solanthue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TKKHTHEOSOPHONGTHUE" FunctionName="dbModel.Store.TKKHTHEOSOPHONGTHUE">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TKKHTHEOSOPHONGTHUE_Result">
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="MaPhieuThuePhong" ColumnName="MaPhieuThuePhong" />
+          <ScalarProperty Name="SoPhongThueTrong1Lan" ColumnName="SoPhongThueTrong1Lan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TKKHTHEOTHANG" FunctionName="dbModel.Store.TKKHTHEOTHANG" />
+    <FunctionImportMapping FunctionImportName="TTKH" FunctionName="dbModel.Store.TTKH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TTKH_Result">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TTNV" FunctionName="dbModel.Store.TTNV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TTNV_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenTk" ColumnName="TenTk" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DSDichVu" FunctionName="dbModel.Store.DSDichVu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.DSDichVu_Result">
+          <ScalarProperty Name="MaDV" ColumnName="MaDV" />
+          <ScalarProperty Name="TenDV" ColumnName="TenDV" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="MaLoaiDV" ColumnName="MaLoaiDV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="updateSer" FunctionName="dbModel.Store.updateSer" />
+    <FunctionImportMapping FunctionImportName="delSer" FunctionName="dbModel.Store.delSer" />
+    <FunctionImportMapping FunctionImportName="addTypeSer" FunctionName="dbModel.Store.addTypeSer" />
+    <FunctionImportMapping FunctionImportName="delTypeSer" FunctionName="dbModel.Store.delTypeSer" />
+    <FunctionImportMapping FunctionImportName="DSLoaiDichVu" FunctionName="dbModel.Store.DSLoaiDichVu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.DSLoaiDichVu_Result">
+          <ScalarProperty Name="MaLoaiDV" ColumnName="MaLoaiDV" />
+          <ScalarProperty Name="TenLoaiDV" ColumnName="TenLoaiDV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="updateTypeSer" FunctionName="dbModel.Store.updateTypeSer" />
+    <FunctionImportMapping FunctionImportName="addTypeRoom" FunctionName="dbModel.Store.addTypeRoom" />
+    <FunctionImportMapping FunctionImportName="delTypeRoom" FunctionName="dbModel.Store.delTypeRoom" />
+    <FunctionImportMapping FunctionImportName="DSLoaiPhong" FunctionName="dbModel.Store.DSLoaiPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.DSLoaiPhong_Result">
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+          <ScalarProperty Name="SoNguoi" ColumnName="SoNguoi" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="updateTypeRoom" FunctionName="dbModel.Store.updateTypeRoom" />
   </EntityContainerMapping>
 </Mapping>
