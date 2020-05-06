@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnX = new FontAwesome.Sharp.IconButton();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
@@ -42,18 +41,7 @@
             this.LbTenDV = new System.Windows.Forms.Label();
             this.LbMaDV = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dichVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hotel_WinformDataSet = new Hotel_SoftWare2.Hotel_WinformDataSet();
-            this.loaiDichVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hotelSoftwareDataSet1 = new Hotel_SoftWare2.HotelSoftwareDataSet1();
-            this.iconButtonSave = new FontAwesome.Sharp.IconButton();
-            this.dichVuTableAdapter = new Hotel_SoftWare2.Hotel_WinformDataSetTableAdapters.DichVuTableAdapter();
-            this.loaiDichVuTableAdapter = new Hotel_SoftWare2.HotelSoftwareDataSet1TableAdapters.LoaiDichVuTableAdapter();
             this.dgvServices = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dichVuBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotel_WinformDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiDichVuBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelSoftwareDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +61,6 @@
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnX.UseVisualStyleBackColor = false;
-            this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // btnTimKiem
             // 
@@ -94,7 +81,6 @@
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKiem.UseVisualStyleBackColor = false;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnXoa
             // 
@@ -115,7 +101,6 @@
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -136,7 +121,6 @@
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -157,7 +141,6 @@
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label2
             // 
@@ -177,7 +160,7 @@
             this.tbGia.Location = new System.Drawing.Point(555, 49);
             this.tbGia.Multiline = true;
             this.tbGia.Name = "tbGia";
-            this.tbGia.Size = new System.Drawing.Size(133, 30);
+            this.tbGia.Size = new System.Drawing.Size(114, 30);
             this.tbGia.TabIndex = 51;
             // 
             // tbTen
@@ -186,7 +169,7 @@
             this.tbTen.Location = new System.Drawing.Point(272, 93);
             this.tbTen.Multiline = true;
             this.tbTen.Name = "tbTen";
-            this.tbTen.Size = new System.Drawing.Size(133, 30);
+            this.tbTen.Size = new System.Drawing.Size(114, 30);
             this.tbTen.TabIndex = 50;
             // 
             // tbMa
@@ -195,7 +178,7 @@
             this.tbMa.Location = new System.Drawing.Point(272, 46);
             this.tbMa.Multiline = true;
             this.tbMa.Name = "tbMa";
-            this.tbMa.Size = new System.Drawing.Size(133, 30);
+            this.tbMa.Size = new System.Drawing.Size(114, 30);
             this.tbMa.TabIndex = 49;
             // 
             // LbGia
@@ -236,74 +219,20 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dichVuBindingSource, "MaLoaiDV", true));
-            this.comboBox1.DataSource = this.loaiDichVuBindingSource;
-            this.comboBox1.DisplayMember = "MaLoaiDV";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(555, 99);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 53;
-            this.comboBox1.ValueMember = "MaLoaiDV";
-            // 
-            // dichVuBindingSource
-            // 
-            this.dichVuBindingSource.DataMember = "DichVu";
-            this.dichVuBindingSource.DataSource = this.hotel_WinformDataSet;
-            // 
-            // hotel_WinformDataSet
-            // 
-            this.hotel_WinformDataSet.DataSetName = "Hotel_WinformDataSet";
-            this.hotel_WinformDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // loaiDichVuBindingSource
-            // 
-            this.loaiDichVuBindingSource.DataMember = "LoaiDichVu";
-            this.loaiDichVuBindingSource.DataSource = this.hotelSoftwareDataSet1;
-            // 
-            // hotelSoftwareDataSet1
-            // 
-            this.hotelSoftwareDataSet1.DataSetName = "HotelSoftwareDataSet1";
-            this.hotelSoftwareDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // iconButtonSave
-            // 
-            this.iconButtonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
-            this.iconButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonSave.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonSave.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButtonSave.IconColor = System.Drawing.Color.White;
-            this.iconButtonSave.IconSize = 30;
-            this.iconButtonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSave.Location = new System.Drawing.Point(745, 76);
-            this.iconButtonSave.Name = "iconButtonSave";
-            this.iconButtonSave.Rotation = 0D;
-            this.iconButtonSave.Size = new System.Drawing.Size(119, 40);
-            this.iconButtonSave.TabIndex = 55;
-            this.iconButtonSave.Text = "Lưu";
-            this.iconButtonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonSave.UseVisualStyleBackColor = false;
-            this.iconButtonSave.Click += new System.EventHandler(this.iconButtonSave_Click_1);
-            // 
-            // dichVuTableAdapter
-            // 
-            this.dichVuTableAdapter.ClearBeforeFill = true;
-            // 
-            // loaiDichVuTableAdapter
-            // 
-            this.loaiDichVuTableAdapter.ClearBeforeFill = true;
             // 
             // dgvServices
             // 
+            this.dgvServices.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServices.Location = new System.Drawing.Point(221, 156);
+            this.dgvServices.Location = new System.Drawing.Point(272, 174);
             this.dgvServices.Name = "dgvServices";
-            this.dgvServices.Size = new System.Drawing.Size(681, 416);
-            this.dgvServices.TabIndex = 56;
-            this.dgvServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellClick);
+            this.dgvServices.Size = new System.Drawing.Size(644, 400);
+            this.dgvServices.TabIndex = 54;
             // 
             // QLServiceForm
             // 
@@ -312,7 +241,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
             this.Controls.Add(this.dgvServices);
-            this.Controls.Add(this.iconButtonSave);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbGia);
@@ -330,11 +258,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QLServiceForm";
             this.Text = "QLServiceForm";
-            this.Load += new System.EventHandler(this.QLServiceForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dichVuBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotel_WinformDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiDichVuBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelSoftwareDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -356,13 +279,6 @@
         private System.Windows.Forms.Label LbTenDV;
         private System.Windows.Forms.Label LbMaDV;
         private System.Windows.Forms.ComboBox comboBox1;
-        private FontAwesome.Sharp.IconButton iconButtonSave;
-        private Hotel_WinformDataSet hotel_WinformDataSet;
-        private System.Windows.Forms.BindingSource dichVuBindingSource;
-        private Hotel_WinformDataSetTableAdapters.DichVuTableAdapter dichVuTableAdapter;
-        private HotelSoftwareDataSet1 hotelSoftwareDataSet1;
-        private System.Windows.Forms.BindingSource loaiDichVuBindingSource;
-        private HotelSoftwareDataSet1TableAdapters.LoaiDichVuTableAdapter loaiDichVuTableAdapter;
         private System.Windows.Forms.DataGridView dgvServices;
     }
 }

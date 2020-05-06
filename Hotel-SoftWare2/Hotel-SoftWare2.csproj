@@ -102,21 +102,6 @@
     <Compile Include="DoanhThuForm.Designer.cs">
       <DependentUpon>DoanhThuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DSDichVu_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DSKHTP_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DSLoaiDichVu_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DSLoaiPhong_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DSNV_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="EmployeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,26 +122,6 @@
     </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="HotelSoftwareDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelSoftwareDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HotelSoftwareDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelSoftwareDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="HotelSoftwareDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HotelSoftwareDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Hotel_WinformDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Hotel_WinformDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
@@ -227,21 +192,6 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TENNV_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TIMNV_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TKKHTHEOPHONG_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TKKHTHEOSOLANTHUE_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TKKHTHEOSOPHONGTHUE_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="TraPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,12 +217,6 @@
     </Compile>
     <Compile Include="ttKhachHang.Designer.cs">
       <DependentUpon>ttKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TTKH_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TTNV_Result.cs">
-      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>
@@ -349,50 +293,6 @@
     </EntityDeploy>
     <None Include="dbModel.edmx.diagram">
       <DependentUpon>dbModel.edmx</DependentUpon>
-    </None>
-    <None Include="HotelSoftwareDataSet.xsc">
-      <DependentUpon>HotelSoftwareDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSoftwareDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HotelSoftwareDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HotelSoftwareDataSet.xss">
-      <DependentUpon>HotelSoftwareDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSoftwareDataSet1.xsc">
-      <DependentUpon>HotelSoftwareDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSoftwareDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HotelSoftwareDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HotelSoftwareDataSet1.xss">
-      <DependentUpon>HotelSoftwareDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSoftwareDataSet2.xsc">
-      <DependentUpon>HotelSoftwareDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="HotelSoftwareDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HotelSoftwareDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HotelSoftwareDataSet2.xss">
-      <DependentUpon>HotelSoftwareDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="Hotel_WinformDataSet.xsc">
-      <DependentUpon>Hotel_WinformDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Hotel_WinformDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Hotel_WinformDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Hotel_WinformDataSet.xss">
-      <DependentUpon>Hotel_WinformDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

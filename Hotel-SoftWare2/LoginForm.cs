@@ -14,7 +14,6 @@ namespace Hotel_SoftWare2
 {
     public partial class LoginForm : Form
     {
-        //htEntities account = new htEntities();
         Thread th;
         public static string username;
         public static string password;
