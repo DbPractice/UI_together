@@ -14,22 +14,20 @@ namespace Hotel_SoftWare2
 
 using System;
     
-public partial class logIn_Result
+public partial class getCusFrPhieuThue_Result
 {
 
-    public string MaNV { get; set; }
+    public string MaKH { get; set; }
 
-    public string TenTk { get; set; }
+    public string TenKH { get; set; }
 
-    public string MatKhau { get; set; }
-
-    public Nullable<bool> Quyen { get; set; }
-
-    public string HoTen { get; set; }
-
-    public Nullable<System.DateTime> NgaySinh { get; set; }
+    public string SoCMND { get; set; }
 
     public string SDT { get; set; }
+
+    public string DiaChi { get; set; }
+
+    public string HoTen { get; set; }
 
 }
 

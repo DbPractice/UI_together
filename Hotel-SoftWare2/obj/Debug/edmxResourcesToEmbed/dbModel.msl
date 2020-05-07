@@ -192,5 +192,17 @@
     <FunctionImportMapping FunctionImportName="wellCome" FunctionName="dbModel.Store.wellCome" />
     <FunctionImportMapping FunctionImportName="changePass" FunctionName="dbModel.Store.changePass" />
     <FunctionImportMapping FunctionImportName="getIdNV" FunctionName="dbModel.Store.getIdNV" />
+    <FunctionImportMapping FunctionImportName="getCusFrPhieuThue" FunctionName="dbModel.Store.getCusFrPhieuThue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getCusFrPhieuThue_Result">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

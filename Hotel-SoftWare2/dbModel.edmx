@@ -253,6 +253,9 @@
         <Function Name="getAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getallCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getallEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="getCusFrPhieuThue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="maphieuthue" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="getIdMPT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getIdNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="TenTk" Type="varchar" Mode="In" />
@@ -684,6 +687,9 @@
             <Parameter Name="TenTk" Mode="In" Type="String" />
             <Parameter Name="MatKhau" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="getCusFrPhieuThue" ReturnType="Collection(dbModel.getCusFrPhieuThue_Result)">
+            <Parameter Name="maphieuthue" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="getAccount_Result">
           <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -720,6 +726,14 @@
           <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
           <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
           <Property Type="String" Name="Quyen" Nullable="true" MaxLength="7" />
+        </ComplexType>
+        <ComplexType Name="getCusFrPhieuThue_Result">
+          <Property Type="String" Name="MaKH" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -918,6 +932,18 @@
           <FunctionImportMapping FunctionImportName="wellCome" FunctionName="dbModel.Store.wellCome" />
           <FunctionImportMapping FunctionImportName="changePass" FunctionName="dbModel.Store.changePass" />
           <FunctionImportMapping FunctionImportName="getIdNV" FunctionName="dbModel.Store.getIdNV" />
+          <FunctionImportMapping FunctionImportName="getCusFrPhieuThue" FunctionName="dbModel.Store.getCusFrPhieuThue">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.getCusFrPhieuThue_Result">
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+                <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

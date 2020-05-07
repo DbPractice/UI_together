@@ -120,6 +120,9 @@
     <Compile Include="getallEmp_Result.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="getCusFrPhieuThue_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>

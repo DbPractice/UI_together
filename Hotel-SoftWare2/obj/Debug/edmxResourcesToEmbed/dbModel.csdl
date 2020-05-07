@@ -346,6 +346,9 @@
       <Parameter Name="TenTk" Mode="In" Type="String" />
       <Parameter Name="MatKhau" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="getCusFrPhieuThue" ReturnType="Collection(dbModel.getCusFrPhieuThue_Result)">
+      <Parameter Name="maphieuthue" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="getAccount_Result">
     <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -382,5 +385,13 @@
     <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
     <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
     <Property Type="String" Name="Quyen" Nullable="true" MaxLength="7" />
+  </ComplexType>
+  <ComplexType Name="getCusFrPhieuThue_Result">
+    <Property Type="String" Name="MaKH" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
   </ComplexType>
 </Schema>

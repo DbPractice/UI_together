@@ -24,6 +24,14 @@ namespace Hotel_SoftWare2
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+        //        public partial class NhanVien
+        //{
+        //    public List<NhanVien> getPass()
+        //    {
+        //        htEntities context = new htEntities();
+        //        return context.NhanViens.ToList();
+        //    }
+        //}
             NhanVien obj = new NhanVien();
             List<NhanVien> list = obj.getPass();
             username = textBoxUserName.Text;
