@@ -10,23 +10,12 @@
 namespace Hotel_SoftWare2
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class DichVu
+    public partial class DSDichVu_Result
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DichVu()
-        {
-            this.PhieuSuDungDichVus = new HashSet<PhieuSuDungDichVu>();
-        }
-    
         public string MaDV { get; set; }
         public string TenDV { get; set; }
         public Nullable<double> DonGia { get; set; }
         public string MaLoaiDV { get; set; }
-    
-        public virtual LoaiDichVu LoaiDichVu { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhieuSuDungDichVu> PhieuSuDungDichVus { get; set; }
     }
 }

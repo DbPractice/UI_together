@@ -11,12 +11,10 @@ namespace Hotel_SoftWare2
 {
     using System;
     
-    public partial class getAccount_Result
+    public partial class TKKHTHEOSOPHONGTHUE_Result
     {
-        public string MaNV { get; set; }
-        public string HoTen { get; set; }
-        public string TenTk { get; set; }
-        public string MatKhau { get; set; }
-        public Nullable<bool> Quyen { get; set; }
+        public string TenKH { get; set; }
+        public string MaPhieuThuePhong { get; set; }
+        public Nullable<int> SoPhongThueTrong1Lan { get; set; }
     }
 }

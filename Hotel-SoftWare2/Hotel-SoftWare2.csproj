@@ -102,6 +102,24 @@
     <Compile Include="DoanhThuForm.Designer.cs">
       <DependentUpon>DoanhThuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DSDichVu_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DSKHTP_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DSLoaiDichVu_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DSLoaiPhong_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DSNV_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DSPhong_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EmployeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +213,21 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="TENNV_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIMNV_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TKKHTHEOPHONG_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TKKHTHEOSOLANTHUE_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TKKHTHEOSOPHONGTHUE_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="TraPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +253,12 @@
     </Compile>
     <Compile Include="ttKhachHang.Designer.cs">
       <DependentUpon>ttKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTKH_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TTNV_Result.cs">
+      <DependentUpon>dbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="UsersForm.cs">
       <SubType>Form</SubType>

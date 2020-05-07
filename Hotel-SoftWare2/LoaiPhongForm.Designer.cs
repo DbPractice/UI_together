@@ -42,6 +42,7 @@
             this.labelMaloai = new System.Windows.Forms.Label();
             this.labelSoNguoiMax = new System.Windows.Forms.Label();
             this.labelGhiChu = new System.Windows.Forms.Label();
+            this.iconButtonSave = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             this.dgvLoaiPhong.Name = "dgvLoaiPhong";
             this.dgvLoaiPhong.Size = new System.Drawing.Size(760, 400);
             this.dgvLoaiPhong.TabIndex = 12;
+            this.dgvLoaiPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTypeRoom_CellClick);
             // 
             // btnX
             // 
@@ -72,6 +74,7 @@
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnX.UseVisualStyleBackColor = false;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // btnTimKiem
             // 
@@ -114,6 +117,7 @@
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -135,6 +139,7 @@
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -156,6 +161,7 @@
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // textBoxMaLoaiPhong
             // 
@@ -170,7 +176,7 @@
             this.textBoxGhiChu.Location = new System.Drawing.Point(212, 112);
             this.textBoxGhiChu.Multiline = true;
             this.textBoxGhiChu.Name = "textBoxGhiChu";
-            this.textBoxGhiChu.Size = new System.Drawing.Size(200, 24);
+            this.textBoxGhiChu.Size = new System.Drawing.Size(436, 24);
             this.textBoxGhiChu.TabIndex = 25;
             // 
             // textBoxTenLoaiPhong
@@ -233,12 +239,35 @@
             this.labelGhiChu.TabIndex = 21;
             this.labelGhiChu.Text = "Ghi Chú";
             // 
+            // iconButtonSave
+            // 
+            this.iconButtonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(60)))));
+            this.iconButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonSave.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButtonSave.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconButtonSave.IconColor = System.Drawing.Color.White;
+            this.iconButtonSave.IconSize = 30;
+            this.iconButtonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonSave.Location = new System.Drawing.Point(730, 72);
+            this.iconButtonSave.Name = "iconButtonSave";
+            this.iconButtonSave.Rotation = 0D;
+            this.iconButtonSave.Size = new System.Drawing.Size(119, 40);
+            this.iconButtonSave.TabIndex = 28;
+            this.iconButtonSave.Text = "Lưu";
+            this.iconButtonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonSave.UseVisualStyleBackColor = false;
+            this.iconButtonSave.Click += new System.EventHandler(this.iconButtonSave_Click);
+            // 
             // LoaiPhongForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.iconButtonSave);
             this.Controls.Add(this.textBoxMaLoaiPhong);
             this.Controls.Add(this.textBoxGhiChu);
             this.Controls.Add(this.textBoxTenLoaiPhong);
@@ -256,6 +285,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoaiPhongForm";
             this.Text = "LoaiPhongForm";
+            this.Load += new System.EventHandler(this.LoaiPhongForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -278,5 +308,6 @@
         private System.Windows.Forms.Label labelMaloai;
         private System.Windows.Forms.Label labelSoNguoiMax;
         private System.Windows.Forms.Label labelGhiChu;
+        private FontAwesome.Sharp.IconButton iconButtonSave;
     }
 }
