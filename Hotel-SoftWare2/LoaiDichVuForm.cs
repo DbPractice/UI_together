@@ -30,12 +30,12 @@ namespace Hotel_SoftWare2
 
         private void clearText()
         {
-            textBoxTenloaidv.Text = "";
+            textBoxTenloaidv.Text = textBoxTimKiem.Text = "";
         }
         private void lockText()
         {
             textBoxMaloaidv.Enabled = textBoxTenloaidv.Enabled = false;
-            btnSua.Enabled = btnXoa.Enabled = false;
+            btnSua.Enabled = btnXoa.Enabled = btnTimKiem.Enabled = false;
         }
 
         private void unlockText()
@@ -154,6 +154,22 @@ namespace Hotel_SoftWare2
                 textBoxMaloaidv.Text = "MLDV0" + (chuoi2 + 1).ToString();
             else
                 textBoxMaloaidv.Text = "MLDV" + (chuoi2 + 1).ToString();
+        }
+
+        private void textBoxTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            btnTimKiem.Enabled = true;
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            dgvLoaiDV.DataSource = TypeSer.TKtypeService(textBoxTimKiem.Text);
+            if (textBoxTimKiem.Text == "")
+            {
+                dgvLoaiDV.DataSource = TypeSer.DSLoaiDichVu();
+            }
+            clearText();
+            btnTimKiem.Enabled = false;
         }
     }
 }

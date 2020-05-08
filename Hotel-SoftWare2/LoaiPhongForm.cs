@@ -53,13 +53,13 @@ namespace Hotel_SoftWare2
 
         private void clearText()
         {
-            textBoxTenLoaiPhong.Text = textBoxSoNguoiMax.Text = textBoxGhiChu.Text = "";
+            textBoxTenLoaiPhong.Text = textBoxSoNguoiMax.Text = textBoxGhiChu.Text = textBoxTimKiem.Text = "";
         }
 
         private void lockText()
         {
             textBoxMaLoaiPhong.Enabled = textBoxTenLoaiPhong.Enabled = textBoxGhiChu.Enabled = textBoxSoNguoiMax.Enabled = false;
-            btnSua.Enabled = btnXoa.Enabled = false;
+            btnSua.Enabled = btnXoa.Enabled = btnTimKiem.Enabled = false;
         }
 
         private void unlockText()
@@ -155,6 +155,22 @@ namespace Hotel_SoftWare2
             clearText();
             lockText();
             TypeRoomID();
+        }
+
+        private void textBoxTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            btnTimKiem.Enabled = true;
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {  
+         dgvLoaiPhong.DataSource =TypeRoom.TKtypeRoom(textBoxTimKiem.Text);
+            if(textBoxTimKiem.Text == "")
+            {
+                dgvLoaiPhong.DataSource = TypeRoom.DSLoaiPhong();
+            }
+         clearText();
+         btnTimKiem.Enabled = false;
         }
     }
 }

@@ -575,5 +575,41 @@ namespace Hotel_SoftWare2
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateRoom", mAPHONGParameter, tENPHONGParameter, tINHTRANGParameter, dIENTICHParameter, gIATHUEParameter, mALOAIParameter);
         }
+    
+        public virtual ObjectResult<TKtypeRoom_Result> TKtypeRoom(string tENLOAIPHONG)
+        {
+            var tENLOAIPHONGParameter = tENLOAIPHONG != null ?
+                new ObjectParameter("TENLOAIPHONG", tENLOAIPHONG) :
+                new ObjectParameter("TENLOAIPHONG", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TKtypeRoom_Result>("TKtypeRoom", tENLOAIPHONGParameter);
+        }
+    
+        public virtual ObjectResult<TKPhong_Result> TKPhong(string tENPHONG)
+        {
+            var tENPHONGParameter = tENPHONG != null ?
+                new ObjectParameter("TENPHONG", tENPHONG) :
+                new ObjectParameter("TENPHONG", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TKPhong_Result>("TKPhong", tENPHONGParameter);
+        }
+    
+        public virtual ObjectResult<TKService_Result> TKService(string tENDV)
+        {
+            var tENDVParameter = tENDV != null ?
+                new ObjectParameter("TENDV", tENDV) :
+                new ObjectParameter("TENDV", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TKService_Result>("TKService", tENDVParameter);
+        }
+    
+        public virtual ObjectResult<TKtypeService_Result> TKtypeService(string tENLOAIDV)
+        {
+            var tENLOAIDVParameter = tENLOAIDV != null ?
+                new ObjectParameter("TENLOAIDV", tENLOAIDV) :
+                new ObjectParameter("TENLOAIDV", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<TKtypeService_Result>("TKtypeService", tENLOAIDVParameter);
+        }
     }
 }

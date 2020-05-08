@@ -43,6 +43,8 @@
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
+            this.textBoxTimKiem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(464, 99);
+            this.label2.Location = new System.Drawing.Point(443, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 17);
             this.label2.TabIndex = 52;
@@ -61,7 +63,7 @@
             // tbGia
             // 
             this.tbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGia.Location = new System.Drawing.Point(555, 49);
+            this.tbGia.Location = new System.Drawing.Point(555, 25);
             this.tbGia.Multiline = true;
             this.tbGia.Name = "tbGia";
             this.tbGia.Size = new System.Drawing.Size(121, 30);
@@ -70,7 +72,7 @@
             // tbTen
             // 
             this.tbTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTen.Location = new System.Drawing.Point(272, 93);
+            this.tbTen.Location = new System.Drawing.Point(272, 81);
             this.tbTen.Multiline = true;
             this.tbTen.Name = "tbTen";
             this.tbTen.Size = new System.Drawing.Size(114, 30);
@@ -79,7 +81,7 @@
             // tbMa
             // 
             this.tbMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMa.Location = new System.Drawing.Point(272, 46);
+            this.tbMa.Location = new System.Drawing.Point(272, 25);
             this.tbMa.Multiline = true;
             this.tbMa.Name = "tbMa";
             this.tbMa.Size = new System.Drawing.Size(114, 30);
@@ -91,7 +93,7 @@
             this.LbGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.LbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbGia.ForeColor = System.Drawing.Color.Transparent;
-            this.LbGia.Location = new System.Drawing.Point(466, 52);
+            this.LbGia.Location = new System.Drawing.Point(464, 38);
             this.LbGia.Name = "LbGia";
             this.LbGia.Size = new System.Drawing.Size(64, 17);
             this.LbGia.TabIndex = 48;
@@ -103,7 +105,7 @@
             this.LbTenDV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.LbTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbTenDV.ForeColor = System.Drawing.Color.Transparent;
-            this.LbTenDV.Location = new System.Drawing.Point(186, 96);
+            this.LbTenDV.Location = new System.Drawing.Point(186, 84);
             this.LbTenDV.Name = "LbTenDV";
             this.LbTenDV.Size = new System.Drawing.Size(60, 17);
             this.LbTenDV.TabIndex = 47;
@@ -115,7 +117,7 @@
             this.LbMaDV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.LbMaDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbMaDV.ForeColor = System.Drawing.Color.Transparent;
-            this.LbMaDV.Location = new System.Drawing.Point(192, 52);
+            this.LbMaDV.Location = new System.Drawing.Point(192, 28);
             this.LbMaDV.Name = "LbMaDV";
             this.LbMaDV.Size = new System.Drawing.Size(54, 17);
             this.LbMaDV.TabIndex = 46;
@@ -124,7 +126,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(555, 99);
+            this.comboBox1.Location = new System.Drawing.Point(555, 84);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 53;
@@ -133,7 +135,7 @@
             // 
             this.dgvServices.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServices.Location = new System.Drawing.Point(189, 174);
+            this.dgvServices.Location = new System.Drawing.Point(177, 169);
             this.dgvServices.Name = "dgvServices";
             this.dgvServices.Size = new System.Drawing.Size(727, 400);
             this.dgvServices.TabIndex = 54;
@@ -269,12 +271,36 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // textBoxTimKiem
+            // 
+            this.textBoxTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTimKiem.Location = new System.Drawing.Point(418, 125);
+            this.textBoxTimKiem.Multiline = true;
+            this.textBoxTimKiem.Name = "textBoxTimKiem";
+            this.textBoxTimKiem.Size = new System.Drawing.Size(153, 30);
+            this.textBoxTimKiem.TabIndex = 61;
+            this.textBoxTimKiem.Click += new System.EventHandler(this.textBoxTimKiem_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(342, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 17);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "Tìm Kiếm:";
+            // 
             // QLServiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxTimKiem);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnXoa);
@@ -317,5 +343,7 @@
         private FontAwesome.Sharp.IconButton btnXoa;
         private FontAwesome.Sharp.IconButton btnSua;
         private FontAwesome.Sharp.IconButton btnThem;
+        private System.Windows.Forms.TextBox textBoxTimKiem;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -48,6 +48,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.iconButtonSave = new FontAwesome.Sharp.IconButton();
             this.btnX = new FontAwesome.Sharp.IconButton();
+            this.labelTim = new System.Windows.Forms.Label();
+            this.textBoxTimKiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).BeginInit();
             this.SuspendLayout();
             // 
@@ -307,12 +309,34 @@
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
+            // labelTim
+            // 
+            this.labelTim.AutoSize = true;
+            this.labelTim.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTim.ForeColor = System.Drawing.Color.Transparent;
+            this.labelTim.Location = new System.Drawing.Point(22, 134);
+            this.labelTim.Name = "labelTim";
+            this.labelTim.Size = new System.Drawing.Size(65, 15);
+            this.labelTim.TabIndex = 63;
+            this.labelTim.Text = "Tìm Kiếm:";
+            // 
+            // textBoxTimKiem
+            // 
+            this.textBoxTimKiem.Location = new System.Drawing.Point(110, 132);
+            this.textBoxTimKiem.Multiline = true;
+            this.textBoxTimKiem.Name = "textBoxTimKiem";
+            this.textBoxTimKiem.Size = new System.Drawing.Size(200, 20);
+            this.textBoxTimKiem.TabIndex = 62;
+            this.textBoxTimKiem.Click += new System.EventHandler(this.textBoxTimKiem_TextChanged);
+            // 
             // QlyPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
+            this.Controls.Add(this.labelTim);
+            this.Controls.Add(this.textBoxTimKiem);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.iconButtonSave);
             this.Controls.Add(this.label2);
@@ -364,5 +388,7 @@
         private System.Windows.Forms.Label label7;
         private FontAwesome.Sharp.IconButton iconButtonSave;
         private FontAwesome.Sharp.IconButton btnX;
+        private System.Windows.Forms.Label labelTim;
+        private System.Windows.Forms.TextBox textBoxTimKiem;
     }
 }

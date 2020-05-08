@@ -64,7 +64,7 @@ namespace Hotel_SoftWare2
 
         private void clearText()
         {
-            tbTen.Text = tbGia.Text = comboBox1.Text = "";
+            tbTen.Text = tbGia.Text = comboBox1.Text = textBoxTimKiem.Text = "";
         }
 
         private void iconButtonSave_Click_1(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace Hotel_SoftWare2
         private void lockText()
         {
             tbMa.Enabled = tbTen.Enabled = tbGia.Enabled = comboBox1.Enabled = false;
-            btnSua.Enabled = btnXoa.Enabled = false;
+            btnSua.Enabled = btnXoa.Enabled = btnTimKiem.Enabled = false;
         }
 
         private void unlockText()
@@ -162,7 +162,17 @@ namespace Hotel_SoftWare2
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            tbMa.Enabled = true;
+            dgvServices.DataSource = ser.TKService(textBoxTimKiem.Text);
+            if (textBoxTimKiem.Text == "")
+            {
+                dgvServices.DataSource = ser.DSDichVu();
+            }
+            clearText();
+            btnTimKiem.Enabled = false;
+        }
+        private void textBoxTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            btnTimKiem.Enabled = true;
         }
     }
 }

@@ -314,6 +314,18 @@
   <Function Name="TKKHTHEOTHANG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="THANG" Type="char" Mode="In" />
   </Function>
+  <Function Name="TKPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TENPHONG" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TKService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TENDV" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TKtypeRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TENLOAIPHONG" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TKtypeService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TENLOAIDV" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="TTKH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="MaKH" Type="char" Mode="In" />
   </Function>

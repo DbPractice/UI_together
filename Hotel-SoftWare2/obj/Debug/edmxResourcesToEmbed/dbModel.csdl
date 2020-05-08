@@ -443,6 +443,18 @@
       <Parameter Name="GIATHUE" Mode="In" Type="Double" />
       <Parameter Name="MALOAI" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="TKtypeRoom" ReturnType="Collection(dbModel.TKtypeRoom_Result)">
+      <Parameter Name="TENLOAIPHONG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TKPhong" ReturnType="Collection(dbModel.TKPhong_Result)">
+      <Parameter Name="TENPHONG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TKService" ReturnType="Collection(dbModel.TKService_Result)">
+      <Parameter Name="TENDV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TKtypeService" ReturnType="Collection(dbModel.TKtypeService_Result)">
+      <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="getAccount_Result">
     <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -571,5 +583,65 @@
     <Property Type="Int32" Name="DienTich" Nullable="true" />
     <Property Type="Double" Name="GiaThue" Nullable="true" />
     <Property Type="String" Name="MaLoai" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="TKtypeRoom_Result">
+    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
+    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="TKRoom_Result">
+    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
+    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="TKSer_Result">
+    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
+    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="TKtypeSer_Result">
+    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
+    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="TKRoom_Result1">
+    <Property Type="String" Name="MaPhong" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+    <Property Type="Byte" Name="TinhTrang" Nullable="true" />
+    <Property Type="Int32" Name="DienTich" Nullable="true" />
+    <Property Type="Double" Name="GiaThue" Nullable="true" />
+    <Property Type="String" Name="MaLoai" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="TKSer1_Result">
+    <Property Type="String" Name="MaDV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
+    <Property Type="Double" Name="DonGia" Nullable="true" />
+    <Property Type="String" Name="MaLoaiDV" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="TKtypeSer_Result1">
+    <Property Type="String" Name="MaLoaiDV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenLoaiDV" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="TKPhong_Result">
+    <Property Type="String" Name="MaPhong" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+    <Property Type="Byte" Name="TinhTrang" Nullable="true" />
+    <Property Type="Int32" Name="DienTich" Nullable="true" />
+    <Property Type="Double" Name="GiaThue" Nullable="true" />
+    <Property Type="String" Name="MaLoai" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="TKService_Result">
+    <Property Type="String" Name="MaDV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
+    <Property Type="Double" Name="DonGia" Nullable="true" />
+    <Property Type="String" Name="MaLoaiDV" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="TKtypeService_Result">
+    <Property Type="String" Name="MaLoaiDV" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenLoaiDV" Nullable="true" MaxLength="20" />
   </ComplexType>
 </Schema>

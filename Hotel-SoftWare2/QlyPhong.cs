@@ -53,13 +53,13 @@ namespace Hotel_SoftWare2
 
         private void clearText()
         {
-            textBoxTenPhong.Text = comboBoxTTphong.Text = textBoxDienTich.Text = textBoxGia.Text = comboBoxMaLoai.Text = "";
+            textBoxTenPhong.Text = comboBoxTTphong.Text = textBoxDienTich.Text = textBoxGia.Text = comboBoxMaLoai.Text = textBoxTimKiem.Text = "";
         }
 
         private void lockText()
         {
             textBoxMaPhong.Enabled = textBoxTenPhong.Enabled = comboBoxTTphong.Enabled = textBoxDienTich.Enabled = textBoxGia.Enabled = comboBoxMaLoai.Enabled = false;
-            iBtSua.Enabled = iBtXoa.Enabled = false;
+            iBtSua.Enabled = iBtXoa.Enabled = iBtTimKiem.Enabled = false;
         }
 
         private void unlockText()
@@ -157,6 +157,22 @@ namespace Hotel_SoftWare2
             {
 
             }
+        }
+
+        private void textBoxTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            iBtTimKiem.Enabled = true;
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            dgvRoom.DataSource = room.TKPhong(textBoxTimKiem.Text);
+            if (textBoxTimKiem.Text == "")
+            {
+                dgvRoom.DataSource = room.DSPhong();
+            }
+            clearText();
+           iBtTimKiem.Enabled = false;
         }
     }
 }

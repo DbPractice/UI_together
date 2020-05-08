@@ -344,5 +344,45 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="updateRoom" FunctionName="dbModel.Store.updateRoom" />
+    <FunctionImportMapping FunctionImportName="TKtypeRoom" FunctionName="dbModel.Store.TKtypeRoom">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TKtypeRoom_Result">
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+          <ScalarProperty Name="SoNguoi" ColumnName="SoNguoi" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TKPhong" FunctionName="dbModel.Store.TKPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TKPhong_Result">
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="DienTich" ColumnName="DienTich" />
+          <ScalarProperty Name="GiaThue" ColumnName="GiaThue" />
+          <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TKService" FunctionName="dbModel.Store.TKService">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TKService_Result">
+          <ScalarProperty Name="MaDV" ColumnName="MaDV" />
+          <ScalarProperty Name="TenDV" ColumnName="TenDV" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="MaLoaiDV" ColumnName="MaLoaiDV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TKtypeService" FunctionName="dbModel.Store.TKtypeService">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.TKtypeService_Result">
+          <ScalarProperty Name="MaLoaiDV" ColumnName="MaLoaiDV" />
+          <ScalarProperty Name="TenLoaiDV" ColumnName="TenLoaiDV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>
