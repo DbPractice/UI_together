@@ -341,6 +341,165 @@ public partial class htEntities : DbContext
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getCusFrPhieuThue_Result>("getCusFrPhieuThue", maphieuthueParameter);
     }
 
+
+    public virtual ObjectResult<tienphongDetail_Result> tienphongDetail(string mptp)
+    {
+
+        var mptpParameter = mptp != null ?
+            new ObjectParameter("mptp", mptp) :
+            new ObjectParameter("mptp", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<tienphongDetail_Result>("tienphongDetail", mptpParameter);
+    }
+
+
+    public virtual ObjectResult<tienDvDetail_Result> tienDvDetail(string maptp)
+    {
+
+        var maptpParameter = maptp != null ?
+            new ObjectParameter("maptp", maptp) :
+            new ObjectParameter("maptp", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<tienDvDetail_Result>("tienDvDetail", maptpParameter);
+    }
+
+
+    public virtual int creatBill(string maHD, Nullable<double> tienphong, Nullable<double> tiendv, Nullable<double> tongtien, Nullable<bool> hinhthuctt, Nullable<System.DateTime> ngaytt, string ghichu, string mptp)
+    {
+
+        var maHDParameter = maHD != null ?
+            new ObjectParameter("maHD", maHD) :
+            new ObjectParameter("maHD", typeof(string));
+
+
+        var tienphongParameter = tienphong.HasValue ?
+            new ObjectParameter("tienphong", tienphong) :
+            new ObjectParameter("tienphong", typeof(double));
+
+
+        var tiendvParameter = tiendv.HasValue ?
+            new ObjectParameter("tiendv", tiendv) :
+            new ObjectParameter("tiendv", typeof(double));
+
+
+        var tongtienParameter = tongtien.HasValue ?
+            new ObjectParameter("tongtien", tongtien) :
+            new ObjectParameter("tongtien", typeof(double));
+
+
+        var hinhthucttParameter = hinhthuctt.HasValue ?
+            new ObjectParameter("hinhthuctt", hinhthuctt) :
+            new ObjectParameter("hinhthuctt", typeof(bool));
+
+
+        var ngayttParameter = ngaytt.HasValue ?
+            new ObjectParameter("ngaytt", ngaytt) :
+            new ObjectParameter("ngaytt", typeof(System.DateTime));
+
+
+        var ghichuParameter = ghichu != null ?
+            new ObjectParameter("ghichu", ghichu) :
+            new ObjectParameter("ghichu", typeof(string));
+
+
+        var mptpParameter = mptp != null ?
+            new ObjectParameter("mptp", mptp) :
+            new ObjectParameter("mptp", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("creatBill", maHDParameter, tienphongParameter, tiendvParameter, tongtienParameter, hinhthucttParameter, ngayttParameter, ghichuParameter, mptpParameter);
+    }
+
+
+    public virtual ObjectResult<string> getHTTT()
+    {
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getHTTT");
+    }
+
+
+    public virtual int creatBill1(string maHD, Nullable<double> tienphong, Nullable<double> tiendv, Nullable<double> tongtien, Nullable<bool> hinhthuctt, Nullable<System.DateTime> ngaytt, string ghichu, string mptp)
+    {
+
+        var maHDParameter = maHD != null ?
+            new ObjectParameter("maHD", maHD) :
+            new ObjectParameter("maHD", typeof(string));
+
+
+        var tienphongParameter = tienphong.HasValue ?
+            new ObjectParameter("tienphong", tienphong) :
+            new ObjectParameter("tienphong", typeof(double));
+
+
+        var tiendvParameter = tiendv.HasValue ?
+            new ObjectParameter("tiendv", tiendv) :
+            new ObjectParameter("tiendv", typeof(double));
+
+
+        var tongtienParameter = tongtien.HasValue ?
+            new ObjectParameter("tongtien", tongtien) :
+            new ObjectParameter("tongtien", typeof(double));
+
+
+        var hinhthucttParameter = hinhthuctt.HasValue ?
+            new ObjectParameter("hinhthuctt", hinhthuctt) :
+            new ObjectParameter("hinhthuctt", typeof(bool));
+
+
+        var ngayttParameter = ngaytt.HasValue ?
+            new ObjectParameter("ngaytt", ngaytt) :
+            new ObjectParameter("ngaytt", typeof(System.DateTime));
+
+
+        var ghichuParameter = ghichu != null ?
+            new ObjectParameter("ghichu", ghichu) :
+            new ObjectParameter("ghichu", typeof(string));
+
+
+        var mptpParameter = mptp != null ?
+            new ObjectParameter("mptp", mptp) :
+            new ObjectParameter("mptp", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("creatBill1", maHDParameter, tienphongParameter, tiendvParameter, tongtienParameter, hinhthucttParameter, ngayttParameter, ghichuParameter, mptpParameter);
+    }
+
+
+    public virtual ObjectResult<getDoanhThuTienDV_Result> getDoanhThuTienDV(Nullable<System.DateTime> ngayvaochon, Nullable<System.DateTime> ngayrachon)
+    {
+
+        var ngayvaochonParameter = ngayvaochon.HasValue ?
+            new ObjectParameter("ngayvaochon", ngayvaochon) :
+            new ObjectParameter("ngayvaochon", typeof(System.DateTime));
+
+
+        var ngayrachonParameter = ngayrachon.HasValue ?
+            new ObjectParameter("ngayrachon", ngayrachon) :
+            new ObjectParameter("ngayrachon", typeof(System.DateTime));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getDoanhThuTienDV_Result>("getDoanhThuTienDV", ngayvaochonParameter, ngayrachonParameter);
+    }
+
+
+    public virtual ObjectResult<getDoanhThuTienPhong_Result> getDoanhThuTienPhong(Nullable<System.DateTime> ngayvaochon, Nullable<System.DateTime> ngayrachon)
+    {
+
+        var ngayvaochonParameter = ngayvaochon.HasValue ?
+            new ObjectParameter("ngayvaochon", ngayvaochon) :
+            new ObjectParameter("ngayvaochon", typeof(System.DateTime));
+
+
+        var ngayrachonParameter = ngayrachon.HasValue ?
+            new ObjectParameter("ngayrachon", ngayrachon) :
+            new ObjectParameter("ngayrachon", typeof(System.DateTime));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getDoanhThuTienPhong_Result>("getDoanhThuTienPhong", ngayvaochonParameter, ngayrachonParameter);
+    }
+
 }
 
 }

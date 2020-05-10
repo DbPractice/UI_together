@@ -13,6 +13,7 @@
     <Property Name="MaPhieuThuePhong" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="PhieuThuePhong" Relationship="Self.FK__ChiTietPh__MaPhi__5D2BD0E6" FromRole="ChiTietPhieuThue" ToRole="PhieuThuePhong" />
     <NavigationProperty Name="Phong" Relationship="Self.FK__ChiTietPh__MaPho__5C37ACAD" FromRole="ChiTietPhieuThue" ToRole="Phong" />
+    <NavigationProperty Name="PhieuSuDungDichVus" Relationship="dbModel.FK__PhieuSuDu__MaChi__22951AFD" FromRole="ChiTietPhieuThue" ToRole="PhieuSuDungDichVu" />
   </EntityType>
   <EntityType Name="DichVu">
     <Key>
@@ -91,7 +92,8 @@
     <Property Name="GiaTien" Type="Double" />
     <Property Name="MaDV" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="DichVu" Relationship="Self.FK__PhieuSuDun__MaDV__4C0144E4" FromRole="PhieuSuDungDichVu" ToRole="DichVu" />
-    <NavigationProperty Name="PhieuThuePhongs" Relationship="Self.FK__PhieuThueP__MaSD__595B4002" FromRole="PhieuSuDungDichVu" ToRole="PhieuThuePhong" />
+    <Property Name="MaChiTietPhieuThue" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ChiTietPhieuThue" Relationship="dbModel.FK__PhieuSuDu__MaChi__22951AFD" FromRole="PhieuSuDungDichVu" ToRole="ChiTietPhieuThue" />
   </EntityType>
   <EntityType Name="PhieuThuePhong">
     <Key>
@@ -101,12 +103,10 @@
     <Property Name="GhiChu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="MaKH" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
     <Property Name="MaNV" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
-    <Property Name="MaSD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="ChiTietPhieuThues" Relationship="Self.FK__ChiTietPh__MaPhi__5D2BD0E6" FromRole="PhieuThuePhong" ToRole="ChiTietPhieuThue" />
     <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__MaPhieuT__60083D91" FromRole="PhieuThuePhong" ToRole="HoaDon" />
     <NavigationProperty Name="KhachHang" Relationship="Self.FK__PhieuThueP__MaKH__5772F790" FromRole="PhieuThuePhong" ToRole="KhachHang" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FK__PhieuThueP__MaNV__58671BC9" FromRole="PhieuThuePhong" ToRole="NhanVien" />
-    <NavigationProperty Name="PhieuSuDungDichVu" Relationship="Self.FK__PhieuThueP__MaSD__595B4002" FromRole="PhieuThuePhong" ToRole="PhieuSuDungDichVu" />
   </EntityType>
   <EntityType Name="Phong">
     <Key>
@@ -227,18 +227,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PhieuThueP__MaSD__595B4002">
-    <End Role="PhieuSuDungDichVu" Type="Self.PhieuSuDungDichVu" Multiplicity="0..1" />
-    <End Role="PhieuThuePhong" Type="Self.PhieuThuePhong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PhieuSuDungDichVu">
-        <PropertyRef Name="MaSD" />
-      </Principal>
-      <Dependent Role="PhieuThuePhong">
-        <PropertyRef Name="MaSD" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="htEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ChiTietPhieuThues" EntityType="Self.ChiTietPhieuThue" />
     <EntitySet Name="DichVus" EntityType="Self.DichVu" />
@@ -281,10 +269,6 @@
     </AssociationSet>
     <AssociationSet Name="FK__PhieuThueP__MaNV__58671BC9" Association="Self.FK__PhieuThueP__MaNV__58671BC9">
       <End Role="NhanVien" EntitySet="NhanViens" />
-      <End Role="PhieuThuePhong" EntitySet="PhieuThuePhongs" />
-    </AssociationSet>
-    <AssociationSet Name="FK__PhieuThueP__MaSD__595B4002" Association="Self.FK__PhieuThueP__MaSD__595B4002">
-      <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
       <End Role="PhieuThuePhong" EntitySet="PhieuThuePhongs" />
     </AssociationSet>
     <FunctionImport Name="addCus">
@@ -349,6 +333,45 @@
     <FunctionImport Name="getCusFrPhieuThue" ReturnType="Collection(dbModel.getCusFrPhieuThue_Result)">
       <Parameter Name="maphieuthue" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="tienphongDetail" ReturnType="Collection(dbModel.tienphongDetail_Result)">
+      <Parameter Name="mptp" Mode="In" Type="String" />
+    </FunctionImport>
+    <AssociationSet Name="FK__PhieuSuDu__MaChi__22951AFD" Association="dbModel.FK__PhieuSuDu__MaChi__22951AFD">
+      <End Role="ChiTietPhieuThue" EntitySet="ChiTietPhieuThues" />
+      <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
+    </AssociationSet>
+    <FunctionImport Name="tienDvDetail" ReturnType="Collection(dbModel.tienDvDetail_Result)">
+      <Parameter Name="maptp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="creatBill">
+      <Parameter Name="maHD" Mode="In" Type="String" />
+      <Parameter Name="tienphong" Mode="In" Type="Double" />
+      <Parameter Name="tiendv" Mode="In" Type="Double" />
+      <Parameter Name="tongtien" Mode="In" Type="Double" />
+      <Parameter Name="hinhthuctt" Mode="In" Type="Boolean" />
+      <Parameter Name="ngaytt" Mode="In" Type="DateTime" />
+      <Parameter Name="ghichu" Mode="In" Type="String" />
+      <Parameter Name="mptp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getHTTT" ReturnType="Collection(String)" />
+    <FunctionImport Name="creatBill1">
+      <Parameter Name="maHD" Mode="In" Type="String" />
+      <Parameter Name="tienphong" Mode="In" Type="Double" />
+      <Parameter Name="tiendv" Mode="In" Type="Double" />
+      <Parameter Name="tongtien" Mode="In" Type="Double" />
+      <Parameter Name="hinhthuctt" Mode="In" Type="Boolean" />
+      <Parameter Name="ngaytt" Mode="In" Type="DateTime" />
+      <Parameter Name="ghichu" Mode="In" Type="String" />
+      <Parameter Name="mptp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getDoanhThuTienDV" ReturnType="Collection(dbModel.getDoanhThuTienDV_Result)">
+      <Parameter Name="ngayvaochon" Mode="In" Type="DateTime" />
+      <Parameter Name="ngayrachon" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="getDoanhThuTienPhong" ReturnType="Collection(dbModel.getDoanhThuTienPhong_Result)">
+      <Parameter Name="ngayvaochon" Mode="In" Type="DateTime" />
+      <Parameter Name="ngayrachon" Mode="In" Type="DateTime" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="getAccount_Result">
     <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -393,5 +416,45 @@
     <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
     <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="tienphongDetail_Result">
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="NgayVao" Nullable="true" />
+    <Property Type="DateTime" Name="NgayRa" Nullable="true" />
+    <Property Type="Int32" Name="SoNgayO" Nullable="true" />
+    <Property Type="Double" Name="TienPhong" Nullable="true" />
+  </ComplexType>
+  <Association Name="FK__PhieuSuDu__MaChi__22951AFD">
+    <End Type="dbModel.ChiTietPhieuThue" Role="ChiTietPhieuThue" Multiplicity="0..1" />
+    <End Type="dbModel.PhieuSuDungDichVu" Role="PhieuSuDungDichVu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChiTietPhieuThue">
+        <PropertyRef Name="MaChiTietPhieuThue" />
+      </Principal>
+      <Dependent Role="PhieuSuDungDichVu">
+        <PropertyRef Name="MaChiTietPhieuThue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="tienDvDetail_Result">
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="NgaySD" Nullable="true" />
+    <Property Type="Byte" Name="SoLuong" Nullable="true" />
+    <Property Type="Double" Name="tiendv" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getDoanhThuTienDV_Result">
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="NgaySD" Nullable="true" />
+    <Property Type="Byte" Name="SoLuong" Nullable="true" />
+    <Property Type="Double" Name="tiendv" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getDoanhThuTienPhong_Result">
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="NgayVao" Nullable="true" />
+    <Property Type="DateTime" Name="NgayRa" Nullable="true" />
+    <Property Type="Int32" Name="SoNgayO" Nullable="true" />
+    <Property Type="Double" Name="TienPhong" Nullable="true" />
   </ComplexType>
 </Schema>

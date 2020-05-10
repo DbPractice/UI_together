@@ -35,6 +35,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
             "EntityFramework": {
               "target": "Package",
               "version": "[6.2.0, )"

@@ -16,6 +16,26 @@
           "lib/net45/EntityFramework.dll": {}
         }
       },
+      "EPPlus/5.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Drawing",
+          "System.Security",
+          "System.Threading.Tasks",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net45/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EPPlus.dll": {}
+        }
+      },
       "FontAwesome/4.7.0": {
         "type": "package"
       },
@@ -42,6 +62,26 @@
         "runtime": {
           "lib/net45/EntityFramework.SqlServer.dll": {},
           "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "EPPlus/5.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Drawing",
+          "System.Security",
+          "System.Threading.Tasks",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net45/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EPPlus.dll": {}
         }
       },
       "FontAwesome/4.7.0": {
@@ -72,6 +112,26 @@
           "lib/net45/EntityFramework.dll": {}
         }
       },
+      "EPPlus/5.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Drawing",
+          "System.Security",
+          "System.Threading.Tasks",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net45/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EPPlus.dll": {}
+        }
+      },
       "FontAwesome/4.7.0": {
         "type": "package"
       },
@@ -98,6 +158,26 @@
         "runtime": {
           "lib/net45/EntityFramework.SqlServer.dll": {},
           "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "EPPlus/5.1.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Drawing",
+          "System.Security",
+          "System.Threading.Tasks",
+          "System.Xml",
+          "System.configuration"
+        ],
+        "compile": {
+          "lib/net45/EPPlus.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EPPlus.dll": {}
         }
       },
       "FontAwesome/4.7.0": {
@@ -145,6 +225,30 @@
         "tools/migrate.exe"
       ]
     },
+    "EPPlus/5.1.1": {
+      "sha512": "N31UIJzw+qtuGclWUDf8OeILx8IkLU0+xvKP73EmbDbnfqFFu0I00umJtny+hPOmaqztjX9XinQBwb6JEBiESQ==",
+      "type": "package",
+      "path": "epplus/5.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EPPlusLogo.png",
+        "epplus.5.1.1.nupkg.sha512",
+        "epplus.nuspec",
+        "lib/net35/EPPlus.dll",
+        "lib/net35/EPPlus.xml",
+        "lib/net40/EPPlus.dll",
+        "lib/net40/EPPlus.xml",
+        "lib/net45/EPPlus.dll",
+        "lib/net45/EPPlus.xml",
+        "lib/netstandard2.0/EPPlus.dll",
+        "lib/netstandard2.0/EPPlus.xml",
+        "lib/netstandard2.1/EPPlus.dll",
+        "lib/netstandard2.1/EPPlus.xml",
+        "license.md",
+        "readme.txt"
+      ]
+    },
     "FontAwesome/4.7.0": {
       "sha512": "n4H/brfszElyoZ4kmGh8E75uqvLzLvFr3h2PFVdPH1LwUmWIpeqdaW2pcC4oZAhg7sESyObh0IZpAI8COCNeUg==",
       "type": "package",
@@ -185,6 +289,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "EPPlus >= 5.1.1",
       "EntityFramework >= 6.2.0",
       "FontAwesome >= 4.7.0",
       "FontAwesome.Sharp >= 5.12.1"
@@ -224,6 +329,10 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "EPPlus": {
+            "target": "Package",
+            "version": "[5.1.1, )"
+          },
           "EntityFramework": {
             "target": "Package",
             "version": "[6.2.0, )"

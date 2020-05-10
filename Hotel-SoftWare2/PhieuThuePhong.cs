@@ -37,8 +37,6 @@ public partial class PhieuThuePhong
 
     public string MaNV { get; set; }
 
-    public string MaSD { get; set; }
-
 
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -52,8 +50,6 @@ public partial class PhieuThuePhong
     public virtual KhachHang KhachHang { get; set; }
 
     public virtual NhanVien NhanVien { get; set; }
-
-    public virtual PhieuSuDungDichVu PhieuSuDungDichVu { get; set; }
 
 }
 

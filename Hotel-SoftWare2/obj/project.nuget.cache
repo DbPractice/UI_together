@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "XjCr/yxKNUiY7xMIRzICVW930dyQvF+e531C1tkHSN13C2jnMZk/b0m7i5uTap/67R7dJe/w+5HQvkY3Z9TY5w==",
+  "dgSpecHash": "G+Rm5xXou0mSmptn688LUkhRc4g51qfWoroV6cS+aSEVLSQVAGlhZKxN1GVk1u6dEhbYg+bgresGjM3e70cigw==",
   "success": true,
   "projectFilePath": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\datproqhna\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
+    "C:\\Users\\datproqhna\\.nuget\\packages\\epplus\\5.1.1\\epplus.5.1.1.nupkg.sha512",
     "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome.sharp\\5.12.1\\fontawesome.sharp.5.12.1.nupkg.sha512"
   ],

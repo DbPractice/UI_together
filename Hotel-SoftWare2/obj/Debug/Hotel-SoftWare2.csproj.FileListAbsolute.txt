@@ -115,3 +115,5 @@ D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\bin\Debug\E
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.LoaiDichVuForm.resources
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.LoaiPhongForm.resources
 D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel-SoftWare2.csprojAssemblyReference.cache
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\obj\Debug\Hotel_SoftWare2.listPhieuThue.resources
+D:\Ki2_Năm3\Db-Practice\Git\UI_together\UI_together\Hotel-SoftWare2\bin\Debug\EPPlus.dll

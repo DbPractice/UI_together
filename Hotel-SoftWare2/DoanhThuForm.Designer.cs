@@ -28,17 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelloaiTK = new System.Windows.Forms.Label();
             this.labeltuNgay = new System.Windows.Forms.Label();
             this.labeldenNgay = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerEmp = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayVao = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgaydi = new System.Windows.Forms.DateTimePicker();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.groupBoxTienPhongDetail = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTienPhongDetail = new System.Windows.Forms.DataGridView();
             this.groupBoxTienDVDetail = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvTienDvDetail = new System.Windows.Forms.DataGridView();
             this.groupBoxTien = new System.Windows.Forms.GroupBox();
             this.labelTongDT = new System.Windows.Forms.Label();
             this.labelTongTienDV = new System.Windows.Forms.Label();
@@ -48,29 +46,18 @@
             this.labelTongTien = new System.Windows.Forms.Label();
             this.buttonInFile = new System.Windows.Forms.Button();
             this.groupBoxTienPhongDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTienPhongDetail)).BeginInit();
             this.groupBoxTienDVDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTienDvDetail)).BeginInit();
             this.groupBoxTien.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelloaiTK
-            // 
-            this.labelloaiTK.AutoSize = true;
-            this.labelloaiTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelloaiTK.ForeColor = System.Drawing.Color.White;
-            this.labelloaiTK.Location = new System.Drawing.Point(52, 53);
-            this.labelloaiTK.Name = "labelloaiTK";
-            this.labelloaiTK.Size = new System.Drawing.Size(101, 17);
-            this.labelloaiTK.TabIndex = 2;
-            this.labelloaiTK.Text = "Loại Thống Kê";
             // 
             // labeltuNgay
             // 
             this.labeltuNgay.AutoSize = true;
             this.labeltuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeltuNgay.ForeColor = System.Drawing.Color.White;
-            this.labeltuNgay.Location = new System.Drawing.Point(322, 53);
+            this.labeltuNgay.Location = new System.Drawing.Point(143, 24);
             this.labeltuNgay.Name = "labeltuNgay";
             this.labeltuNgay.Size = new System.Drawing.Size(62, 17);
             this.labeltuNgay.TabIndex = 3;
@@ -81,60 +68,50 @@
             this.labeldenNgay.AutoSize = true;
             this.labeldenNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeldenNgay.ForeColor = System.Drawing.Color.White;
-            this.labeldenNgay.Location = new System.Drawing.Point(597, 53);
+            this.labeldenNgay.Location = new System.Drawing.Point(476, 24);
             this.labeldenNgay.Name = "labeldenNgay";
             this.labeldenNgay.Size = new System.Drawing.Size(71, 17);
             this.labeldenNgay.TabIndex = 4;
             this.labeldenNgay.Text = "Đến Ngày";
             // 
-            // comboBox1
+            // dtpNgayVao
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Theo Ngày",
-            "Theo Tháng"});
-            this.comboBox1.Location = new System.Drawing.Point(55, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
+            this.dtpNgayVao.CustomFormat = "dd-MM-yyyy";
+            this.dtpNgayVao.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpNgayVao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayVao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayVao.Location = new System.Drawing.Point(90, 73);
+            this.dtpNgayVao.Name = "dtpNgayVao";
+            this.dtpNgayVao.Size = new System.Drawing.Size(200, 24);
+            this.dtpNgayVao.TabIndex = 26;
             // 
-            // dateTimePickerEmp
+            // dtpNgaydi
             // 
-            this.dateTimePickerEmp.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePickerEmp.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePickerEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerEmp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerEmp.Location = new System.Drawing.Point(325, 85);
-            this.dateTimePickerEmp.Name = "dateTimePickerEmp";
-            this.dateTimePickerEmp.Size = new System.Drawing.Size(200, 24);
-            this.dateTimePickerEmp.TabIndex = 26;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(589, 85);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
-            this.dateTimePicker1.TabIndex = 27;
+            this.dtpNgaydi.CustomFormat = "dd-MM-yyyy";
+            this.dtpNgaydi.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpNgaydi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgaydi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgaydi.Location = new System.Drawing.Point(425, 73);
+            this.dtpNgaydi.Name = "dtpNgaydi";
+            this.dtpNgaydi.Size = new System.Drawing.Size(200, 24);
+            this.dtpNgaydi.TabIndex = 27;
             // 
             // btnThongKe
             // 
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.Location = new System.Drawing.Point(816, 73);
+            this.btnThongKe.Location = new System.Drawing.Point(725, 41);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(112, 40);
             this.btnThongKe.TabIndex = 28;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // groupBoxTienPhongDetail
             // 
             this.groupBoxTienPhongDetail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxTienPhongDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.groupBoxTienPhongDetail.Controls.Add(this.dataGridView1);
+            this.groupBoxTienPhongDetail.Controls.Add(this.dgvTienPhongDetail);
             this.groupBoxTienPhongDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTienPhongDetail.ForeColor = System.Drawing.Color.White;
             this.groupBoxTienPhongDetail.Location = new System.Drawing.Point(325, 119);
@@ -144,19 +121,19 @@
             this.groupBoxTienPhongDetail.TabStop = false;
             this.groupBoxTienPhongDetail.Text = "Chi Tiết Tiền Phòng";
             // 
-            // dataGridView1
+            // dgvTienPhongDetail
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(546, 207);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvTienPhongDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTienPhongDetail.Location = new System.Drawing.Point(22, 21);
+            this.dgvTienPhongDetail.Name = "dgvTienPhongDetail";
+            this.dgvTienPhongDetail.Size = new System.Drawing.Size(546, 207);
+            this.dgvTienPhongDetail.TabIndex = 0;
             // 
             // groupBoxTienDVDetail
             // 
             this.groupBoxTienDVDetail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxTienDVDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.groupBoxTienDVDetail.Controls.Add(this.dataGridView2);
+            this.groupBoxTienDVDetail.Controls.Add(this.dgvTienDvDetail);
             this.groupBoxTienDVDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTienDVDetail.ForeColor = System.Drawing.Color.White;
             this.groupBoxTienDVDetail.Location = new System.Drawing.Point(325, 354);
@@ -166,13 +143,13 @@
             this.groupBoxTienDVDetail.TabStop = false;
             this.groupBoxTienDVDetail.Text = "Chi Tiết Tiền Dịch Vụ";
             // 
-            // dataGridView2
+            // dgvTienDvDetail
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(22, 21);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(546, 207);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvTienDvDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTienDvDetail.Location = new System.Drawing.Point(22, 21);
+            this.dgvTienDvDetail.Name = "dgvTienDvDetail";
+            this.dgvTienDvDetail.Size = new System.Drawing.Size(546, 207);
+            this.dgvTienDvDetail.TabIndex = 1;
             // 
             // groupBoxTien
             // 
@@ -262,6 +239,7 @@
             this.buttonInFile.TabIndex = 35;
             this.buttonInFile.Text = "In Exel";
             this.buttonInFile.UseVisualStyleBackColor = true;
+            this.buttonInFile.Click += new System.EventHandler(this.buttonInFile_Click);
             // 
             // DoanhThuForm
             // 
@@ -274,19 +252,18 @@
             this.Controls.Add(this.groupBoxTienDVDetail);
             this.Controls.Add(this.groupBoxTienPhongDetail);
             this.Controls.Add(this.btnThongKe);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dateTimePickerEmp);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dtpNgaydi);
+            this.Controls.Add(this.dtpNgayVao);
             this.Controls.Add(this.labeldenNgay);
             this.Controls.Add(this.labeltuNgay);
-            this.Controls.Add(this.labelloaiTK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DoanhThuForm";
             this.Text = "DoanhThuForm";
+            this.Load += new System.EventHandler(this.DoanhThuForm_Load);
             this.groupBoxTienPhongDetail.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTienPhongDetail)).EndInit();
             this.groupBoxTienDVDetail.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTienDvDetail)).EndInit();
             this.groupBoxTien.ResumeLayout(false);
             this.groupBoxTien.PerformLayout();
             this.ResumeLayout(false);
@@ -295,18 +272,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelloaiTK;
         private System.Windows.Forms.Label labeltuNgay;
         private System.Windows.Forms.Label labeldenNgay;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePickerEmp;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNgayVao;
+        private System.Windows.Forms.DateTimePicker dtpNgaydi;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.GroupBox groupBoxTienPhongDetail;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTienPhongDetail;
         private System.Windows.Forms.GroupBox groupBoxTienDVDetail;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvTienDvDetail;
         private System.Windows.Forms.GroupBox groupBoxTien;
         private System.Windows.Forms.Label labelTongDT;
         private System.Windows.Forms.Label labelTongTienDV;

@@ -86,6 +86,7 @@
           <Property Name="SoLuong" Type="tinyint" />
           <Property Name="GiaTien" Type="float" />
           <Property Name="MaDV" Type="varchar" MaxLength="8" />
+          <Property Name="MaChiTietPhieuThue" Type="varchar" MaxLength="8" />
         </EntityType>
         <EntityType Name="PhieuThuePhong">
           <Key>
@@ -95,7 +96,6 @@
           <Property Name="GhiChu" Type="nvarchar" MaxLength="250" />
           <Property Name="MaKH" Type="varchar" MaxLength="8" />
           <Property Name="MaNV" Type="varchar" MaxLength="8" />
-          <Property Name="MaSD" Type="varchar" MaxLength="8" />
         </EntityType>
         <EntityType Name="Phong">
           <Key>
@@ -118,7 +118,7 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
-        <Association Name="FK__ChiTietPh__MaPhi__5D2BD0E6">
+        <Association Name="FK__ChiTietPh__MaPhi__1BE81D6E">
           <End Role="PhieuThuePhong" Type="Self.PhieuThuePhong" Multiplicity="0..1" />
           <End Role="ChiTietPhieuThue" Type="Self.ChiTietPhieuThue" Multiplicity="*" />
           <ReferentialConstraint>
@@ -130,7 +130,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ChiTietPh__MaPho__5C37ACAD">
+        <Association Name="FK__ChiTietPh__MaPho__1AF3F935">
           <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
           <End Role="ChiTietPhieuThue" Type="Self.ChiTietPhieuThue" Multiplicity="*" />
           <ReferentialConstraint>
@@ -142,7 +142,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__DichVu__MaLoaiDV__4924D839">
+        <Association Name="FK__DichVu__MaLoaiDV__07E124C1">
           <End Role="LoaiDichVu" Type="Self.LoaiDichVu" Multiplicity="0..1" />
           <End Role="DichVu" Type="Self.DichVu" Multiplicity="*" />
           <ReferentialConstraint>
@@ -154,7 +154,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__HoaDon__MaPhieuT__60083D91">
+        <Association Name="FK__HoaDon__MaPhieuT__1EC48A19">
           <End Role="PhieuThuePhong" Type="Self.PhieuThuePhong" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
@@ -166,7 +166,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PhieuSuDun__MaDV__4C0144E4">
+        <Association Name="FK__PhieuSuDu__MaChi__22951AFD">
+          <End Role="ChiTietPhieuThue" Type="Self.ChiTietPhieuThue" Multiplicity="0..1" />
+          <End Role="PhieuSuDungDichVu" Type="Self.PhieuSuDungDichVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChiTietPhieuThue">
+              <PropertyRef Name="MaChiTietPhieuThue" />
+            </Principal>
+            <Dependent Role="PhieuSuDungDichVu">
+              <PropertyRef Name="MaChiTietPhieuThue" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PhieuSuDun__MaDV__21A0F6C4">
           <End Role="DichVu" Type="Self.DichVu" Multiplicity="0..1" />
           <End Role="PhieuSuDungDichVu" Type="Self.PhieuSuDungDichVu" Multiplicity="*" />
           <ReferentialConstraint>
@@ -178,7 +190,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PhieuThueP__MaKH__5772F790">
+        <Association Name="FK__PhieuThueP__MaKH__17236851">
           <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1" />
           <End Role="PhieuThuePhong" Type="Self.PhieuThuePhong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -190,7 +202,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PhieuThueP__MaNV__58671BC9">
+        <Association Name="FK__PhieuThueP__MaNV__18178C8A">
           <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
           <End Role="PhieuThuePhong" Type="Self.PhieuThuePhong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -202,19 +214,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PhieuThueP__MaSD__595B4002">
-          <End Role="PhieuSuDungDichVu" Type="Self.PhieuSuDungDichVu" Multiplicity="0..1" />
-          <End Role="PhieuThuePhong" Type="Self.PhieuThuePhong" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuSuDungDichVu">
-              <PropertyRef Name="MaSD" />
-            </Principal>
-            <Dependent Role="PhieuThuePhong">
-              <PropertyRef Name="MaSD" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Phong__MaLoai__50C5FA01">
+        <Association Name="FK__Phong__MaLoai__10766AC2">
           <End Role="LoaiPhong" Type="Self.LoaiPhong" Multiplicity="0..1" />
           <End Role="Phong" Type="Self.Phong" Multiplicity="*" />
           <ReferentialConstraint>
@@ -243,6 +243,26 @@
           <Parameter Name="matkhauhientai" Type="varchar" Mode="In" />
           <Parameter Name="idnv" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="creatBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="maHD" Type="varchar" Mode="In" />
+          <Parameter Name="tienphong" Type="float" Mode="In" />
+          <Parameter Name="tiendv" Type="float" Mode="In" />
+          <Parameter Name="tongtien" Type="float" Mode="In" />
+          <Parameter Name="hinhthuctt" Type="bit" Mode="In" />
+          <Parameter Name="ngaytt" Type="date" Mode="In" />
+          <Parameter Name="ghichu" Type="nvarchar" Mode="In" />
+          <Parameter Name="mptp" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="creatBill1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="maHD" Type="varchar" Mode="In" />
+          <Parameter Name="tienphong" Type="float" Mode="In" />
+          <Parameter Name="tiendv" Type="float" Mode="In" />
+          <Parameter Name="tongtien" Type="float" Mode="In" />
+          <Parameter Name="hinhthuctt" Type="bit" Mode="In" />
+          <Parameter Name="ngaytt" Type="date" Mode="In" />
+          <Parameter Name="ghichu" Type="nvarchar" Mode="In" />
+          <Parameter Name="mptp" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="delCus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MAKH" Type="varchar" Mode="In" />
         </Function>
@@ -256,6 +276,15 @@
         <Function Name="getCusFrPhieuThue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="maphieuthue" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="getDoanhThuTienDV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngayvaochon" Type="date" Mode="In" />
+          <Parameter Name="ngayrachon" Type="date" Mode="In" />
+        </Function>
+        <Function Name="getDoanhThuTienPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngayvaochon" Type="date" Mode="In" />
+          <Parameter Name="ngayrachon" Type="date" Mode="In" />
+        </Function>
+        <Function Name="getHTTT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getIdMPT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getIdNV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="TenTk" Type="varchar" Mode="In" />
@@ -264,6 +293,12 @@
         <Function Name="logIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="tentk" Type="varchar" Mode="In" />
           <Parameter Name="matkhau" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="tienDvDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="maptp" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="tienphongDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mptp" Type="varchar" Mode="In" />
         </Function>
         <Function Name="updateAcc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="MANV" Type="varchar" Mode="In" />
@@ -300,39 +335,39 @@
           <EntitySet Name="PhieuThuePhong" EntityType="Self.PhieuThuePhong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Phong" EntityType="Self.Phong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__ChiTietPh__MaPhi__5D2BD0E6" Association="Self.FK__ChiTietPh__MaPhi__5D2BD0E6">
+          <AssociationSet Name="FK__ChiTietPh__MaPhi__1BE81D6E" Association="Self.FK__ChiTietPh__MaPhi__1BE81D6E">
             <End Role="PhieuThuePhong" EntitySet="PhieuThuePhong" />
             <End Role="ChiTietPhieuThue" EntitySet="ChiTietPhieuThue" />
           </AssociationSet>
-          <AssociationSet Name="FK__ChiTietPh__MaPho__5C37ACAD" Association="Self.FK__ChiTietPh__MaPho__5C37ACAD">
+          <AssociationSet Name="FK__ChiTietPh__MaPho__1AF3F935" Association="Self.FK__ChiTietPh__MaPho__1AF3F935">
             <End Role="Phong" EntitySet="Phong" />
             <End Role="ChiTietPhieuThue" EntitySet="ChiTietPhieuThue" />
           </AssociationSet>
-          <AssociationSet Name="FK__DichVu__MaLoaiDV__4924D839" Association="Self.FK__DichVu__MaLoaiDV__4924D839">
+          <AssociationSet Name="FK__DichVu__MaLoaiDV__07E124C1" Association="Self.FK__DichVu__MaLoaiDV__07E124C1">
             <End Role="LoaiDichVu" EntitySet="LoaiDichVu" />
             <End Role="DichVu" EntitySet="DichVu" />
           </AssociationSet>
-          <AssociationSet Name="FK__HoaDon__MaPhieuT__60083D91" Association="Self.FK__HoaDon__MaPhieuT__60083D91">
+          <AssociationSet Name="FK__HoaDon__MaPhieuT__1EC48A19" Association="Self.FK__HoaDon__MaPhieuT__1EC48A19">
             <End Role="PhieuThuePhong" EntitySet="PhieuThuePhong" />
             <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
-          <AssociationSet Name="FK__PhieuSuDun__MaDV__4C0144E4" Association="Self.FK__PhieuSuDun__MaDV__4C0144E4">
+          <AssociationSet Name="FK__PhieuSuDu__MaChi__22951AFD" Association="Self.FK__PhieuSuDu__MaChi__22951AFD">
+            <End Role="ChiTietPhieuThue" EntitySet="ChiTietPhieuThue" />
+            <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVu" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PhieuSuDun__MaDV__21A0F6C4" Association="Self.FK__PhieuSuDun__MaDV__21A0F6C4">
             <End Role="DichVu" EntitySet="DichVu" />
             <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVu" />
           </AssociationSet>
-          <AssociationSet Name="FK__PhieuThueP__MaKH__5772F790" Association="Self.FK__PhieuThueP__MaKH__5772F790">
+          <AssociationSet Name="FK__PhieuThueP__MaKH__17236851" Association="Self.FK__PhieuThueP__MaKH__17236851">
             <End Role="KhachHang" EntitySet="KhachHang" />
             <End Role="PhieuThuePhong" EntitySet="PhieuThuePhong" />
           </AssociationSet>
-          <AssociationSet Name="FK__PhieuThueP__MaNV__58671BC9" Association="Self.FK__PhieuThueP__MaNV__58671BC9">
+          <AssociationSet Name="FK__PhieuThueP__MaNV__18178C8A" Association="Self.FK__PhieuThueP__MaNV__18178C8A">
             <End Role="NhanVien" EntitySet="NhanVien" />
             <End Role="PhieuThuePhong" EntitySet="PhieuThuePhong" />
           </AssociationSet>
-          <AssociationSet Name="FK__PhieuThueP__MaSD__595B4002" Association="Self.FK__PhieuThueP__MaSD__595B4002">
-            <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVu" />
-            <End Role="PhieuThuePhong" EntitySet="PhieuThuePhong" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Phong__MaLoai__50C5FA01" Association="Self.FK__Phong__MaLoai__50C5FA01">
+          <AssociationSet Name="FK__Phong__MaLoai__10766AC2" Association="Self.FK__Phong__MaLoai__10766AC2">
             <End Role="LoaiPhong" EntitySet="LoaiPhong" />
             <End Role="Phong" EntitySet="Phong" />
           </AssociationSet>
@@ -354,6 +389,7 @@
           <Property Name="MaPhieuThuePhong" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="PhieuThuePhong" Relationship="Self.FK__ChiTietPh__MaPhi__5D2BD0E6" FromRole="ChiTietPhieuThue" ToRole="PhieuThuePhong" />
           <NavigationProperty Name="Phong" Relationship="Self.FK__ChiTietPh__MaPho__5C37ACAD" FromRole="ChiTietPhieuThue" ToRole="Phong" />
+          <NavigationProperty Name="PhieuSuDungDichVus" Relationship="dbModel.FK__PhieuSuDu__MaChi__22951AFD" FromRole="ChiTietPhieuThue" ToRole="PhieuSuDungDichVu" />
         </EntityType>
         <EntityType Name="DichVu">
           <Key>
@@ -432,7 +468,8 @@
           <Property Name="GiaTien" Type="Double" />
           <Property Name="MaDV" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DichVu" Relationship="Self.FK__PhieuSuDun__MaDV__4C0144E4" FromRole="PhieuSuDungDichVu" ToRole="DichVu" />
-          <NavigationProperty Name="PhieuThuePhongs" Relationship="Self.FK__PhieuThueP__MaSD__595B4002" FromRole="PhieuSuDungDichVu" ToRole="PhieuThuePhong" />
+          <Property Name="MaChiTietPhieuThue" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ChiTietPhieuThue" Relationship="dbModel.FK__PhieuSuDu__MaChi__22951AFD" FromRole="PhieuSuDungDichVu" ToRole="ChiTietPhieuThue" />
         </EntityType>
         <EntityType Name="PhieuThuePhong">
           <Key>
@@ -442,12 +479,10 @@
           <Property Name="GhiChu" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="MaKH" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
           <Property Name="MaNV" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
-          <Property Name="MaSD" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="ChiTietPhieuThues" Relationship="Self.FK__ChiTietPh__MaPhi__5D2BD0E6" FromRole="PhieuThuePhong" ToRole="ChiTietPhieuThue" />
           <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__MaPhieuT__60083D91" FromRole="PhieuThuePhong" ToRole="HoaDon" />
           <NavigationProperty Name="KhachHang" Relationship="Self.FK__PhieuThueP__MaKH__5772F790" FromRole="PhieuThuePhong" ToRole="KhachHang" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK__PhieuThueP__MaNV__58671BC9" FromRole="PhieuThuePhong" ToRole="NhanVien" />
-          <NavigationProperty Name="PhieuSuDungDichVu" Relationship="Self.FK__PhieuThueP__MaSD__595B4002" FromRole="PhieuThuePhong" ToRole="PhieuSuDungDichVu" />
         </EntityType>
         <EntityType Name="Phong">
           <Key>
@@ -568,18 +603,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PhieuThueP__MaSD__595B4002">
-          <End Role="PhieuSuDungDichVu" Type="Self.PhieuSuDungDichVu" Multiplicity="0..1" />
-          <End Role="PhieuThuePhong" Type="Self.PhieuThuePhong" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhieuSuDungDichVu">
-              <PropertyRef Name="MaSD" />
-            </Principal>
-            <Dependent Role="PhieuThuePhong">
-              <PropertyRef Name="MaSD" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="htEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ChiTietPhieuThues" EntityType="Self.ChiTietPhieuThue" />
           <EntitySet Name="DichVus" EntityType="Self.DichVu" />
@@ -622,10 +645,6 @@
           </AssociationSet>
           <AssociationSet Name="FK__PhieuThueP__MaNV__58671BC9" Association="Self.FK__PhieuThueP__MaNV__58671BC9">
             <End Role="NhanVien" EntitySet="NhanViens" />
-            <End Role="PhieuThuePhong" EntitySet="PhieuThuePhongs" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PhieuThueP__MaSD__595B4002" Association="Self.FK__PhieuThueP__MaSD__595B4002">
-            <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
             <End Role="PhieuThuePhong" EntitySet="PhieuThuePhongs" />
           </AssociationSet>
           <FunctionImport Name="addCus">
@@ -688,7 +707,46 @@
             <Parameter Name="MatKhau" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="getCusFrPhieuThue" ReturnType="Collection(dbModel.getCusFrPhieuThue_Result)">
-            <Parameter Name="maphieuthue" Mode="In" Type="String" />
+          <Parameter Name="maphieuthue" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="tienphongDetail" ReturnType="Collection(dbModel.tienphongDetail_Result)">
+          <Parameter Name="mptp" Mode="In" Type="String" />
+          </FunctionImport>
+          <AssociationSet Name="FK__PhieuSuDu__MaChi__22951AFD" Association="dbModel.FK__PhieuSuDu__MaChi__22951AFD">
+            <End Role="ChiTietPhieuThue" EntitySet="ChiTietPhieuThues" />
+            <End Role="PhieuSuDungDichVu" EntitySet="PhieuSuDungDichVus" />
+          </AssociationSet>
+          <FunctionImport Name="tienDvDetail" ReturnType="Collection(dbModel.tienDvDetail_Result)">
+          <Parameter Name="maptp" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="creatBill">
+            <Parameter Name="maHD" Mode="In" Type="String" />
+            <Parameter Name="tienphong" Mode="In" Type="Double" />
+            <Parameter Name="tiendv" Mode="In" Type="Double" />
+            <Parameter Name="tongtien" Mode="In" Type="Double" />
+            <Parameter Name="hinhthuctt" Mode="In" Type="Boolean" />
+            <Parameter Name="ngaytt" Mode="In" Type="DateTime" />
+            <Parameter Name="ghichu" Mode="In" Type="String" />
+            <Parameter Name="mptp" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getHTTT" ReturnType="Collection(String)" />
+          <FunctionImport Name="creatBill1">
+            <Parameter Name="maHD" Mode="In" Type="String" />
+            <Parameter Name="tienphong" Mode="In" Type="Double" />
+            <Parameter Name="tiendv" Mode="In" Type="Double" />
+            <Parameter Name="tongtien" Mode="In" Type="Double" />
+            <Parameter Name="hinhthuctt" Mode="In" Type="Boolean" />
+            <Parameter Name="ngaytt" Mode="In" Type="DateTime" />
+            <Parameter Name="ghichu" Mode="In" Type="String" />
+            <Parameter Name="mptp" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getDoanhThuTienDV" ReturnType="Collection(dbModel.getDoanhThuTienDV_Result)">
+            <Parameter Name="ngayvaochon" Mode="In" Type="DateTime" />
+            <Parameter Name="ngayrachon" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="getDoanhThuTienPhong" ReturnType="Collection(dbModel.getDoanhThuTienPhong_Result)">
+            <Parameter Name="ngayvaochon" Mode="In" Type="DateTime" />
+            <Parameter Name="ngayrachon" Mode="In" Type="DateTime" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="getAccount_Result">
@@ -734,6 +792,46 @@
           <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
           <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="tienphongDetail_Result">
+          <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="NgayVao" Nullable="true" />
+          <Property Type="DateTime" Name="NgayRa" Nullable="true" />
+          <Property Type="Int32" Name="SoNgayO" Nullable="true" />
+          <Property Type="Double" Name="TienPhong" Nullable="true" />
+        </ComplexType>
+        <Association Name="FK__PhieuSuDu__MaChi__22951AFD">
+          <End Type="dbModel.ChiTietPhieuThue" Role="ChiTietPhieuThue" Multiplicity="0..1" />
+          <End Type="dbModel.PhieuSuDungDichVu" Role="PhieuSuDungDichVu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChiTietPhieuThue">
+              <PropertyRef Name="MaChiTietPhieuThue" />
+            </Principal>
+            <Dependent Role="PhieuSuDungDichVu">
+              <PropertyRef Name="MaChiTietPhieuThue" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="tienDvDetail_Result">
+          <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="NgaySD" Nullable="true" />
+          <Property Type="Byte" Name="SoLuong" Nullable="true" />
+          <Property Type="Double" Name="tiendv" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="getDoanhThuTienDV_Result">
+          <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="NgaySD" Nullable="true" />
+          <Property Type="Byte" Name="SoLuong" Nullable="true" />
+          <Property Type="Double" Name="tiendv" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="getDoanhThuTienPhong_Result">
+          <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="NgayVao" Nullable="true" />
+          <Property Type="DateTime" Name="NgayRa" Nullable="true" />
+          <Property Type="Int32" Name="SoNgayO" Nullable="true" />
+          <Property Type="Double" Name="TienPhong" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -823,6 +921,7 @@
           <EntitySetMapping Name="PhieuSuDungDichVus">
             <EntityTypeMapping TypeName="dbModel.PhieuSuDungDichVu">
               <MappingFragment StoreEntitySet="PhieuSuDungDichVu">
+                <ScalarProperty Name="MaChiTietPhieuThue" ColumnName="MaChiTietPhieuThue" />
                 <ScalarProperty Name="MaSD" ColumnName="MaSD" />
                 <ScalarProperty Name="NgaySD" ColumnName="NgaySD" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
@@ -838,7 +937,6 @@
                 <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
                 <ScalarProperty Name="MaKH" ColumnName="MaKH" />
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-                <ScalarProperty Name="MaSD" ColumnName="MaSD" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -941,6 +1039,53 @@
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="tienphongDetail" FunctionName="dbModel.Store.tienphongDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.tienphongDetail_Result">
+                <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+                <ScalarProperty Name="NgayVao" ColumnName="NgayVao" />
+                <ScalarProperty Name="NgayRa" ColumnName="NgayRa" />
+                <ScalarProperty Name="SoNgayO" ColumnName="SoNgayO" />
+                <ScalarProperty Name="TienPhong" ColumnName="TienPhong" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="tienDvDetail" FunctionName="dbModel.Store.tienDvDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.tienDvDetail_Result">
+                <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+                <ScalarProperty Name="TenDV" ColumnName="TenDV" />
+                <ScalarProperty Name="NgaySD" ColumnName="NgaySD" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="tiendv" ColumnName="tiendv" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="creatBill" FunctionName="dbModel.Store.creatBill" />
+          <FunctionImportMapping FunctionImportName="getHTTT" FunctionName="dbModel.Store.getHTTT" />
+          <FunctionImportMapping FunctionImportName="creatBill1" FunctionName="dbModel.Store.creatBill1" />
+          <FunctionImportMapping FunctionImportName="getDoanhThuTienDV" FunctionName="dbModel.Store.getDoanhThuTienDV">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.getDoanhThuTienDV_Result">
+                <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+                <ScalarProperty Name="TenDV" ColumnName="TenDV" />
+                <ScalarProperty Name="NgaySD" ColumnName="NgaySD" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="tiendv" ColumnName="tiendv" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getDoanhThuTienPhong" FunctionName="dbModel.Store.getDoanhThuTienPhong">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="dbModel.getDoanhThuTienPhong_Result">
+                <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+                <ScalarProperty Name="NgayVao" ColumnName="NgayVao" />
+                <ScalarProperty Name="NgayRa" ColumnName="NgayRa" />
+                <ScalarProperty Name="SoNgayO" ColumnName="SoNgayO" />
+                <ScalarProperty Name="TienPhong" ColumnName="TienPhong" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

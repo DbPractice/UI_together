@@ -13,28 +13,19 @@ namespace Hotel_SoftWare2
 {
 
 using System;
-    using System.Collections.Generic;
     
-public partial class PhieuSuDungDichVu
+public partial class getDoanhThuTienPhong_Result
 {
 
-    public string MaSD { get; set; }
+    public string TenPhong { get; set; }
 
-    public Nullable<System.DateTime> NgaySD { get; set; }
+    public Nullable<System.DateTime> NgayVao { get; set; }
 
-    public Nullable<byte> SoLuong { get; set; }
+    public Nullable<System.DateTime> NgayRa { get; set; }
 
-    public Nullable<double> GiaTien { get; set; }
+    public Nullable<int> SoNgayO { get; set; }
 
-    public string MaDV { get; set; }
-
-    public string MaChiTietPhieuThue { get; set; }
-
-
-
-    public virtual DichVu DichVu { get; set; }
-
-    public virtual ChiTietPhieuThue ChiTietPhieuThue { get; set; }
+    public Nullable<double> TienPhong { get; set; }
 
 }
 

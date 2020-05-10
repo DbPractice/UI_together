@@ -83,6 +83,7 @@
     <EntitySetMapping Name="PhieuSuDungDichVus">
       <EntityTypeMapping TypeName="dbModel.PhieuSuDungDichVu">
         <MappingFragment StoreEntitySet="PhieuSuDungDichVu">
+          <ScalarProperty Name="MaChiTietPhieuThue" ColumnName="MaChiTietPhieuThue" />
           <ScalarProperty Name="MaSD" ColumnName="MaSD" />
           <ScalarProperty Name="NgaySD" ColumnName="NgaySD" />
           <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
@@ -98,7 +99,6 @@
           <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
           <ScalarProperty Name="MaKH" ColumnName="MaKH" />
           <ScalarProperty Name="MaNV" ColumnName="MaNV" />
-          <ScalarProperty Name="MaSD" ColumnName="MaSD" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -201,6 +201,53 @@
           <ScalarProperty Name="SDT" ColumnName="SDT" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="tienphongDetail" FunctionName="dbModel.Store.tienphongDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.tienphongDetail_Result">
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="NgayVao" ColumnName="NgayVao" />
+          <ScalarProperty Name="NgayRa" ColumnName="NgayRa" />
+          <ScalarProperty Name="SoNgayO" ColumnName="SoNgayO" />
+          <ScalarProperty Name="TienPhong" ColumnName="TienPhong" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="tienDvDetail" FunctionName="dbModel.Store.tienDvDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.tienDvDetail_Result">
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="TenDV" ColumnName="TenDV" />
+          <ScalarProperty Name="NgaySD" ColumnName="NgaySD" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="tiendv" ColumnName="tiendv" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="creatBill" FunctionName="dbModel.Store.creatBill" />
+    <FunctionImportMapping FunctionImportName="getHTTT" FunctionName="dbModel.Store.getHTTT" />
+    <FunctionImportMapping FunctionImportName="creatBill1" FunctionName="dbModel.Store.creatBill1" />
+    <FunctionImportMapping FunctionImportName="getDoanhThuTienDV" FunctionName="dbModel.Store.getDoanhThuTienDV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getDoanhThuTienDV_Result">
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="TenDV" ColumnName="TenDV" />
+          <ScalarProperty Name="NgaySD" ColumnName="NgaySD" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="tiendv" ColumnName="tiendv" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getDoanhThuTienPhong" FunctionName="dbModel.Store.getDoanhThuTienPhong">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getDoanhThuTienPhong_Result">
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+          <ScalarProperty Name="NgayVao" ColumnName="NgayVao" />
+          <ScalarProperty Name="NgayRa" ColumnName="NgayRa" />
+          <ScalarProperty Name="SoNgayO" ColumnName="SoNgayO" />
+          <ScalarProperty Name="TienPhong" ColumnName="TienPhong" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

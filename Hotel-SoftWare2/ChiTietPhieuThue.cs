@@ -18,6 +18,15 @@ using System;
 public partial class ChiTietPhieuThue
 {
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+    public ChiTietPhieuThue()
+    {
+
+        this.PhieuSuDungDichVus = new HashSet<PhieuSuDungDichVu>();
+
+    }
+
+
     public string MaChiTietPhieuThue { get; set; }
 
     public Nullable<System.DateTime> NgayVao { get; set; }
@@ -37,6 +46,10 @@ public partial class ChiTietPhieuThue
     public virtual PhieuThuePhong PhieuThuePhong { get; set; }
 
     public virtual Phong Phong { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+
+    public virtual ICollection<PhieuSuDungDichVu> PhieuSuDungDichVus { get; set; }
 
 }
 
