@@ -43,6 +43,7 @@ namespace Hotel_SoftWare2
         private void QLServiceForm_Load(object sender, EventArgs e)
         {
             ShowSer(dgvServices);
+            //SerCombobox();
             lockText();
         }
 
@@ -174,5 +175,13 @@ namespace Hotel_SoftWare2
         {
             btnTimKiem.Enabled = true;
         }
+
+        private void SerCombobox()
+        {
+                var getIdMdvList = from LoaiDichVu in ser.LoaiDichVus
+                                   select LoaiDichVu;
+                comboBox1.DataSource = getIdMdvList.ToList();
+                comboBox1.DisplayMember = "MaLoaiDV";
+         }
     }
 }

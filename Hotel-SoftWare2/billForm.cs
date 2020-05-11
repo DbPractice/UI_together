@@ -24,7 +24,7 @@ namespace Hotel_SoftWare2
             using (htEntities bill = new htEntities())
             {
                 var getIdMptList = from PhieuThuePhong in bill.PhieuThuePhongs
-                                   select PhieuThuePhong;
+                                   select PhieuThuePhong.MaPhieuThuePhong;
                 comboBoxMaPT.DataSource = getIdMptList.ToList();
                 comboBoxMaPT.DisplayMember = "MaPhieuThuePhong";
                 //comboBoxMaPT.ValueMember = "MaSD";
