@@ -32,30 +32,30 @@ namespace Hotel_SoftWare2
         //        return context.NhanViens.ToList();
         //    }
         //}
-            //NhanVien obj = new NhanVien();
-            //List<NhanVien> list = obj.getPass();
+            NhanVien obj = new NhanVien();
+            List<NhanVien> list = obj.getPass();
             username = textBoxUserName.Text;
             password = textBoxPassWord.Text;
-            //var check = list.Where(item => item.TenTk.Equals(username)).ToList();
-            //if (check.Count > 0)
-            //{
-            //    if (check[0].MatKhau.Equals(password))
-            //    {
-            //        MessageBox.Show("dang nhap thanh cong");
+            var check = list.Where(item => item.TenTk.Equals(username)).ToList();
+            if (check.Count > 0)
+            {
+                if (check[0].MatKhau.Equals(password))
+                {
+                    MessageBox.Show("dang nhap thanh cong");
                     this.Close();
                     th = new Thread(openMainForm);
                     th.SetApartmentState(ApartmentState.STA);
                     th.Start();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("mat khau khong dung");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("khong ton tai tk");
-            //}
+                }
+                else
+                {
+                    MessageBox.Show("mat khau khong dung");
+                }
+            }
+            else
+            {
+                MessageBox.Show("khong ton tai tk");
+            }
 
             //DataGridView dt = new DataGridView();
             //dt.DataSource = account.logIn(textBoxUserName.Text, textBoxPassWord.Text);

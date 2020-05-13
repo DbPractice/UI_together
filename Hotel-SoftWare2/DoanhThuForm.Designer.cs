@@ -1,4 +1,6 @@
-﻿namespace Hotel_SoftWare2
+﻿using System.Drawing;
+
+namespace Hotel_SoftWare2
 {
     partial class DoanhThuForm
     {
@@ -128,6 +130,7 @@
             this.dgvTienPhongDetail.Name = "dgvTienPhongDetail";
             this.dgvTienPhongDetail.Size = new System.Drawing.Size(546, 207);
             this.dgvTienPhongDetail.TabIndex = 0;
+            dgvTienPhongDetail.DefaultCellStyle.ForeColor = Color.Black;
             // 
             // groupBoxTienDVDetail
             // 
@@ -150,6 +153,7 @@
             this.dgvTienDvDetail.Name = "dgvTienDvDetail";
             this.dgvTienDvDetail.Size = new System.Drawing.Size(546, 207);
             this.dgvTienDvDetail.TabIndex = 1;
+            dgvTienDvDetail.DefaultCellStyle.ForeColor = Color.Black;
             // 
             // groupBoxTien
             // 

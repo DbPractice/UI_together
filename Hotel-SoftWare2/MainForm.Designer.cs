@@ -662,11 +662,11 @@
         private FontAwesome.Sharp.IconButton btnKhachHang;
         private FontAwesome.Sharp.IconButton btnThongKeHoaDon;
         private System.Windows.Forms.Panel panelTopChill;
-        private System.Windows.Forms.Panel panelBotChildForm;
         private System.Windows.Forms.TextBox textBoxTitle;
         private FontAwesome.Sharp.IconButton btnLoaiDV;
         private FontAwesome.Sharp.IconButton btnLoaiPhong;
         private System.Windows.Forms.Label labelWellCome;
+        public System.Windows.Forms.Panel panelBotChildForm;
     }
 }
 

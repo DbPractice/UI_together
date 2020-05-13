@@ -371,111 +371,44 @@
     <FunctionImport Name="getDoanhThuTienPhong" ReturnType="Collection(dbModel.getDoanhThuTienPhong_Result)">
       <Parameter Name="ngayvaochon" Mode="In" Type="DateTime" />
       <Parameter Name="ngayrachon" Mode="In" Type="DateTime" />
-    <FunctionImport Name="addSer">
-      <Parameter Name="MADV" Mode="In" Type="String" />
-      <Parameter Name="TENDV" Mode="In" Type="String" />
-      <Parameter Name="DONGIA" Mode="In" Type="Double" />
-      <Parameter Name="MALOAIDICHVU" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="addTypeRoom">
-      <Parameter Name="MALOAIPHONG" Mode="In" Type="String" />
-      <Parameter Name="TENLOAIPHONG" Mode="In" Type="String" />
-      <Parameter Name="SONGUOI" Mode="In" Type="Byte" />
-      <Parameter Name="GHICHU" Mode="In" Type="String" />
+    <FunctionImport Name="getFreeRoom" ReturnType="Collection(dbModel.getFreeRoom_Result)" />
+    <FunctionImport Name="getPhieuThue" ReturnType="Collection(dbModel.getPhieuThue_Result)" />
+    <FunctionImport Name="getRoomRented" ReturnType="Collection(dbModel.getRoomRented_Result)">
+      <Parameter Name="mptp" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="addTypeSer">
-      <Parameter Name="MALOAIDV" Mode="In" Type="String" />
-      <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
+    <FunctionImport Name="getPhieuThue2" ReturnType="Collection(dbModel.getPhieuThue2_Result)" />
+    <FunctionImport Name="getIdEmpFrAcc" ReturnType="Collection(String)">
+      <Parameter Name="tentk" Mode="In" Type="String" />
+      <Parameter Name="matkhau" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="delSer">
-      <Parameter Name="MADV" Mode="In" Type="String" />
+    <FunctionImport Name="addCTPT">
+      <Parameter Name="mactpt" Mode="In" Type="String" />
+      <Parameter Name="ngayvao" Mode="In" Type="DateTime" />
+      <Parameter Name="ngayra" Mode="In" Type="DateTime" />
+      <Parameter Name="htt" Mode="In" Type="Boolean" />
+      <Parameter Name="slk" Mode="In" Type="Byte" />
+      <Parameter Name="maphong" Mode="In" Type="String" />
+      <Parameter Name="mptp" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="delTypeRoom">
-      <Parameter Name="MALOAIPHONG" Mode="In" Type="String" />
+    <FunctionImport Name="addPhieuThuePhong">
+      <Parameter Name="mptp" Mode="In" Type="String" />
+      <Parameter Name="ghichu" Mode="In" Type="String" />
+      <Parameter Name="makh" Mode="In" Type="String" />
+      <Parameter Name="manv" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="delTypeSer">
-      <Parameter Name="MALOAIDV" Mode="In" Type="String" />
+    <FunctionImport Name="getAllCTPT" ReturnType="Collection(dbModel.getAllCTPT_Result)" />
+    <FunctionImport Name="getCTPT_FrIdPT" ReturnType="Collection(dbModel.getCTPT_FrIdPT_Result)">
+      <Parameter Name="mpt" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="DSDichVu" ReturnType="Collection(dbModel.DSDichVu_Result)" />
-    <FunctionImport Name="DSKHTP" ReturnType="Collection(dbModel.DSKHTP_Result)" />
-    <FunctionImport Name="DSLoaiDichVu" ReturnType="Collection(dbModel.DSLoaiDichVu_Result)" />
-    <FunctionImport Name="DSLoaiPhong" ReturnType="Collection(dbModel.DSLoaiPhong_Result)" />
-    <FunctionImport Name="DSNV" ReturnType="Collection(dbModel.DSNV_Result)" />
-    <FunctionImport Name="HTTT">
-      <Parameter Name="HTTT" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TENNV" ReturnType="Collection(dbModel.TENNV_Result)">
-      <Parameter Name="TenNV" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TIMNV" ReturnType="Collection(dbModel.TIMNV_Result)">
-      <Parameter Name="TenKH" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TKKH" ReturnType="Collection(Int32)">
-      <Parameter Name="TenLoaiPhong" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TKKHTHEOPHONG" ReturnType="Collection(dbModel.TKKHTHEOPHONG_Result)" />
-    <FunctionImport Name="TKKHTHEOSOLANTHUE" ReturnType="Collection(dbModel.TKKHTHEOSOLANTHUE_Result)">
-      <Parameter Name="SOLANTHUE" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="TKKHTHEOSOPHONGTHUE" ReturnType="Collection(dbModel.TKKHTHEOSOPHONGTHUE_Result)">
-      <Parameter Name="SOPHONGTHUE" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="TKKHTHEOTHANG" ReturnType="Collection(Int32)">
-      <Parameter Name="THANG" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TTKH" ReturnType="Collection(dbModel.TTKH_Result)">
-      <Parameter Name="MaKH" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TTNV" ReturnType="Collection(dbModel.TTNV_Result)">
-      <Parameter Name="MaNV" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="updateSer">
-      <Parameter Name="MADV" Mode="In" Type="String" />
-      <Parameter Name="TENDV" Mode="In" Type="String" />
-      <Parameter Name="DONGIA" Mode="In" Type="Double" />
-      <Parameter Name="MALOAIDICHVU" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="updateTypeRoom">
-      <Parameter Name="MALOAIPHONG" Mode="In" Type="String" />
-      <Parameter Name="TENLOAIPHONG" Mode="In" Type="String" />
-      <Parameter Name="SONGUOI" Mode="In" Type="Byte" />
-      <Parameter Name="GHICHU" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="updateTypeSer">
-      <Parameter Name="MALOAIDV" Mode="In" Type="String" />
-      <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="addRoom">
-      <Parameter Name="MAPHONG" Mode="In" Type="String" />
-      <Parameter Name="TENPHONG" Mode="In" Type="String" />
-      <Parameter Name="TINHTRANG" Mode="In" Type="Byte" />
-      <Parameter Name="DIENTICH" Mode="In" Type="Int32" />
-      <Parameter Name="GIATHUE" Mode="In" Type="Double" />
-      <Parameter Name="MALOAI" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="delRoom">
-      <Parameter Name="MAPHONG" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="DSPhong" ReturnType="Collection(dbModel.DSPhong_Result)" />
-    <FunctionImport Name="updateRoom">
-      <Parameter Name="MAPHONG" Mode="In" Type="String" />
-      <Parameter Name="TENPHONG" Mode="In" Type="String" />
-      <Parameter Name="TINHTRANG" Mode="In" Type="Byte" />
-      <Parameter Name="DIENTICH" Mode="In" Type="Int32" />
-      <Parameter Name="GIATHUE" Mode="In" Type="Double" />
-      <Parameter Name="MALOAI" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TKtypeRoom" ReturnType="Collection(dbModel.TKtypeRoom_Result)">
-      <Parameter Name="TENLOAIPHONG" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TKPhong" ReturnType="Collection(dbModel.TKPhong_Result)">
-      <Parameter Name="TENPHONG" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TKService" ReturnType="Collection(dbModel.TKService_Result)">
-      <Parameter Name="TENDV" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="TKtypeService" ReturnType="Collection(dbModel.TKtypeService_Result)">
-      <Parameter Name="TENLOAIDV" Mode="In" Type="String" />
+    <FunctionImport Name="updateCTPT">
+      <Parameter Name="mactpt" Mode="In" Type="String" />
+      <Parameter Name="ngayvao" Mode="In" Type="DateTime" />
+      <Parameter Name="ngayra" Mode="In" Type="DateTime" />
+      <Parameter Name="htt" Mode="In" Type="Boolean" />
+      <Parameter Name="slk" Mode="In" Type="Byte" />
+      <Parameter Name="maphong" Mode="In" Type="String" />
+      <Parameter Name="mptp" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="getAccount_Result">
@@ -561,148 +494,50 @@
     <Property Type="DateTime" Name="NgayRa" Nullable="true" />
     <Property Type="Int32" Name="SoNgayO" Nullable="true" />
     <Property Type="Double" Name="TienPhong" Nullable="true" />
-  <ComplexType Name="DSDichVu_Result">
-    <Property Type="String" Name="MaDV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
-    <Property Type="Double" Name="DonGia" Nullable="true" />
-    <Property Type="String" Name="MaLoaiDV" Nullable="true" MaxLength="8" />
   </ComplexType>
-  <ComplexType Name="DSKHTP_Result">
-    <Property Type="String" Name="MaKH" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
-    <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
-    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
-    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
-  </ComplexType>
-  <ComplexType Name="DSLoaiDichVu_Result">
-    <Property Type="String" Name="MaLoaiDV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenLoaiDV" Nullable="true" MaxLength="20" />
-  </ComplexType>
-  <ComplexType Name="DSLoaiPhong_Result">
-    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
+  <ComplexType Name="getFreeRoom_Result">
+    <Property Type="String" Name="MaPhong" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
     <Property Type="Byte" Name="SoNguoi" Nullable="true" />
-    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="DienTich" Nullable="true" />
+    <Property Type="Double" Name="GiaThue" Nullable="true" />
   </ComplexType>
-  <ComplexType Name="DSNV_Result">
-    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
-    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
-    <Property Type="Boolean" Name="Quyen" Nullable="true" />
-    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
-    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
-    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
-  </ComplexType>
-  <ComplexType Name="TENNV_Result">
-    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
-    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
-    <Property Type="Boolean" Name="Quyen" Nullable="true" />
-    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
-    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
-    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
-  </ComplexType>
-  <ComplexType Name="TIMNV_Result">
-    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
-    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
-    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
-  </ComplexType>
-  <ComplexType Name="TKKHTHEOPHONG_Result">
-    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
-    <Property Type="Int32" Name="slkhach" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="TKKHTHEOSOLANTHUE_Result">
-    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
-    <Property Type="Int32" Name="solanthue" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="TKKHTHEOSOPHONGTHUE_Result">
-    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+  <ComplexType Name="getPhieuThue_Result">
     <Property Type="String" Name="MaPhieuThuePhong" Nullable="false" MaxLength="8" />
-    <Property Type="Int32" Name="SoPhongThueTrong1Lan" Nullable="true" />
+    <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="NgayVao" Nullable="true" />
+    <Property Type="DateTime" Name="NgayRa" Nullable="true" />
   </ComplexType>
-  <ComplexType Name="TTKH_Result">
+  <ComplexType Name="getRoomRented_Result">
+    <Property Type="String" Name="MaPhong" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
+    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
+    <Property Type="Int32" Name="DienTich" Nullable="true" />
+    <Property Type="Double" Name="GiaThue" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getPhieuThue2_Result">
+    <Property Type="String" Name="MaPhieuThuePhong" Nullable="false" MaxLength="8" />
     <Property Type="String" Name="MaKH" Nullable="false" MaxLength="8" />
     <Property Type="String" Name="TenKH" Nullable="true" MaxLength="30" />
-    <Property Type="String" Name="SoCMND" Nullable="true" MaxLength="12" />
-    <Property Type="String" Name="DiaChi" Nullable="true" MaxLength="20" />
-    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
   </ComplexType>
-  <ComplexType Name="TTNV_Result">
-    <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenTk" Nullable="true" MaxLength="30" />
-    <Property Type="String" Name="MatKhau" Nullable="true" MaxLength="30" />
-    <Property Type="Boolean" Name="Quyen" Nullable="true" />
-    <Property Type="String" Name="HoTen" Nullable="true" MaxLength="30" />
-    <Property Type="DateTime" Name="NgaySinh" Nullable="true" />
-    <Property Type="String" Name="SDT" Nullable="true" MaxLength="12" />
+  <ComplexType Name="getAllCTPT_Result">
+    <Property Type="String" Name="MaChiTietPhieuThue" Nullable="false" MaxLength="8" />
+    <Property Type="DateTime" Name="NgayVao" Nullable="true" />
+    <Property Type="DateTime" Name="NgayRa" Nullable="true" />
+    <Property Type="String" Name="hinhthucthue" Nullable="true" MaxLength="7" />
+    <Property Type="Byte" Name="SoLuongKhach" Nullable="true" />
+    <Property Type="String" Name="MaPhong" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="MaPhieuThuePhong" Nullable="true" MaxLength="8" />
   </ComplexType>
-  <ComplexType Name="DSPhong_Result">
-    <Property Type="String" Name="MaPhong" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
-    <Property Type="Byte" Name="TinhTrang" Nullable="true" />
-    <Property Type="Int32" Name="DienTich" Nullable="true" />
-    <Property Type="Double" Name="GiaThue" Nullable="true" />
-    <Property Type="String" Name="MaLoai" Nullable="true" MaxLength="8" />
-  </ComplexType>
-  <ComplexType Name="TKtypeRoom_Result">
-    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
-    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
-    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
-  </ComplexType>
-  <ComplexType Name="TKRoom_Result">
-    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
-    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
-    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
-  </ComplexType>
-  <ComplexType Name="TKSer_Result">
-    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
-    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
-    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
-  </ComplexType>
-  <ComplexType Name="TKtypeSer_Result">
-    <Property Type="String" Name="MaLoai" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="30" />
-    <Property Type="Byte" Name="SoNguoi" Nullable="true" />
-    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="250" />
-  </ComplexType>
-  <ComplexType Name="TKRoom_Result1">
-    <Property Type="String" Name="MaPhong" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
-    <Property Type="Byte" Name="TinhTrang" Nullable="true" />
-    <Property Type="Int32" Name="DienTich" Nullable="true" />
-    <Property Type="Double" Name="GiaThue" Nullable="true" />
-    <Property Type="String" Name="MaLoai" Nullable="true" MaxLength="8" />
-  </ComplexType>
-  <ComplexType Name="TKSer1_Result">
-    <Property Type="String" Name="MaDV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
-    <Property Type="Double" Name="DonGia" Nullable="true" />
-    <Property Type="String" Name="MaLoaiDV" Nullable="true" MaxLength="8" />
-  </ComplexType>
-  <ComplexType Name="TKtypeSer_Result1">
-    <Property Type="String" Name="MaLoaiDV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenLoaiDV" Nullable="true" MaxLength="20" />
-  </ComplexType>
-  <ComplexType Name="TKPhong_Result">
-    <Property Type="String" Name="MaPhong" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
-    <Property Type="Byte" Name="TinhTrang" Nullable="true" />
-    <Property Type="Int32" Name="DienTich" Nullable="true" />
-    <Property Type="Double" Name="GiaThue" Nullable="true" />
-    <Property Type="String" Name="MaLoai" Nullable="true" MaxLength="8" />
-  </ComplexType>
-  <ComplexType Name="TKService_Result">
-    <Property Type="String" Name="MaDV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenDV" Nullable="true" MaxLength="20" />
-    <Property Type="Double" Name="DonGia" Nullable="true" />
-    <Property Type="String" Name="MaLoaiDV" Nullable="true" MaxLength="8" />
-  </ComplexType>
-  <ComplexType Name="TKtypeService_Result">
-    <Property Type="String" Name="MaLoaiDV" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="TenLoaiDV" Nullable="true" MaxLength="20" />
+  <ComplexType Name="getCTPT_FrIdPT_Result">
+    <Property Type="String" Name="MaChiTietPhieuThue" Nullable="false" MaxLength="8" />
+    <Property Type="DateTime" Name="NgayVao" Nullable="true" />
+    <Property Type="DateTime" Name="NgayRa" Nullable="true" />
+    <Property Type="String" Name="hinhthucthue" Nullable="true" MaxLength="7" />
+    <Property Type="Byte" Name="SoLuongKhach" Nullable="true" />
+    <Property Type="String" Name="MaPhong" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="MaPhieuThuePhong" Nullable="true" MaxLength="8" />
   </ComplexType>
 </Schema>

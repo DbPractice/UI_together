@@ -194,8 +194,8 @@ namespace Hotel_SoftWare2
             HideMenu();
         }
 
-        private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public Form activeForm = null;
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null)
             {

@@ -29,28 +29,25 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.iBtThem = new FontAwesome.Sharp.IconButton();
-            this.iBtSua = new FontAwesome.Sharp.IconButton();
-            this.iBtXoa = new FontAwesome.Sharp.IconButton();
-            this.iBtTimKiem = new FontAwesome.Sharp.IconButton();
-            this.dgvRoom = new System.Windows.Forms.DataGridView();
-            this.textBoxGia = new System.Windows.Forms.TextBox();
-            this.textBoxTenPhong = new System.Windows.Forms.TextBox();
-            this.textBoxDienTich = new System.Windows.Forms.TextBox();
-            this.textBoxMaPhong = new System.Windows.Forms.TextBox();
-            this.comboBoxTTphong = new System.Windows.Forms.ComboBox();
-            this.comboBoxMaLoai = new System.Windows.Forms.ComboBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.iconButtonSave = new FontAwesome.Sharp.IconButton();
-            this.btnX = new FontAwesome.Sharp.IconButton();
-            this.labelTim = new System.Windows.Forms.Label();
-            this.textBoxTimKiem = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,142 +61,155 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH SÁCH CÁC PHÒNG CỦA KHÁCH SẠN";
             // 
-            // iBtThem
+            // iconButton1
             // 
-            this.iBtThem.BackColor = System.Drawing.Color.Navy;
-            this.iBtThem.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iBtThem.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iBtThem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.iBtThem.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iBtThem.IconColor = System.Drawing.Color.White;
-            this.iBtThem.IconSize = 27;
-            this.iBtThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iBtThem.Location = new System.Drawing.Point(24, 220);
-            this.iBtThem.Name = "iBtThem";
-            this.iBtThem.Rotation = 0D;
-            this.iBtThem.Size = new System.Drawing.Size(119, 40);
-            this.iBtThem.TabIndex = 0;
-            this.iBtThem.Text = "THÊM PHÒNG";
-            this.iBtThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iBtThem.UseVisualStyleBackColor = false;
-            this.iBtThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.iconButton1.BackColor = System.Drawing.Color.Navy;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconSize = 27;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(24, 220);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(119, 40);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.Text = "THÊM PHÒNG";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
-            // iBtSua
+            // iconButton2
             // 
-            this.iBtSua.BackColor = System.Drawing.Color.Navy;
-            this.iBtSua.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iBtSua.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iBtSua.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.iBtSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.iBtSua.IconColor = System.Drawing.Color.White;
-            this.iBtSua.IconSize = 27;
-            this.iBtSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iBtSua.Location = new System.Drawing.Point(24, 289);
-            this.iBtSua.Name = "iBtSua";
-            this.iBtSua.Rotation = 0D;
-            this.iBtSua.Size = new System.Drawing.Size(119, 40);
-            this.iBtSua.TabIndex = 1;
-            this.iBtSua.Text = "SỬA PHÒNG";
-            this.iBtSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iBtSua.UseVisualStyleBackColor = false;
-            this.iBtSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.iconButton2.BackColor = System.Drawing.Color.Navy;
+            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconSize = 27;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(24, 289);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Rotation = 0D;
+            this.iconButton2.Size = new System.Drawing.Size(119, 40);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.Text = "SỬA PHÒNG";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = false;
             // 
-            // iBtXoa
+            // iconButton3
             // 
-            this.iBtXoa.BackColor = System.Drawing.Color.Navy;
-            this.iBtXoa.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iBtXoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iBtXoa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.iBtXoa.IconChar = FontAwesome.Sharp.IconChar.Cut;
-            this.iBtXoa.IconColor = System.Drawing.Color.White;
-            this.iBtXoa.IconSize = 27;
-            this.iBtXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iBtXoa.Location = new System.Drawing.Point(24, 364);
-            this.iBtXoa.Name = "iBtXoa";
-            this.iBtXoa.Rotation = 0D;
-            this.iBtXoa.Size = new System.Drawing.Size(119, 40);
-            this.iBtXoa.TabIndex = 2;
-            this.iBtXoa.Text = "XÓA PHÒNG";
-            this.iBtXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iBtXoa.UseVisualStyleBackColor = false;
-            this.iBtXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.iconButton3.BackColor = System.Drawing.Color.Navy;
+            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Cut;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconSize = 27;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(24, 364);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Rotation = 0D;
+            this.iconButton3.Size = new System.Drawing.Size(119, 40);
+            this.iconButton3.TabIndex = 2;
+            this.iconButton3.Text = "XÓA PHÒNG";
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // iBtTimKiem
+            // iconButton4
             // 
-            this.iBtTimKiem.BackColor = System.Drawing.Color.Navy;
-            this.iBtTimKiem.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iBtTimKiem.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iBtTimKiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.iBtTimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iBtTimKiem.IconColor = System.Drawing.Color.White;
-            this.iBtTimKiem.IconSize = 27;
-            this.iBtTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iBtTimKiem.Location = new System.Drawing.Point(24, 443);
-            this.iBtTimKiem.Name = "iBtTimKiem";
-            this.iBtTimKiem.Rotation = 0D;
-            this.iBtTimKiem.Size = new System.Drawing.Size(119, 40);
-            this.iBtTimKiem.TabIndex = 3;
-            this.iBtTimKiem.Text = "TÌM KIẾM";
-            this.iBtTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iBtTimKiem.UseVisualStyleBackColor = false;
+            this.iconButton4.BackColor = System.Drawing.Color.Navy;
+            this.iconButton4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconSize = 27;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(24, 443);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Rotation = 0D;
+            this.iconButton4.Size = new System.Drawing.Size(119, 40);
+            this.iconButton4.TabIndex = 3;
+            this.iconButton4.Text = "TÌM KIẾM";
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton4.UseVisualStyleBackColor = false;
             // 
-            // dgvRoom
+            // iconButton5
             // 
-            this.dgvRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoom.Location = new System.Drawing.Point(168, 186);
-            this.dgvRoom.Name = "dgvRoom";
-            this.dgvRoom.Size = new System.Drawing.Size(760, 400);
-            this.dgvRoom.TabIndex = 12;
-            this.dgvRoom.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoom_CellClick);
+            this.iconButton5.BackColor = System.Drawing.Color.Red;
+            this.iconButton5.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
+            this.iconButton5.IconColor = System.Drawing.Color.White;
+            this.iconButton5.IconSize = 27;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(24, 524);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Rotation = 0D;
+            this.iconButton5.Size = new System.Drawing.Size(119, 40);
+            this.iconButton5.TabIndex = 4;
+            this.iconButton5.Text = "THOÁT";
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
-            // textBoxGia
+            // dgvUsers
             // 
-            this.textBoxGia.Location = new System.Drawing.Point(516, 25);
-            this.textBoxGia.Name = "textBoxGia";
-            this.textBoxGia.Size = new System.Drawing.Size(200, 20);
-            this.textBoxGia.TabIndex = 13;
+            this.dgvUsers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsers.Location = new System.Drawing.Point(168, 186);
+            this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.Size = new System.Drawing.Size(760, 400);
+            this.dgvUsers.TabIndex = 12;
             // 
-            // textBoxTenPhong
+            // textBox1
             // 
-            this.textBoxTenPhong.Location = new System.Drawing.Point(110, 63);
-            this.textBoxTenPhong.Name = "textBoxTenPhong";
-            this.textBoxTenPhong.Size = new System.Drawing.Size(200, 20);
-            this.textBoxTenPhong.TabIndex = 14;
+            this.textBox1.Location = new System.Drawing.Point(516, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 20);
+            this.textBox1.TabIndex = 13;
             // 
-            // textBoxDienTich
+            // textBox2
             // 
-            this.textBoxDienTich.Location = new System.Drawing.Point(110, 95);
-            this.textBoxDienTich.Name = "textBoxDienTich";
-            this.textBoxDienTich.Size = new System.Drawing.Size(200, 20);
-            this.textBoxDienTich.TabIndex = 15;
+            this.textBox2.Location = new System.Drawing.Point(110, 63);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(200, 20);
+            this.textBox2.TabIndex = 14;
             // 
-            // textBoxMaPhong
+            // textBox3
             // 
-            this.textBoxMaPhong.Location = new System.Drawing.Point(110, 23);
-            this.textBoxMaPhong.Name = "textBoxMaPhong";
-            this.textBoxMaPhong.Size = new System.Drawing.Size(200, 20);
-            this.textBoxMaPhong.TabIndex = 16;
+            this.textBox3.Location = new System.Drawing.Point(110, 95);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(200, 20);
+            this.textBox3.TabIndex = 15;
             // 
-            // comboBoxTTphong
+            // textBox5
             // 
-            this.comboBoxTTphong.FormattingEnabled = true;
-            this.comboBoxTTphong.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2"});
-            this.comboBoxTTphong.Location = new System.Drawing.Point(517, 66);
-            this.comboBoxTTphong.Name = "comboBoxTTphong";
-            this.comboBoxTTphong.Size = new System.Drawing.Size(200, 21);
-            this.comboBoxTTphong.TabIndex = 18;
+            this.textBox5.Location = new System.Drawing.Point(110, 23);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(200, 20);
+            this.textBox5.TabIndex = 16;
             // 
-            // comboBoxMaLoai
+            // comboBox2
             // 
-            this.comboBoxMaLoai.FormattingEnabled = true;
-            this.comboBoxMaLoai.Location = new System.Drawing.Point(517, 98);
-            this.comboBoxMaLoai.Name = "comboBoxMaLoai";
-            this.comboBoxMaLoai.Size = new System.Drawing.Size(200, 21);
-            this.comboBoxMaLoai.TabIndex = 17;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(517, 66);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 21);
+            this.comboBox2.TabIndex = 18;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(517, 98);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
+            this.comboBox1.TabIndex = 17;
             // 
             // label2
             // 
@@ -267,101 +277,35 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "Tình Trạng:";
             // 
-            // iconButtonSave
-            // 
-            this.iconButtonSave.BackColor = System.Drawing.Color.Navy;
-            this.iconButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonSave.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonSave.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButtonSave.IconColor = System.Drawing.Color.White;
-            this.iconButtonSave.IconSize = 30;
-            this.iconButtonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSave.Location = new System.Drawing.Point(774, 55);
-            this.iconButtonSave.Name = "iconButtonSave";
-            this.iconButtonSave.Rotation = 0D;
-            this.iconButtonSave.Size = new System.Drawing.Size(119, 40);
-            this.iconButtonSave.TabIndex = 25;
-            this.iconButtonSave.Text = "Lưu";
-            this.iconButtonSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonSave.UseVisualStyleBackColor = false;
-            this.iconButtonSave.Click += new System.EventHandler(this.iconButtonSave_Click);
-            // 
-            // btnX
-            // 
-            this.btnX.BackColor = System.Drawing.Color.Navy;
-            this.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnX.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnX.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnX.IconChar = FontAwesome.Sharp.IconChar.Undo;
-            this.btnX.IconColor = System.Drawing.Color.White;
-            this.btnX.IconSize = 30;
-            this.btnX.Location = new System.Drawing.Point(24, 518);
-            this.btnX.Name = "btnX";
-            this.btnX.Rotation = 0D;
-            this.btnX.Size = new System.Drawing.Size(119, 42);
-            this.btnX.TabIndex = 61;
-            this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnX.UseVisualStyleBackColor = false;
-            this.btnX.Click += new System.EventHandler(this.btnX_Click);
-            // 
-            // labelTim
-            // 
-            this.labelTim.AutoSize = true;
-            this.labelTim.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTim.ForeColor = System.Drawing.Color.Transparent;
-            this.labelTim.Location = new System.Drawing.Point(22, 134);
-            this.labelTim.Name = "labelTim";
-            this.labelTim.Size = new System.Drawing.Size(65, 15);
-            this.labelTim.TabIndex = 63;
-            this.labelTim.Text = "Tìm Kiếm:";
-            // 
-            // textBoxTimKiem
-            // 
-            this.textBoxTimKiem.Location = new System.Drawing.Point(110, 132);
-            this.textBoxTimKiem.Multiline = true;
-            this.textBoxTimKiem.Name = "textBoxTimKiem";
-            this.textBoxTimKiem.Size = new System.Drawing.Size(200, 20);
-            this.textBoxTimKiem.TabIndex = 62;
-            this.textBoxTimKiem.Click += new System.EventHandler(this.textBoxTimKiem_TextChanged);
-            // 
             // QlyPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(940, 600);
-            this.Controls.Add(this.labelTim);
-            this.Controls.Add(this.textBoxTimKiem);
-            this.Controls.Add(this.btnX);
-            this.Controls.Add(this.iconButtonSave);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxGia);
-            this.Controls.Add(this.textBoxTenPhong);
-            this.Controls.Add(this.textBoxDienTich);
-            this.Controls.Add(this.textBoxMaPhong);
-            this.Controls.Add(this.comboBoxTTphong);
-            this.Controls.Add(this.comboBoxMaLoai);
-            this.Controls.Add(this.dgvRoom);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dgvUsers);
+            this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.iBtTimKiem);
-            this.Controls.Add(this.iBtXoa);
-            this.Controls.Add(this.iBtSua);
-            this.Controls.Add(this.iBtThem);
+            this.Controls.Add(this.iconButton4);
+            this.Controls.Add(this.iconButton3);
+            this.Controls.Add(this.iconButton2);
+            this.Controls.Add(this.iconButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QlyPhong";
             this.Text = "QlyPhong";
-            this.Load += new System.EventHandler(this.PhongForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,26 +313,23 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton iBtThem;
-        private FontAwesome.Sharp.IconButton iBtSua;
-        private FontAwesome.Sharp.IconButton iBtXoa;
-        private FontAwesome.Sharp.IconButton iBtTimKiem;
-        private System.Windows.Forms.DataGridView dgvRoom;
-        private System.Windows.Forms.TextBox textBoxGia;
-        private System.Windows.Forms.TextBox textBoxTenPhong;
-        private System.Windows.Forms.TextBox textBoxDienTich;
-        private System.Windows.Forms.TextBox textBoxMaPhong;
-        private System.Windows.Forms.ComboBox comboBoxTTphong;
-        private System.Windows.Forms.ComboBox comboBoxMaLoai;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton iconButton5;
+        private System.Windows.Forms.DataGridView dgvUsers;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private FontAwesome.Sharp.IconButton iconButtonSave;
-        private FontAwesome.Sharp.IconButton btnX;
-        private System.Windows.Forms.Label labelTim;
-        private System.Windows.Forms.TextBox textBoxTimKiem;
     }
 }

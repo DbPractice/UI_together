@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "vqw9WM8oKj1Yw0uQcawRI2VN6LvwrY8L5U8yKH8lLleRjJoIjbFlVURngyOfbr0k+2N04SgrH0b9WR0MYL4cCA==",
+  "dgSpecHash": "gk8c4Y1Dr2bXXW3LrQ5OXeClg7tvJIalgCXlU+j9n5tQJ6TKVMDjmyEFY8BUwa9yim5EZ0yrUSTBSIGE47fHDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FPTSHOP\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+  "projectFilePath": "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\FPTSHOP\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
-    "C:\\Users\\FPTSHOP\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
-    "C:\\Users\\FPTSHOP\\.nuget\\packages\\fontawesome.sharp\\5.12.1\\fontawesome.sharp.5.12.1.nupkg.sha512"
+    "C:\\Users\\datproqhna\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
+    "C:\\Users\\datproqhna\\.nuget\\packages\\epplus\\5.1.1\\epplus.5.1.1.nupkg.sha512",
+    "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
+    "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome.sharp\\5.12.1\\fontawesome.sharp.5.12.1.nupkg.sha512"
   ],
   "logs": []
 }

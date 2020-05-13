@@ -13,177 +13,97 @@ namespace Hotel_SoftWare2
 {
     public partial class DatPhongForm : Form
     {
-        Thread th;
+        public static string mapt;
+        htEntities context = new htEntities();
         public DatPhongForm()
         {
             InitializeComponent();
         }
-       
-     
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-          
-        }
-
-       
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labeltb_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel13_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel14_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel15_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel16_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel17_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel18_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel19_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void iconButton2_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-            th = new Thread(openttKhachhang);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
-        }
-        private void openttKhachhang(object obj)
-        {
-            Application.Run(new ttKhachHang());
-        }
 
         private void DatPhongForm_Load(object sender, EventArgs e)
         {
-
+            btnDkyThue.Enabled = textBoxMaNV.Enabled = false;
+            textBoxMaNV.Text = context.getIdEmpFrAcc(LoginForm.username, LoginForm.password).FirstOrDefault();
+            showDsPhieuThue(dgvDSphieuThue);
+            implementID();
+            textBoxMaKH.Text = listCustomer.maKH;
+            mapt = lableIdPT.Text;
         }
 
-       
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            openChildForm(new listCustomer());
+            btnDkyThue.Enabled = true;
+        }
+
+
+        private void showDsPhieuThue(DataGridView dgv)
+        {
+            dgv.DataSource = context.getPhieuThue2();
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+        }
+
+        private void implementID()
+        {
+            int count = 0;
+            count = dgvDSphieuThue.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            chuoi = Convert.ToString(dgvDSphieuThue.Rows[count - 1].Cells[0].Value);
+            chuoi2 = Convert.ToInt32(chuoi.Remove(0, 4));
+            if (chuoi2 + 1 < 10)
+                lableIdPT.Text = "MPTP0" + (chuoi2 + 1).ToString();
+            else
+                lableIdPT.Text = "MPTP" + (chuoi2 + 1).ToString();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private Form activeForm = null;
+        void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildFormPhieuThue.Controls.Add(childForm);
+            panelChildFormPhieuThue.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btnDkyThue_Click(object sender, EventArgs e)
+        {
+            context.addPhieuThuePhong(lableIdPT.Text, textBoxNote.Text, textBoxMaKH.Text, textBoxMaNV.Text);
+            try
+            {
+                MessageBox.Show("Them phieu thue phong thanh cong");
+                context.SaveChanges();
+                showDsPhieuThue(dgvDSphieuThue);
+                openChildForm(new ChiTietDatPhongForm());
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ChiTietDatPhongForm());
+        }
+
+        private void panelChildFormPhieuThue_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

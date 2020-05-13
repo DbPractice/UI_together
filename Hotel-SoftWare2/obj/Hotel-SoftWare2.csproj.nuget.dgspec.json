@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FPTSHOP\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj": {}
+    "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FPTSHOP\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj": {
+    "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FPTSHOP\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+        "projectUniqueName": "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
         "projectName": "Hotel-SoftWare2",
-        "projectPath": "C:\\Users\\FPTSHOP\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
-        "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FPTSHOP\\Documents\\GitHub\\UI_together\\Hotel-SoftWare2\\obj\\",
+        "projectPath": "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+        "packagesPath": "C:\\Users\\datproqhna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\datproqhna\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,6 +23,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://packagesource": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
