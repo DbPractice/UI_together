@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj": {}
+    "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj": {
+    "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+        "projectUniqueName": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
         "projectName": "Hotel-SoftWare2",
-        "projectPath": "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+        "projectPath": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
         "packagesPath": "C:\\Users\\datproqhna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\obj\\",
+        "outputPath": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -50,6 +50,14 @@
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[5.12.1, )"
+            },
+            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
+              "target": "Package",
+              "version": "[150.1404.0, )"
+            },
+            "Microsoft.SqlServer.Types": {
+              "target": "Package",
+              "version": "[14.0.1016.290, )"
             }
           }
         }

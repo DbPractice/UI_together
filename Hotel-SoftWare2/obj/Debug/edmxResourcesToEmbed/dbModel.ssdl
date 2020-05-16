@@ -253,6 +253,9 @@
     <Parameter Name="matkhauhientai" Type="varchar" Mode="In" />
     <Parameter Name="idnv" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="changeStatusRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="maphong" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="creatBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="maHD" Type="varchar" Mode="In" />
     <Parameter Name="tienphong" Type="float" Mode="In" />
@@ -309,8 +312,19 @@
     <Parameter Name="TenTk" Type="varchar" Mode="In" />
     <Parameter Name="MatKhau" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="getIdPTFromMaPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tenphong" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getlistBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getListRentedRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="getPhieuThue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="getPhieuThue2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getRentedRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mptp" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getRentedRoomSearch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="mptp" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="getRoomRented" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="mptp" Type="varchar" Mode="In" />
   </Function>

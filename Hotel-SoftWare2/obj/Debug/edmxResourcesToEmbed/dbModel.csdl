@@ -410,6 +410,23 @@
       <Parameter Name="maphong" Mode="In" Type="String" />
       <Parameter Name="mptp" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="changeStatusRoom">
+      <Parameter Name="maphong" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getRentedRoom" ReturnType="Collection(String)">
+      <Parameter Name="mptp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getListRentedRoom" ReturnType="Collection(dbModel.getListRentedRoom_Result)" />
+    <FunctionImport Name="getRentedRoomSearch" ReturnType="Collection(dbModel.getRentedRoomSearch_Result)">
+      <Parameter Name="mptp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getlistBill" ReturnType="Collection(dbModel.getlistBill_Result)" />
+    <FunctionImport Name="getIdPTFromSDT" ReturnType="Collection(String)">
+      <Parameter Name="sdt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getIdPTFromMaPhong" ReturnType="Collection(String)">
+      <Parameter Name="tenphong" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="getAccount_Result">
     <Property Type="String" Name="MaNV" Nullable="false" MaxLength="8" />
@@ -538,6 +555,24 @@
     <Property Type="String" Name="hinhthucthue" Nullable="true" MaxLength="7" />
     <Property Type="Byte" Name="SoLuongKhach" Nullable="true" />
     <Property Type="String" Name="MaPhong" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="MaPhieuThuePhong" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="getListRentedRoom_Result">
+    <Property Type="String" Name="MaPhong" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="getRentedRoomSearch_Result">
+    <Property Type="String" Name="MaPhong" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="TenPhong" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="getlistBill_Result">
+    <Property Type="String" Name="MaHoaDon" Nullable="false" MaxLength="8" />
+    <Property Type="Double" Name="TienPhong" Nullable="true" />
+    <Property Type="Double" Name="TienDV" Nullable="true" />
+    <Property Type="Double" Name="TongTien" Nullable="true" />
+    <Property Type="String" Name="HinhThucThanhToan" Nullable="true" MaxLength="8" />
+    <Property Type="DateTime" Name="NgayThanhToan" Nullable="true" />
+    <Property Type="String" Name="GhiChu" Nullable="true" MaxLength="500" />
     <Property Type="String" Name="MaPhieuThuePhong" Nullable="true" MaxLength="8" />
   </ComplexType>
 </Schema>

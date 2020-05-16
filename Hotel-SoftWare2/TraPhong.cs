@@ -12,6 +12,7 @@ namespace Hotel_SoftWare2
 {
     public partial class TraPhong : Form
     {
+        htEntities context = new htEntities();
         public TraPhong()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace Hotel_SoftWare2
 
         private void TraPhong_Load(object sender, EventArgs e)
         {
-
+            showlistRentedRoom(dgvRentedRoom);
         }
 
         private void TraPhong_FormClosing(object sender, FormClosingEventArgs e)
@@ -43,6 +44,31 @@ namespace Hotel_SoftWare2
         private void iconButton3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("TTrả phòng thành công !", "Thông báo");
+        }
+
+        private void showlistRentedRoom(DataGridView dgv)
+        {
+            dgv.DataSource = context.getListRentedRoom();
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+        }
+
+        private void showListRentedRoomSearch(DataGridView dgv)
+        {
+            if (textBoxMptSearch.Text == "")
+            {
+                showlistRentedRoom(dgvRentedRoom);
+            }
+            else
+            {
+                dgv.DataSource = context.getRentedRoomSearch(textBoxMptSearch.Text);
+                dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            }
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            showListRentedRoomSearch(dgvRentedRoom);
         }
     }
 }

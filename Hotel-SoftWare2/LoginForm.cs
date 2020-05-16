@@ -21,7 +21,7 @@ namespace Hotel_SoftWare2
         {
             InitializeComponent();
         }
-
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
         //        public partial class NhanVien

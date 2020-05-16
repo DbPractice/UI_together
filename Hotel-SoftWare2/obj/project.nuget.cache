@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "gk8c4Y1Dr2bXXW3LrQ5OXeClg7tvJIalgCXlU+j9n5tQJ6TKVMDjmyEFY8BUwa9yim5EZ0yrUSTBSIGE47fHDA==",
+  "dgSpecHash": "p4sFM/ZDZUtuxCkXdfP3pFeypuaEv3LkBuRToNy3GHlacqKUGb558pLkTXdqj6aB+B3UwSTALv6kAHtpa/1sEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\datproqhna\\Downloads\\ks\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
+  "projectFilePath": "D:\\Ki2_Năm3\\Db-Practice\\Git\\UI_together\\UI_together\\Hotel-SoftWare2\\Hotel-SoftWare2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\datproqhna\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
     "C:\\Users\\datproqhna\\.nuget\\packages\\epplus\\5.1.1\\epplus.5.1.1.nupkg.sha512",
     "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
-    "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome.sharp\\5.12.1\\fontawesome.sharp.5.12.1.nupkg.sha512"
+    "C:\\Users\\datproqhna\\.nuget\\packages\\fontawesome.sharp\\5.12.1\\fontawesome.sharp.5.12.1.nupkg.sha512",
+    "C:\\Users\\datproqhna\\.nuget\\packages\\microsoft.reportingservices.reportviewercontrol.winforms\\150.1404.0\\microsoft.reportingservices.reportviewercontrol.winforms.150.1404.0.nupkg.sha512",
+    "C:\\Users\\datproqhna\\.nuget\\packages\\microsoft.sqlserver.types\\14.0.1016.290\\microsoft.sqlserver.types.14.0.1016.290.nupkg.sha512"
   ],
   "logs": []
 }

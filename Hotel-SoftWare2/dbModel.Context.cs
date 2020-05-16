@@ -680,6 +680,80 @@ public partial class htEntities : DbContext
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("updateCTPT", mactptParameter, ngayvaoParameter, ngayraParameter, httParameter, slkParameter, maphongParameter, mptpParameter);
     }
 
+
+    public virtual int changeStatusRoom(string maphong)
+    {
+
+        var maphongParameter = maphong != null ?
+            new ObjectParameter("maphong", maphong) :
+            new ObjectParameter("maphong", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("changeStatusRoom", maphongParameter);
+    }
+
+
+    public virtual ObjectResult<string> getRentedRoom(string mptp)
+    {
+
+        var mptpParameter = mptp != null ?
+            new ObjectParameter("mptp", mptp) :
+            new ObjectParameter("mptp", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getRentedRoom", mptpParameter);
+    }
+
+
+    public virtual ObjectResult<getListRentedRoom_Result> getListRentedRoom()
+    {
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getListRentedRoom_Result>("getListRentedRoom");
+    }
+
+
+    public virtual ObjectResult<getRentedRoomSearch_Result> getRentedRoomSearch(string mptp)
+    {
+
+        var mptpParameter = mptp != null ?
+            new ObjectParameter("mptp", mptp) :
+            new ObjectParameter("mptp", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getRentedRoomSearch_Result>("getRentedRoomSearch", mptpParameter);
+    }
+
+
+    public virtual ObjectResult<getlistBill_Result> getlistBill()
+    {
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getlistBill_Result>("getlistBill");
+    }
+
+
+    public virtual ObjectResult<string> getIdPTFromSDT(string sdt)
+    {
+
+        var sdtParameter = sdt != null ?
+            new ObjectParameter("sdt", sdt) :
+            new ObjectParameter("sdt", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getIdPTFromSDT", sdtParameter);
+    }
+
+
+    public virtual ObjectResult<string> getIdPTFromMaPhong(string tenphong)
+    {
+
+        var tenphongParameter = tenphong != null ?
+            new ObjectParameter("tenphong", tenphong) :
+            new ObjectParameter("tenphong", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("getIdPTFromMaPhong", tenphongParameter);
+    }
+
 }
 
 }

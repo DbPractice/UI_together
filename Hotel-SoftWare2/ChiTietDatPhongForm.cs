@@ -12,6 +12,7 @@ namespace Hotel_SoftWare2
 {
     public partial class ChiTietDatPhongForm : Form
     {
+        private string maPhongSua;
         htEntities context = new htEntities();
         public ChiTietDatPhongForm()
         {
@@ -60,6 +61,7 @@ namespace Hotel_SoftWare2
                 textBoxSoNguoi.Text = row.Cells[4].Value.ToString();
                 textBoxMaPhong.Text = row.Cells[5].Value.ToString();
                 labelIdPT.Text = row.Cells[6].Value.ToString();
+                maPhongSua = row.Cells[5].Value.ToString();
             }
             catch
             {
@@ -90,6 +92,7 @@ namespace Hotel_SoftWare2
                 comboBoxhtt.Text = "True";
             }
             else comboBoxhtt.Text = "False";
+            context.changeStatusRoom(textBoxMaPhong.Text);
             if (status == true)
             {
                 context.addCTPT(lableIdCTPT.Text, dtpNgayVao.Value, dtpNgayRa.Value, Convert.ToBoolean(comboBoxhtt.Text), Convert.ToByte(textBoxSoNguoi.Text), textBoxMaPhong.Text, labelIdPT.Text);
@@ -98,7 +101,7 @@ namespace Hotel_SoftWare2
                     MessageBox.Show("Them ctpt thanh cong");
                     context.SaveChanges();
                     showCTPT(dgvDSCTPT);
-
+                    showFreeRoom(dgvFreeRoom);
                 }
                 catch (Exception ex)
                 {
@@ -108,11 +111,13 @@ namespace Hotel_SoftWare2
             else
             {
                 context.updateCTPT(lableIdCTPT.Text, dtpNgayVao.Value, dtpNgayRa.Value, Convert.ToBoolean(comboBoxhtt.Text), Convert.ToByte(textBoxSoNguoi.Text), textBoxMaPhong.Text, labelIdPT.Text);
+                context.changeStatusRoom(maPhongSua);
                 try
                 {
                     MessageBox.Show("cap nhat chi tiet phieu thue thanh cong");
                     context.SaveChanges();
                     showCTPT(dgvDSCTPT);
+                    showFreeRoom(dgvFreeRoom);
                 }
                 catch (Exception ex)
                 {
@@ -144,7 +149,7 @@ namespace Hotel_SoftWare2
 
         private void clearText()
         {
-            lableIdCTPT.Text = dtpNgayVao.Text = dtpNgayRa.Text = textBoxSoNguoi.Text = textBoxMaPhong.Text = comboBoxhtt.Text = "";
+            dtpNgayVao.Text = dtpNgayRa.Text = textBoxSoNguoi.Text = textBoxMaPhong.Text = comboBoxhtt.Text = "";
         }
 
         private void dgvFreeRoom_CellClick(object sender, DataGridViewCellEventArgs e)

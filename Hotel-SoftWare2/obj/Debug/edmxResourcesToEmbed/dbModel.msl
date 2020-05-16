@@ -324,5 +324,38 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="updateCTPT" FunctionName="dbModel.Store.updateCTPT" />
+    <FunctionImportMapping FunctionImportName="changeStatusRoom" FunctionName="dbModel.Store.changeStatusRoom" />
+    <FunctionImportMapping FunctionImportName="getRentedRoom" FunctionName="dbModel.Store.getRentedRoom" />
+    <FunctionImportMapping FunctionImportName="getListRentedRoom" FunctionName="dbModel.Store.getListRentedRoom">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getListRentedRoom_Result">
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getRentedRoomSearch" FunctionName="dbModel.Store.getRentedRoomSearch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getRentedRoomSearch_Result">
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+          <ScalarProperty Name="TenPhong" ColumnName="TenPhong" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getlistBill" FunctionName="dbModel.Store.getlistBill">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbModel.getlistBill_Result">
+          <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
+          <ScalarProperty Name="TienPhong" ColumnName="TienPhong" />
+          <ScalarProperty Name="TienDV" ColumnName="TienDV" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="HinhThucThanhToan" ColumnName="HinhThucThanhToan" />
+          <ScalarProperty Name="NgayThanhToan" ColumnName="NgayThanhToan" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="MaPhieuThuePhong" ColumnName="MaPhieuThuePhong" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getIdPTFromMaPhong" FunctionName="dbModel.Store.getIdPTFromMaPhong" />
   </EntityContainerMapping>
 </Mapping>
